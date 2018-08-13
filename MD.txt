@@ -1,0 +1,28 @@
+
+(1)：URL路由
+kk.cn/test/test/test
+域名：模块/控制器/函数
+1
+根据模块名和控制名加载相应文件
+example:
+mvc/crt/test/test.php  （文件）
+2
+根据控制名实例化对象
+prefix_模块名_控制器名 
+(前缀在inc文件中可设定)
+example:
+class  App_Ctr_Test_Test
+2
+根据函数名调用
+    testAction
+example:
+  public function testAction(){
+     ... ... 
+  } 
+默认模块，控制器，方法 均为 index 
+(inc 文件中设定)
+
+(2)URL 参数
+set: kk.cn/test/test/test?parameter=123456;
+get: $_REQUEST['parameter'];
+
