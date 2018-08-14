@@ -1,4 +1,9 @@
 <?php
+/*  
+* app 作为应用实例处理一些必要流程 如请求分发 文件载入
+*
+*/
+ 
 namespace APP{
  class App {
     private $CTRL;
@@ -21,6 +26,7 @@ namespace APP{
         $module = isset($module) && $module ? $module : (empty($query) ? DEF_MODULE : trim(array_shift($query)));
         //设置基URL
         $base_url = isset($_SERVER['PHP_SELF']) && trim($_SERVER['PHP_SELF'], '/') != 'index.php' ? '/' : '/' . $module . '/';
+        #echo $base_url;
         $controller = empty($query) ? DEF_CONTROLLER : trim(array_shift($query));
         $action = empty($query) ? DEF_ACTION : trim(array_shift($query));
         while(!empty($query)) {
@@ -34,9 +40,9 @@ namespace APP{
         @include_once DIR_CTR.$module.'/'.$controller.'.php';    
         //定义 类前缀后缀          (实例化的类名)Ctr_module_class 
         $controller =DEF_CLASS_PREFIX.ucfirst(strtolower($module)).'_'.ucfirst(strtolower($controller));
-        echo $controller;
+
         $action = strtolower($action).'Action';
-        echo $action;
+      
         //分发逻辑控制
         $flag = false;
         if (class_exists($controller)) {
@@ -48,6 +54,9 @@ namespace APP{
             }
         }
         if (!$flag) {
+           
+            echo $controller.'/';
+            echo $action.'/';
             echo "方法或类未找到";
         #   header('Location:/error'); //未找到控制器
         }
@@ -66,6 +75,11 @@ namespace APP{
         }
         return $query;
     }
+
+
+    /*
+    *    加载扩展组件相应文件
+    */
     private function LoadFile($extends){
        foreach($extends as $k => $v){
           $file = DIR_EXTENDS.$k.'/'.$v.'.php';

@@ -15,35 +15,56 @@ class CTRL{
   获去前端数据输入（单字段）
   其中array由调用者设置各字段名，此函数负责填充数据
  */
+ private $smart;
+
+ public function __construct(){
+   include_once DIR_ROOT.'/public/smarty/libs/Smarty.class.php';
+   $this->smart = new Smarty();
+ }
+
+
  public function GetParam(array &$param){
     if($param){
       foreach($param as $key => &$value) {
         $value = (isset($__GET[$key]))?$__GET[$key]:"";
         $value = cleanHtml($value);
         $value = cleanJsCss($value);
-       }
+      }
       return true;
     } else {
       return false;
     }
- }
-
+}
  /*
   获去前端输入（json）
   json_decode
  */
  public function GetJson(){
-    if($param){
-      foreach($param as $key => &$value) {
-        $value = (isset($__GET[$key]))?$__GET[$key]:"";
-        $value = cleanHtml($value);
-        $value = cleanJsCss($value);
-       }
-      return true;
-    } else {
-      return false;
-    }
+    echo "none";
  }
+ /*
+ *   输出 smart
+ */
+ public function DisplaySmart($file){
+ 
+   $file =DIR_VIEW.$file; 
+   $this->smart->display($file);
+ }
+ /*
+ *   输出json串 
+ */
+ public function DisplayJson($msg='',$data=array(),$status=true){
+    $arr = array();
+    $arr['msg'] =$msg ;
+    $arr['data'] =$data ;
+    $arr['status'] =$status ;
+    $arr['ec']=200;
+    echo json_encode($arr);       
+ }
+public function LoadIn(){
+
+
+}
 
 
 
@@ -69,8 +90,8 @@ private function cleanJs($html){
  * Return string
  */
 private function cleanJsCss($html){
-    $html=trim($html);
-    $html=preg_replace('/\0+/', '', $html);
+  $html=trim($html);
+  $html=preg_replace('/\0+/', '', $html);
   $html=preg_replace('/(\\\\0)+/', '', $html);
   $html=preg_replace('#(&\#*\w+)[\x00-\x20]+;#u',"\\1;",$html);
   $html=preg_replace('#(&\#x*)([0-9A-F]+);*#iu',"\\1\\2;",$html);
