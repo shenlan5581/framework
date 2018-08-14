@@ -1,7 +1,7 @@
 <?php
 
-class App_Ctr_K_Shop{
-     public function indexAction(){
+class App_Ctr_K_shop{
+     public function IndexAction(){
    
       echo 'k--shop';
     }

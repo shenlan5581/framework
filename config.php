@@ -1,6 +1,5 @@
 <?php
-namespace CONFIG {
-const config = array(
+    $config = array(
     //所需要的自定义扩展组件  此配会加载extend 中的相应文件
     'extends' =>  array(
             //文件夹            文件
@@ -12,7 +11,7 @@ const config = array(
     'sources'=>  array(
             'local_name'=>'http://yaoyao.mobi',
             //图片上传路径
-            'uploadImagePath' => DIR_ROOT.'/sources/image'
+            'UploadImagePath' => DIR_ROOT.'/sources/image'
     ),
 
 
@@ -21,5 +20,3 @@ const config = array(
 );
 
  
-
-}

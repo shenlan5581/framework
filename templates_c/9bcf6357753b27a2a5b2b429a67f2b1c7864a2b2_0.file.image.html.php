@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-14 14:10:55
-  from '/home/ki/https/www/framework/mvc/view/uploadimgtest/uploadimg.html' */
+/* Smarty version 3.1.32, created on 2018-08-14 16:23:02
+  from '/home/ki/https/www/framework/mvc/view/Admin/image.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b72e2ef5244b8_38038144',
+  'unifunc' => 'content_5b7301e6ec45e6_38406775',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'a0869be08c9b4613ba06721bff1464f110abb197' => 
+    '9bcf6357753b27a2a5b2b429a67f2b1c7864a2b2' => 
     array (
-      0 => '/home/ki/https/www/framework/mvc/view/uploadimgtest/uploadimg.html',
-      1 => 1534255852,
+      0 => '/home/ki/https/www/framework/mvc/view/Admin/image.html',
+      1 => 1534263742,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b72e2ef5244b8_38038144 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b7301e6ec45e6_38406775 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -37,10 +37,7 @@ function content_5b72e2ef5244b8_38038144 (Smarty_Internal_Template $_smarty_tpl)
 <title>upload</title>
 </head> 
 <body >
- <form> 
- <input id="img" type = "file" name ='img'>
- <a href="#" onclick =uploadimg() >上传</a>
-</form>
+ <img src="/image/403316.jpg">dd</img>
 
 </body>
 </html>

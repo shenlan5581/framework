@@ -13,8 +13,8 @@ include DIR_APP."app.php";
 include DIR_PUB."smarty/libs/Smarty.class.php";
 include "config.php";
 //default set about url route
-define('DEF_MODULE'    ,'admin');
-define('DEF_CONTROLLER','index');
-define('DEF_ACTION'    ,'index');
+define('DEF_MODULE'    ,'Admin');
+define('DEF_CONTROLLER','Index');
+define('DEF_ACTION'    ,'Index');
 define('DEF_CLASS_PREFIX','App_Ctr_');
 

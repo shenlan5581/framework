@@ -14,9 +14,9 @@ example:
 class  App_Ctr_Test_Test
 2
 根据函数名调用
-    testAction
+   testAction
 example:
-  public function testAction(){
+   public function testAction(){
      ... ... 
   } 
 默认模块，控制器，方法 均为 index 
@@ -26,3 +26,9 @@ example:
 set: kk.cn/test/test/test?parameter=123456;
 get: $_REQUEST['parameter'];
 
+rewrite:
+css js 文件重定位到 /mvc/view 文件下  引用时以此为根目录
+资源文件重定位到 /sources文件下        引用时以此为根目录
+
+
+公共图片上传接口 /Public/Upload/UploadImg  字段：'img' 返回资源路径
