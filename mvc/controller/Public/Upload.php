@@ -2,8 +2,7 @@
 /*
 * 图片上传公共接口
 */
-
-class App_Ctr_Public_Upload{
+class App_Controller_Public_Upload{
     private $path;
     private $local_name;
     public function __construct(){
@@ -12,10 +11,10 @@ class App_Ctr_Public_Upload{
       $this->path       = $config['sources']['UploadImagePath'];
     }
 /*
-*   上传图片 保存在资源文件夹且返回url
+* 上传图片 保存在资源文件夹且返回url
 */    
 public function UploadImgAction(){
-    $ctr = new CTRL;
+    $ctr = new Controller;
     if($_FILES["img"]['error'] >0         ||  //file error
        $_FILES["img"]['size']  > 502400   ||  //大小
        $_FILES["img"]['type'] !='image/jpeg'  //类型   
@@ -25,20 +24,15 @@ public function UploadImgAction(){
       // print_r($_FILES);
        $number =  rand(0,1000000);
        $name = $number.'.jpg';
-      // echo $name;
+       // echo $name;
        $file = $this->path."/".$name;
-        
        if(file_exists($file)){
-        $ctr->DisplayJson("文件已存在",null,false);
+          $ctr->DisplayJson("文件已存在",null,false);
         } else {
-        move_uploaded_file($_FILES['img']['tmp_name'],$file);
-        $file ='image/'.$name;
-        $ctr->DisplayJson("成功",$file,true);
+          move_uploaded_file($_FILES['img']['tmp_name'],$file);
+          $file ='image/'.$name;
+          $ctr->DisplayJson("成功",$file,true);
        }
     }
- }
-
-
-
-
+  }
 }

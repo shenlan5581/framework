@@ -11,7 +11,7 @@
 
 namespace {
 include_once "inc.php"; 
-        $app = new APP\App();
+        $app = new App();
         $app ->Run($config);
 }
 ?>

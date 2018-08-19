@@ -1,0 +1,15 @@
+Warning:include_once(/home/ki/https/www/framework/mvc/controller/formtest/Index.php): failed to open stream: No such file or directory
+ File (46): /home/ki/https/www/framework/app/app.php Time:2018-08-15 08:12:10pm 
+
+Warning:include_once(): Failed opening '/home/ki/https/www/framework/mvc/controller/formtest/Index.php' for inclusion (include_path='.:/home/ki/nginx/php/lib/php')
+ File (46): /home/ki/https/www/framework/app/app.php Time:2018-08-15 08:12:10pm 
+
+Notice:Undefined variable: para
+ File (16): /home/ki/https/www/framework/mvc/controller/Index/Index.php Time:2018-08-15 08:27:32pm 
+
+Notice:Undefined variable: para
+ File (16): /home/ki/https/www/framework/mvc/controller/Index/Index.php Time:2018-08-15 08:27:33pm 
+
+Notice:Undefined variable: para
+ File (16): /home/ki/https/www/framework/mvc/controller/Index/Index.php Time:2018-08-15 08:27:34pm 
+
