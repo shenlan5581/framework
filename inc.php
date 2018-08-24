@@ -24,5 +24,5 @@ define('DEF_ACTION'    ,'Index');
 define('DEF_CLASS_PREFIX','App_Controller_');
 define('DEF_CLASS_PREFIX','App_Model_');
 
-define('RUNLEVEL','RELE');//运行级别 错误是否显示
+define('RUNLEVEL','DEBUG');//运行级别 错误是否显示
 #RELEASE

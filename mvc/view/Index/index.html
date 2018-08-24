@@ -1,30 +1,83 @@
- 
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<script src="public/jquery.js"></script>
-<script src="uploadimgtest/uploadimg.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<title>Framework</title>
-    <style>
-      body{
-          margin:50px;
-          text-align: center;
-          font-size: 15px;
-          color:rgb(146, 146, 146);
-      }      
-      span{
-         font-size:10px;
-      }
-    </style>
-</head> 
-<body>
- Frame Work 
- <span>Author:22542812@qq.com</span>
-<form method="Get" action="/Index/Index/formtest">
-    <input tpye='text' name='text' value="xingke"></input> 
-    <button type ='commit'>COMMIT</button>
-</form>
 
-</body>
-</html>
+<style>
+.k-item{   
+    float: left;
+    width:350px;
+    margin:5px;
+    font-size:14px;
+}
+#k-template{
+
+}
+.k-title{
+    font-size:20px;
+    padding:3px;
+    margin: 30px;
+    text-align: center;
+}
+
+</style>
+
+
+<div id = "k-jiazhaung">
+   <div class='k-title'>
+    家装案例
+   </div>    
+   <div class="k-item">
+       <image src = "/sites/Index/2.jpg" width=350px height=250px;></image>
+       <span>理想名称 现代风格</span>
+   </div>
+   <div class="k-item">
+       <image src = "/sites/Index/3.jpg" width=350px height=250px;></image>
+       <span>理想名称 现代风格</span>
+   </div>
+   <div class="k-item">
+       <image src = "/sites/Index/4.jpg" width=350px height=250px;></image>
+       <span>理想名称 现代风格</span>
+   </div>
+   <div class="k-item">
+       <image src = "/sites/Index/5.jpg" width=350px height=250px;></image>
+       <span>理想名称 现代风格</span>
+   </div>
+   <div class="k-item">
+       <image src = "/sites/Index/6.jpg" width=350px height=250px;></image>
+       <span>理想名称 现代风格</span>
+   </div>
+   <div class="k-item">
+       <image src = "/sites/Index/7.jpg" width=350px height=250px;></image>
+       <span>理想名称 现代风格</span>
+   </div>
+
+</div>
+
+
+
+
+<div style="clear:both"></div>
+
+<div id = "k-gongzhuang">
+   <div class='k-title'>
+     工装案例 
+   </div>    
+   <span>简介</span>
+   <div class="k-item">
+   </div>
+
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+
+<script>
+var obj=null;
+$('.k-item').mousemove(function(event){
+        event = event ? event : window.event;
+        var obj = event.srcElement ? event.srcElement : event.target; 
+        var $obj = $(obj);
+
+});
+
+
+
+</script>

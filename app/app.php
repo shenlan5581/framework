@@ -11,6 +11,12 @@
     *  分发
     */ 
     public function Run($config){
+        //session
+        session_start();
+        // 屏蔽错误
+        if(RUNLEVEL === 'RELEASE'){
+            error_reporting(0);
+        }
         //组件加载    
         $this->LoadExtends($config['extends']); 
         //模型文件加载

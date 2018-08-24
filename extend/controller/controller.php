@@ -13,18 +13,21 @@ class Controller{
  }
 
 //以数组方式获取参数
+//  GetParam('a','b');
  public function GetParam(&$param,$method='GET'){
     if(is_array($param)){        //数组获取
-      foreach($param as $key => &$value) {
+      foreach($param as $key =>&$value) {
         if($method =='GET'){
           $val = (isset($_GET[$key]))?$_GET[$key]:"";
-          $value = $this->Clean($val);
+          $type = $value.'val';
+          $value = $type($this->Clean($val));
         } else if ($method =='POST'){
           $val = (isset($_POST[$key]))?$_POST[$key]:"";
-          $value = $this->Clean($val);
+          $type = $value.'val';
+          $value = $type($this->Clean($val));
         }
       }
-      return true;
+      return $param;
     } else {                    //单值获取
         if($method =='GET'){
           $val = (isset($_GET[$param]))?$_GET[$param]:"";

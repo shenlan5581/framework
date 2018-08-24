@@ -1,0 +1,98 @@
+<div id='menu' >
+
+    <style>
+    .menu1{
+        display: block;
+        float: left;
+        color:rgb(1, 14, 23);
+        width:100px;
+        font-size: 14px;
+        padding-left:30px;
+        cursor: pointer;
+    }    
+    .menu1 > div{
+     padding: 5px;
+     background-color: rgba(75, 75, 75, 0.738);
+     color:rgb(10, 77, 77);
+     position: fixed;
+     display: none;
+        padding: 2px;
+    border-style:none;
+    border-width: 1px;
+    border-color: rgb(25, 63, 70);
+    border-radius:3px; 
+    }
+    .menu_item{
+     padding:1px;
+     margin: 3px;
+     display: block;
+     color:rgb(255, 255, 255);
+     font-size: 12px;
+    }
+    a{
+     text-decoration:none;  
+}
+a:hover{
+  color:rgb(86, 182, 230);
+  text-decoration:none;  
+     font-size: 12px;
+}
+
+
+   </style>
+    <script> 
+    var e=0;
+    var status_show=false;
+    $(document).ready(function(){
+     $(".menu1").click(function(event){
+        event = event ? event : window.event;
+        var obj = event.srcElement ? event.srcElement : event.target; 
+        if(e!=0 && e == obj){
+           return;           
+        }else {
+           e=obj;
+        }
+        var $obj = $(obj);
+        var x =  $obj.offset().top+30;
+        var y =  $obj.offset().left+30;
+        var d =  $obj.children("div");
+        if(d == status_show){
+           return;
+        }
+        d.css("top",x);                
+        d.css("left",y);
+        d.fadeIn();                
+        if(status_show !== false){
+           status_show.fadeOut();
+           status_show=false;
+        }
+        status_show = d;
+     });
+    });
+    </script>
+
+
+<!--主目录 -->
+<div class='menu1 ' > 图片管理
+     <!--二级目录 -->
+     <div class >
+         <a class='menu_item' href="#">幻灯片</a>
+         <a class='menu_item' href="#">标题</a> 
+         <a class='menu_item' href="#">家装案例</a>
+     </div>
+</div>
+<div  class='menu1 btn1' href ='#1'>案例管理
+     <!--二级目录 -->
+     <div class >
+         <a class='menu_item' href="#">幻灯片</a>
+         <a class='menu_item' href="#">标题</a> 
+         <a class='menu_item' href="#">家装案例</a>
+     </div>
+</div>
+
+
+
+
+</div>
+
+

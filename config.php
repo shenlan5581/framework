@@ -6,6 +6,7 @@
             'controller' => 'controller',    //控制器基本组件
             'db'         => 'mysql',         //数据库
             'model'      => 'BaseModel',     //必要的模型基类
+            'session'      => 'session',     //session
             'tools'      => 'tools',         //常见公共函数
             ),
      //日志
@@ -20,9 +21,9 @@
                 'host'=>'127.0.0.1',
                 'user'=>'root',
                 'pass'=>'xingke',
-                'dbname'=>'yunzhe',
+                'dbname'=>'framework',
                 'port'=>'3306',
-                'tablepre'=>'pre_', //表前缀
+                'tablepre'=>'fw_', //表前缀
             )
     ),
 

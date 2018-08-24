@@ -3,8 +3,10 @@
 *      业务说明
 */
 class App_Model_Index_Index { #extends Model
-    public function Handler($ctr){
 
 
-    }
+
+
+
+    
 }
