@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-25 01:36:25
+/* Smarty version 3.1.32, created on 2018-08-25 09:17:36
   from '/home/ki/https/www/framework/mvc/view/Index/layout/head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b80b299204be4_64811144',
+  'unifunc' => 'content_5b811eb0774480_45781614',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12c8aa00d1632b70a226cf91988c5151ec274216' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Index/layout/head.html',
-      1 => 1535160983,
+      1 => 1535188655,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b80b299204be4_64811144 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b811eb0774480_45781614 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
 <link  href="/storage/a.css" rel="stylesheet">
-<link  href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- bootstrap-->
@@ -56,9 +55,10 @@ header{
    margin-left:30%;
    display: inline-block;
    font-size: 15px;
-   top:40px;;
+   top:-10px;;
 }
 #k-user{
+   top:-20px;;
    position:relative;
    margin-left:90%;
    display: inline-block;
