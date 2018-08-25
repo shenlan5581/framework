@@ -1,83 +1,123 @@
-
 <style>
-.k-item{   
-    float: left;
-    width:350px;
-    margin:5px;
-    font-size:14px;
-}
-#k-template{
+		.k-item{   
+			float: left;
+			width:350px;
+			margin:5px;
+			font-size:14px;
 
-}
-.k-title{
-    font-size:20px;
-    padding:3px;
-    margin: 30px;
-    text-align: center;
-}
+			z-index:2;
+		}
+		#k-template{
+		}
+		.k-title{
+			color:rgb(63, 63, 63);
+			font-size:20px;
+			padding:3px;
+			margin: 30px;
+			text-align: center;
+			font-weight: 900;
+		}
+        .info{
+			  width:350px;
+			  height:250px;
+			  background-color: rgba(0, 0, 0, 0.523); 
+			  position:absolute;
+			  z-index: 3;
+			  text-align: center;
+			  cursor: pointer;
+			  display:none;
+		}
+		.info>span{
+			 position: absolute;
+			 display:block;
+			 z-index:1;
+			 color:white;
+			 top:46%;left:46%;
+		}
 
-</style>
+		</style>
+		
 
 
-<div id = "k-jiazhaung">
-   <div class='k-title'>
-    家装案例
-   </div>    
-   <div class="k-item">
-       <image src = "/sites/Index/2.jpg" width=350px height=250px;></image>
-       <span>理想名称 现代风格</span>
-   </div>
-   <div class="k-item">
-       <image src = "/sites/Index/3.jpg" width=350px height=250px;></image>
-       <span>理想名称 现代风格</span>
-   </div>
-   <div class="k-item">
-       <image src = "/sites/Index/4.jpg" width=350px height=250px;></image>
-       <span>理想名称 现代风格</span>
-   </div>
-   <div class="k-item">
-       <image src = "/sites/Index/5.jpg" width=350px height=250px;></image>
-       <span>理想名称 现代风格</span>
-   </div>
-   <div class="k-item">
-       <image src = "/sites/Index/6.jpg" width=350px height=250px;></image>
-       <span>理想名称 现代风格</span>
-   </div>
-   <div class="k-item">
-       <image src = "/sites/Index/7.jpg" width=350px height=250px;></image>
-       <span>理想名称 现代风格</span>
-   </div>
-
-</div>
-
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+			  <a href="#" class="thumbnail">
+				<image  "/sites/Index/2.jpg" alt="..."></image>
+			  </a>
+			</div>
+			...
+		  </div>
 
 
 
-<div style="clear:both"></div>
-
-<div id = "k-gongzhuang">
-   <div class='k-title'>
-     工装案例 
-   </div>    
-   <span>简介</span>
-   <div class="k-item">
-   </div>
-
-</div>
-</div>
-
-<div style="clear:both"></div>
 
 
-<script>
-var obj=null;
-$('.k-item').mousemove(function(event){
-        event = event ? event : window.event;
-        var obj = event.srcElement ? event.srcElement : event.target; 
-        var $obj = $(obj);
+		<div id = "k-jiazhaung">
+		   <div class='k-title'>
+			家装案例
+		   </div>    
+		   <div class="k-item">
+			   <div class="info"  > <span >详情 </span></div>
+			   <image src = "/sites/Index/2.jpg" width=350px height=250px;></image>
+		   </div>
+		   <div class="k-item">
+			   <div class="info"  > <span  >查看详情</span></div>
+			   <image src = "/sites/Index/3.jpg" width=350px height=250px;></image>
+		   </div>
+		   <div class="k-item">
+			   <div class="info"  > <span  >简介</span></div>
+			   <image src = "/sites/Index/4.jpg" width=350px height=250px;></image>
+		   </div>
+		   <div class="k-item">
+			   <div class="info"  > <span  >简介</span></div>
+			   <image src = "/sites/Index/5.jpg" width=350px height=250px;></image>
+		   </div>
+		   <div class="k-item">
+			   <div class="info"  > <span  >简介</span></div>
+			   <image src = "/sites/Index/6.jpg" width=350px height=250px;></image>
+		   </div>
+		   <div class="k-item">
+			   <div class="info"  > <span  >简介</span></div>
+			   <image src = "/sites/Index/7.jpg" width=350px height=250px;></image>
+		   </div>
+		
+		</div>
+		
+		
+		
+		
+		<div style="clear:both"></div>
+		
+		<div id = "k-gongzhuang">
+		   <div class='k-title'>
+			 工装案例 
+		   </div>    
+		   <span>简介</span>
+		   <div class="k-item">
+		   </div>
+		
+		</div>
+		</div>
+		
+		<div style="clear:both"></div>
+		
+		
+		<script>
+		$('.k-item').mousemove(function(event){
+				event = event ? event : window.event;
+				var obj = event.srcElement ? event.srcElement : event.target; 
+				var $obj = $(obj);
+				$obj = $obj.parent();
+				$obj = $obj.children('.info');
+				   $obj.fadeIn('fast');
+				});
+		$('.info').mouseleave(function(event){
+				event = event ? event : window.event;
+				var obj = event.srcElement ? event.srcElement : event.target; 
+				var $obj = $(obj);
+				$obj = $obj.parent();
+				$obj = $obj.children('.info');
+				    $obj.fadeOut('fast'); 
+		});
 
-});
-
-
-
-</script>
+		</script>
