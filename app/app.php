@@ -94,8 +94,11 @@
     /*
     *    加载扩展组件相应文件
     */
-    private function LoadModel($path){
-        $this->LoadFromDir($path);
+    private function loadModel($path){
+        $this->loadfromdir($path);
+    }
+    private function loadController($path){
+        $this->loadfromdir($path);
     }
     /*
     * 加载文件夹下所有文件

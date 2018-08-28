@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-25 20:22:50
+/* Smarty version 3.1.32, created on 2018-08-26 20:53:34
   from '/home/ki/https/www/framework/mvc/view/Index/layout/head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b81ba9a1344f8_71644556',
+  'unifunc' => 'content_5b83134e8ef710_84825894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '12c8aa00d1632b70a226cf91988c5151ec274216' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Index/layout/head.html',
-      1 => 1535228568,
+      1 => 1535316480,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,34 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b81ba9a1344f8_71644556 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b83134e8ef710_84825894 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <link  href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 <?php echo '<script'; ?>
- src="/public/popper.js"><?php echo '</script'; ?>
+ type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=dpflbirZykMxB1Xp1MxSew5yyR5VrG4l"><?php echo '</script'; ?>
 >
+
+<?php echo '<script'; ?>
+ src="/public/jquery-3.3.1.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public/popper.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/Index/layout/index.js"><?php echo '</script'; ?>
+>
+
+
 <link  href="/storage/a.css" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- bootstrap-->
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style> 
 body{
@@ -59,7 +73,10 @@ header{
    display: inline-block;
    font-size: 13px;
 }
-
+#allmap{
+  width: 100%;height: 500px;;overflow: hidden;margin:0;font-family:"微软雅黑";
+  background-color: rgb(238, 142, 24);
+}
 </style>
 
 
@@ -93,20 +110,9 @@ header{
 					  <a class="nav-link" href="#">主页<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-					  <a class="nav-link" href="#">工程案例</a>
+					  <a class="nav-link" href="#design">工程案例</a>
 					</li>
             <!--  下拉-->
-					<li class="nav-item dropdown">
-					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              过往项目
-					  </a>
-					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">家装案例</a>
-						<a class="dropdown-item" href="#">工装案例</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">预约</a>
-					  </div>
-          </li>
           
 					<li class="nav-item">
 					  <a class="nav-link " href="#">线上预约</a>
@@ -124,8 +130,15 @@ header{
 					  <a class="nav-link " href="#">优惠活动</a>
           </li>
 
+          
 					<li class="nav-item">
 					  <a class="nav-link " href="#">关于我们</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link " href="#">小程序</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link " href="#">公众号</a>
 					</li>
 				  </ul>
 				  <form class="form-inline my-2 my-lg-0">
@@ -169,5 +182,6 @@ header{
     </div>
  <!-- 轮拨-->
 <br>
+
 <?php }
 }

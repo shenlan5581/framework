@@ -15,11 +15,13 @@ class App_Controller_Index_Index extends Index_Base {
       }
 
     public function indexAction(){
-        $model = new App_Model_Index_Index();
         $this->ctr->assign('size','88');
         $this->ctr->DisplaySmart("Index/index.html");
     }
 
+    public function mapAction(){
+        $this->ctr->DisplaySmart("Index/map.html");
+    }
 
 
 

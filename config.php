@@ -1,6 +1,7 @@
 <?php
     $config = array(
     //所需要的自定义扩展组件  此配会加载extend 中的相应文件
+    'local_name'=>'framework.cn',
     'extends' =>  array(
             //文件夹            文件
             'controller' => 'controller',    //控制器基本组件

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-21 18:15:45
+/* Smarty version 3.1.32, created on 2018-08-27 16:41:03
   from '/home/ki/https/www/framework/mvc/view/Manage/layout/head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b7c56d1953672_52861199',
+  'unifunc' => 'content_5b84299fd3a979_97230014',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '73e8a02ea8d018fd2bd365b742ebfddfa455bd70' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Manage/layout/head.html',
-      1 => 1534875343,
+      1 => 1535388034,
       2 => 'file',
     ),
   ),
@@ -20,29 +20,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b7c56d1953672_52861199 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b84299fd3a979_97230014 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link  href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 <?php echo '<script'; ?>
- src="/public/jquery.js"><?php echo '</script'; ?>
+ src="/public/jquery-3.3.1.min.js"><?php echo '</script'; ?>
 >
-<link  href="/Manage/layout/layout.css" rel="stylesheet">
 <!-- bootstrap-->
-<link  href="/public/bootstrap/js/bootstrap.min.js" rel="stylesheet">
-<link  href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<?php echo '<script'; ?>
+ src="/public/popper.min.js"><?php echo '</script'; ?>
+>
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- bootstrap-->
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Admin</title>
 </head> 
+
+
+<style>
+
+body{
+    width:80%;
+    margin:auto;
+}
+
+
+</style>
+
+
 <body>
-   <header id ="head">
-    <project>
-        <name> <span>三原色装饰工程有限公司</span>内容管理系统</name>
-    </project>
-    </header>
-<div id ='head_s'></div>
 <?php }
 }

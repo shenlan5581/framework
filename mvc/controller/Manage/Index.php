@@ -45,14 +45,19 @@ class App_Controller_Manage_Index extends Manage_Base {
      $this->ctr->DisplaySmart('/Manage/index/home.html');
     }
 
-    public function HomeAction(){
-
-       //   $this->ctr->DisplaySmart('/Manage/Index/menu.html');
-    }
     public function LogoutAction(){
        Session::DestoyUser();
        echo "退出";
     }
+
+    //  幻灯列表
+    public function SlideAction(){
+
+
+
+      
+    $this->ctr->DisplaySmart('/Manage/index/slide.html');
+   }
 
 
 
