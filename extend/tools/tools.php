@@ -43,14 +43,13 @@ function GetProjectInfo() {
     return $model->getRow($where);
 }
 
-
-
-
-
-
-
-
-
+function check_exiset($table,$item,$vel){ //检测是否存在
+    $model = new \Mysql($table);
+    $where =array(
+      array('name'=>$item,'oper'=> '=' ,'value'=>$vel),
+    );
+    return $model->getRow($where);
+}
 
 
 

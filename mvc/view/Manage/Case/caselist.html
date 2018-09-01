@@ -1,0 +1,47 @@
+
+
+<hr>
+<form method="Post" action='/Manage/Case/CaseAdd'>
+<textarea name='html' id="editor_id" name="content" style=" width:70%;height:300px;">
+    请输入内容 ... ...
+</textarea>
+<button type="submit" class= 'btn'>save</button>
+
+</form>
+
+
+{foreach $list as $row} 
+  {$row['c_articel']} 
+{/foreach}
+
+
+
+
+
+<!-- 文本编辑器组件 -->
+
+    <script charset="utf-8" src="/public/kindeditor/kindeditor-all.js"></script>
+    <script charset="utf-8" src="/public/kindeditor/lang/zh-CN.js"></script>
+
+    <script>
+        KindEditor.ready(function(K) {
+        var    options={
+            items:[
+                'source', '|', 'undo', 'redo', '|', 'preview',   'cut', 'copy', 'paste',
+                '|', 'justifyleft', 'justifycenter', 'justifyright',
+                'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+                'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen',
+                'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|','image',
+                'table', 'hr', 'pagebreak',
+                    'link', 'unlink', '|', 'about'
+                    ],
+            uploadJson:'/Public/Upload/kindeditUpload',
+            afterBlur:function(){   //关键点  获取不到内容
+                        this.sync();
+                       }
+                    }
+                    window.editor = K.create('#editor_id',options);
+            });
+ 
+    </script>
