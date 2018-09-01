@@ -14,9 +14,10 @@ class Controller{
 
 //以数组方式获取参数
 //  GetParam('a','b');
- public function GetParam(&$param,$method='GET'){
-    if(is_array($param)){        //数组获取
-      foreach($param as $key =>&$value) {
+ public function GetParam($param,$method='GET'){
+    $ret = $param;
+    if(is_array($ret)){        //数组获取
+      foreach($ret as  $key =>&$value) {
         if($method =='GET'){
           $val = (isset($_GET[$key]))?$_GET[$key]:"";
           $type = $value.'val';
@@ -27,7 +28,7 @@ class Controller{
           $value = $type($this->Clean($val));
         }
       }
-      return $param;
+      return $ret;
     } else {                    //单值获取
         if($method =='GET'){
           $val = (isset($_GET[$param]))?$_GET[$param]:"";
@@ -38,8 +39,55 @@ class Controller{
         }
     }
 }
-
-
+/*
+*   这两个函数动态添加 message (需求 jquery 以及页面中用来定位的 MSG 元素) 
+*   重要 必须在 页面中创建 id = MSG 元素 (span 不影响布局） 该函数自动添加 消息
+*   参数1 消息    
+*   msg2 为小字体 提示 默认为无
+*/
+ public function Message($msg,$msg2=''){
+  $html="     
+    <style> 
+      #msg {
+        display:inline-block;
+        margin-left:25%;
+        color:rgb(218, 59, 59);
+        font-size:15px;
+        font-weight:900;
+      }
+    </style>
+    <script>
+    $(document).ready(function(){
+      var html=\"<span id ='msg'> $msg <span style='font-weight:300;font-size:12px;color:rgb(150,150,150)'> $msg2 </span></span>\";
+              $('#MSG').append(html);
+     setTimeout(\"$('#msg').fadeOut('slow')\",3000);
+     setTimeout(\" $('#msg').remove()\",6000);
+   });
+    </script>  
+  ";
+ echo $html;
+ }
+ public function MessageLocation($msg,$url,$msg2=''){
+  $html="    
+  <style> 
+  #msg {
+    display:inline-block;
+    margin-left:25%;
+    color:rgb(218, 59, 59);
+    font-size:15px;
+    font-weight:900;
+  }
+</style>
+<script>
+$(document).ready(function(){
+  var html=\"<span id ='msg'> $msg <span style='font-weight:300;font-size:12px;color:rgb(150,150,150)'> $msg2 </span></span>\";
+          $('#MSG').append(html);
+     setTimeout(\"window.location.href='$url'\",3000)
+   });
+    </script>  
+  ";
+ echo $html;
+ }
  public function GetJson(){
     echo "none";
  }
@@ -72,6 +120,9 @@ class Controller{
     echo json_encode($arr);       
  }
 
+ public function CleanCache(){
+   $this->smart->clearAllCache();
+ }
 
 
 
@@ -98,12 +149,10 @@ private function Clean($str){
    return  str_replace(
      array(
        'script',
-       'yuxinji',
        'php'
      ),
      array( 
        '*',
-       'YUINJI',
        '*'
      ),
    $str);

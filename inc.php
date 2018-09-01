@@ -11,6 +11,8 @@ define('DIR_CTR',DIR_ROOT.'/mvc/controller/');
 define('DIR_MODEL',DIR_ROOT.'/mvc/model/');
 define('DIR_VIEW',DIR_ROOT.'/mvc/view/');
 define('DIR_EXTENDS',DIR_ROOT.'/extend//');
+define('DIR_SMARTCACHE',DIR_ROOT.'/templates_c');
+define('DIR_LOG',DIR_ROOT.'/log');
 //load file
 include "config.php";
 include DIR_APP."app.php";
