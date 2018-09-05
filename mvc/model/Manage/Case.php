@@ -35,6 +35,13 @@ class App_Model_Manage_Case{
  public function AddCase($set){
        return $this->mysql->insertValue($set);
     }
+
+ public function UpdateCase($id,$set){
+        $where =array(
+          array('name'=>'c_id','oper'=>'=','value'=>$id)
+        );
+       return $this->mysql->updateValue($set,$where);
+    }
     
 
  public function GetRow($id){
@@ -44,5 +51,14 @@ class App_Model_Manage_Case{
        return $this->mysql->getRow($where);
     }
     
+ public function Del($id){
+    $set =array(
+      'c_del'=>1,
+    );
+    $where =array(
+      array('name'=>'c_id','oper'=>'=','value'=>$id)
+    );
+       return $this->mysql->updateValue($set,$where);
+    }
 
 }

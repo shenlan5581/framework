@@ -14,23 +14,34 @@
                 <div class="input-group-prepend">
                     <span style = 'width:80px'class="input-group-text">标题</span>
                 </div>
-                   <input name='title' type="text" value="{if isset($row['c_title'])} {$row['c_title']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                   <input required="required"  name='title' type="text" value="{if isset($row['c_title'])} {$row['c_title']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>  
 
+        <div class ="row clearfix">
+            
+                    <div class ="col-sm-6">
+                        <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span style = 'width:80px'class="input-group-text">简介</span>
+                        </div>
+                           <textarea required="required"  name='biref' type="text" value="{if isset($row['c_biref'])} {$row['c_biref']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                            {if isset($row['c_biref'])} {$row['c_biref']} {/if}
+                            </textarea>
+                        </div>
+                    </div>
+                </div>  
+
     <div class ="row clearfix">
             <div class ="col-sm-6">
-                   {if isset($row['c_title_img'])}
-                      <img src="{$row['c_title_img']}"></img>
-                   {/if}
+                      <img id ='lit_img' class='border02' style ="text-align:center;font-size:15px;background-color:rgb(239, 237, 237); height:100px;width:auto;margin:5px;display:block"src="{$row['c_title_img']}" alt='微缩图'></img>  
                 <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
                     <span style = 'width:80px'class="input-group-text">微缩图</span>
                 </div>
-                   <input name='title_img' type="text" id ='title_img' value="{if isset($row['c_title'])} {$row['c_title']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                   <input  required="required"  name='title_img' type="text" id ='title_img' value="{if isset($row['c_title_img'])} {$row['c_title_img']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                    {if isset($row['c_title_img'])}
-                      <img src="{$row['c_title_img']}"></img>
                       <button type="button"class ="btn btn-sm btn-info" onclick=k_crop()>替换</button>
                    {else}
                       <button type="button"class ="btn btn-sm btn-info" onclick=k_crop()>上传</button>
@@ -48,8 +59,8 @@
                                         </div>
                                        <select name='type'   id = 'type' class="custom-select custom-select-sm" >
                                             {foreach $type as $k => $v}
-                                                  {if $curr_type == $k}
-                                                    <option selected ={$curr_type} value ={$curr_type}>{$v}</option>
+                                                  {if $row['c_type'] == $k}
+                                                    <option selected ={$row['c_type']} value ={$row['c_type']}>{$v}</option>
                                               {else}
                                                    <option  value ={$k}>{$v}</option>
                                               {/if}
@@ -68,8 +79,8 @@
                                     </div>
                                    <select name='style'  id = 'type' class="custom-select custom-select-sm" >
                                         {foreach $style as $k => $v}
-                                              {if $curr_type == $k}
-                                                <option selected ={$curr_type} value ={$curr_type}>{$v}</option>
+                                              {if $row['c_style'] == $k}
+                                                <option selected ={$row['c_style']} value ={$row['c_style']}>{$v}</option>
                                           {else}
                                                <option  value ={$k}>{$v}</option>
                                           {/if}
@@ -81,11 +92,11 @@
 
  <div class ="row clearfix">
         <div class ="col-sm-8">
-                <textarea name='html' id="editor_id" name="content" >
-                    请输入内容 ... ...
+                <textarea required="required"   name='html' id="editor_id" name="content" >
+                    {if isset($id)}{$row['c_articel']}{/if}
                 </textarea>
                 <br>
-                <input type ="hidden" name='id' value="{if isset($row['c_id'])}{$row['c_id']}{/if}"></input>
+                <input type ="hidden" name='id' value="{if isset($row['c_id']) || isset($id)}{$row['c_id']}{/if}"></input>
                 <input type ="hidden" name='oper' value="commit"></input>
                 <button   type="submit" class= 'btn btn-dark'>save</button>       
         </div> 
@@ -119,9 +130,18 @@
                       }
                       window.editor = K.create('#editor_id',options);
               });
-   
-      </script>
+
+
+
+$('#title_img').change(function(){
+    var url =$('#title_img').val();
+    $('#lit_img').attr('src',url);
+   });
+
+   </script>
   
+
+
 
 
 
@@ -154,6 +174,7 @@ doc: 使用Jcrop 作为前端处理
         /* 回调函数 裁剪成功调用*/
         function crop_callback(){
          $('#title_img').val(img_info['url']);
+         $('#lit_img').attr('src',img_info['url']);
         }
         function crop($){
             jQuery(function($){

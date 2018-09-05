@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 17:55:35
-  from '/home/k/https/www/framework/mvc/view/Manage/Case/CaseEdit.html' */
+/* Smarty version 3.1.32, created on 2018-09-05 21:46:46
+  from '/home/ki/https/www/framework/mvc/view/Manage/Case/CaseEdit.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b901897c0c910_55069449',
+  'unifunc' => 'content_5b904ec634cac6_15843425',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '17ec50f34784b2c30c3626ef2151d9c366e292c6' => 
+    '661df12bee63fba6602e5c946dc09af6b9f03197' => 
     array (
-      0 => '/home/k/https/www/framework/mvc/view/Manage/Case/CaseEdit.html',
-      1 => 1536170132,
+      0 => '/home/ki/https/www/framework/mvc/view/Manage/Case/CaseEdit.html',
+      1 => 1536184003,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b901897c0c910_55069449 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904ec634cac6_15843425 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <strong>
     <?php if (isset($_smarty_tpl->tpl_vars['oper']->value)) {?>
@@ -38,27 +38,39 @@ function content_5b901897c0c910_55069449 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="input-group-prepend">
                     <span style = 'width:80px'class="input-group-text">标题</span>
                 </div>
-                   <input name='title' type="text" value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_title'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['c_title'];?>
+                   <input required="required"  name='title' type="text" value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_title'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['c_title'];?>
  <?php }?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>  
 
+        <div class ="row clearfix">
+            
+                    <div class ="col-sm-6">
+                        <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span style = 'width:80px'class="input-group-text">简介</span>
+                        </div>
+                           <textarea required="required"  name='biref' type="text" value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_biref'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['c_biref'];?>
+ <?php }?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                            <?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_biref'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['c_biref'];?>
+ <?php }?>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>  
+
     <div class ="row clearfix">
             <div class ="col-sm-6">
-                   <?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_title_img'])) {?>
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['c_title_img'];?>
-"></img>
-                   <?php }?>
+                      <img id ='lit_img' class='border02' style ="text-align:center;font-size:15px;background-color:rgb(239, 237, 237); height:100px;width:auto;margin:5px;display:block"src="<?php echo $_smarty_tpl->tpl_vars['row']->value['c_title_img'];?>
+" alt='微缩图'></img>  
                 <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
                     <span style = 'width:80px'class="input-group-text">微缩图</span>
                 </div>
-                   <input name='title_img' type="text" id ='title_img' value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_title'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['c_title'];?>
+                   <input  required="required"  name='title_img' type="text" id ='title_img' value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_title_img'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['c_title_img'];?>
  <?php }?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                    <?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_title_img'])) {?>
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['row']->value['c_title_img'];?>
-"></img>
                       <button type="button"class ="btn btn-sm btn-info" onclick=k_crop()>替换</button>
                    <?php } else { ?>
                       <button type="button"class ="btn btn-sm btn-info" onclick=k_crop()>上传</button>
@@ -80,9 +92,9 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
-                                                  <?php if ($_smarty_tpl->tpl_vars['curr_type']->value == $_smarty_tpl->tpl_vars['k']->value) {?>
-                                                    <option selected =<?php echo $_smarty_tpl->tpl_vars['curr_type']->value;?>
- value =<?php echo $_smarty_tpl->tpl_vars['curr_type']->value;?>
+                                                  <?php if ($_smarty_tpl->tpl_vars['row']->value['c_type'] == $_smarty_tpl->tpl_vars['k']->value) {?>
+                                                    <option selected =<?php echo $_smarty_tpl->tpl_vars['row']->value['c_type'];?>
+ value =<?php echo $_smarty_tpl->tpl_vars['row']->value['c_type'];?>
 ><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
 </option>
                                               <?php } else { ?>
@@ -112,9 +124,9 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
-                                              <?php if ($_smarty_tpl->tpl_vars['curr_type']->value == $_smarty_tpl->tpl_vars['k']->value) {?>
-                                                <option selected =<?php echo $_smarty_tpl->tpl_vars['curr_type']->value;?>
- value =<?php echo $_smarty_tpl->tpl_vars['curr_type']->value;?>
+                                              <?php if ($_smarty_tpl->tpl_vars['row']->value['c_style'] == $_smarty_tpl->tpl_vars['k']->value) {?>
+                                                <option selected =<?php echo $_smarty_tpl->tpl_vars['row']->value['c_style'];?>
+ value =<?php echo $_smarty_tpl->tpl_vars['row']->value['c_style'];?>
 ><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
 </option>
                                           <?php } else { ?>
@@ -133,11 +145,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
  <div class ="row clearfix">
         <div class ="col-sm-8">
-                <textarea name='html' id="editor_id" name="content" >
-                    请输入内容 ... ...
+                <textarea required="required"   name='html' id="editor_id" name="content" >
+                    <?php if (isset($_smarty_tpl->tpl_vars['id']->value)) {
+echo $_smarty_tpl->tpl_vars['row']->value['c_articel'];
+}?>
                 </textarea>
                 <br>
-                <input type ="hidden" name='id' value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_id'])) {
+                <input type ="hidden" name='id' value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['c_id']) || isset($_smarty_tpl->tpl_vars['id']->value)) {
 echo $_smarty_tpl->tpl_vars['row']->value['c_id'];
 }?>"></input>
                 <input type ="hidden" name='oper' value="commit"></input>
@@ -178,10 +192,19 @@ echo $_smarty_tpl->tpl_vars['row']->value['c_id'];
                       }
                       window.editor = K.create('#editor_id',options);
               });
-   
-      <?php echo '</script'; ?>
+
+
+
+$('#title_img').change(function(){
+    var url =$('#title_img').val();
+    $('#lit_img').attr('src',url);
+   });
+
+   <?php echo '</script'; ?>
 >
   
+
+
 
 
 
@@ -221,6 +244,7 @@ doc: 使用Jcrop 作为前端处理
         /* 回调函数 裁剪成功调用*/
         function crop_callback(){
          $('#title_img').val(img_info['url']);
+         $('#lit_img').attr('src',img_info['url']);
         }
         function crop($){
             jQuery(function($){

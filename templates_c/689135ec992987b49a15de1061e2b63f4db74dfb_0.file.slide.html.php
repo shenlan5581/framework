@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 14:24:29
-  from '/home/k/https/www/framework/mvc/view/Manage/Slide/slide.html' */
+/* Smarty version 3.1.32, created on 2018-09-05 21:30:52
+  from '/home/ki/https/www/framework/mvc/view/Manage/Slide/slide.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8fe71db58ef3_18229735',
+  'unifunc' => 'content_5b904b0c0ecea3_61152531',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ce863acfcb7c1ae989bb0af9dc5a40a19e7d6827' => 
+    '689135ec992987b49a15de1061e2b63f4db74dfb' => 
     array (
-      0 => '/home/k/https/www/framework/mvc/view/Manage/Slide/slide.html',
-      1 => 1535785905,
+      0 => '/home/ki/https/www/framework/mvc/view/Manage/Slide/slide.html',
+      1 => 1536171294,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8fe71db58ef3_18229735 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904b0c0ecea3_61152531 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <style>
 #slide{

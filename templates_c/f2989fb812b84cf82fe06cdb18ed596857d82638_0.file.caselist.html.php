@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 16:08:31
-  from '/home/k/https/www/framework/mvc/view/Manage/Case/caselist.html' */
+/* Smarty version 3.1.32, created on 2018-09-05 21:29:53
+  from '/home/ki/https/www/framework/mvc/view/Manage/Case/caselist.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8fff7f8e8c10_66760787',
+  'unifunc' => 'content_5b904ad1de9e17_28572093',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '27827e0bbf1d2baec380e4b231289728f69f1d81' => 
+    'f2989fb812b84cf82fe06cdb18ed596857d82638' => 
     array (
-      0 => '/home/k/https/www/framework/mvc/view/Manage/Case/caselist.html',
-      1 => 1536163710,
+      0 => '/home/ki/https/www/framework/mvc/view/Manage/Case/caselist.html',
+      1 => 1536179717,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8fff7f8e8c10_66760787 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904ad1de9e17_28572093 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
     <span> 案例列表：</span><br>
     <span style="font-size: 10px;">管理案例信息相关</span> 
@@ -70,7 +70,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
-                                <?php if ($_smarty_tpl->tpl_vars['curr_type']->value == $_smarty_tpl->tpl_vars['k']->value) {?>
+                                <?php if ($_smarty_tpl->tpl_vars['curr_style']->value == $_smarty_tpl->tpl_vars['k']->value) {?>
                                   <option selected   ="<?php echo $_smarty_tpl->tpl_vars['curr_type']->value;?>
 " value =<?php echo $_smarty_tpl->tpl_vars['curr_style']->value;?>
 ><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
@@ -93,8 +93,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <table class="table">
     <thead>
       <tr>
+        <th scope="col">微缩图</th>
         <th scope="col">标题</th>
         <th scope="col">分类</th>
+        <th scope="col">风格 </th>
+        <th scope="col">简介</th>
         <th scope="col">日期</th>
         <th scope="col">操作</th>
       </tr>
@@ -106,17 +109,23 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
 ?> 
       <tr>
+        <td><img  style="height:50px;width:auto" src="<?php echo $_smarty_tpl->tpl_vars['row']->value['c_title_img'];?>
+"></td>
         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['c_title'];?>
  </td>
         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['c_type'];?>
  </td>
+        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['c_style'];?>
+ </td>
+        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['c_biref'];?>
+  </td>
         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['c_date'];?>
   </td>
         <td>
                     <a href="/Manage/Case/CaseEdit?id=<?php echo $_smarty_tpl->tpl_vars['row']->value['c_id'];?>
 " class="btn btn-sm btn-light"> 编辑 </a>
-                    <a href="/Manage/Case/CaseEdit?oper=delete&id=<?php echo $_smarty_tpl->tpl_vars['row']->value['c_id'];?>
-" class="btn   btn-sm btn-secondary"> 删除 </a>
+                    <a href="/Manage/Case/CaseDelete?id=<?php echo $_smarty_tpl->tpl_vars['row']->value['c_id'];?>
+" class="btn  btn-sm btn-secondary"> 删除 </a>
         </td>
       </tr>
 <?php

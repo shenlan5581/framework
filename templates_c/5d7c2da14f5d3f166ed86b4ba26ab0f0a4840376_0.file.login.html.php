@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 13:59:22
-  from '/home/k/https/www/framework/mvc/view/Manage/Sign/login.html' */
+/* Smarty version 3.1.32, created on 2018-09-05 21:37:34
+  from '/home/ki/https/www/framework/mvc/view/Manage/Sign/login.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8fe13a218d14_30423040',
+  'unifunc' => 'content_5b904c9ee62c29_74983935',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c3d31da1be84150631da10e67d6a12a6436cebab' => 
+    '5d7c2da14f5d3f166ed86b4ba26ab0f0a4840376' => 
     array (
-      0 => '/home/k/https/www/framework/mvc/view/Manage/Sign/login.html',
-      1 => 1535792844,
+      0 => '/home/ki/https/www/framework/mvc/view/Manage/Sign/login.html',
+      1 => 1536183449,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8fe13a218d14_30423040 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904c9ee62c29_74983935 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -63,13 +63,13 @@ function content_5b8fe13a218d14_30423040 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="form-group">
                     <hr>
                                 <div class="col-sm-12">
-                                   用户名 <input name ="user"class="form-control" id="inputEmail3" type="text" />
+                                   用户名 <input required="required" name ="user"class="form-control" id="inputEmail3" type="text" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
 
-                                    密码  <input name ="pass" class="form-control" id="inputPassword3" type="password" />
+                                    密码  <input required="required" name ="pass" class="form-control" id="inputPassword3" type="password" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -83,7 +83,7 @@ function content_5b8fe13a218d14_30423040 (Smarty_Internal_Template $_smarty_tpl)
                                 <div class="col-sm-offset-2 col-sm-10">
                     <hr>
                                      <button type="submit" class="btn btn-dark">登陆</button>
-                                     <a href="/Manage/Sign/Register"  class="btn btn-info">注册</a>
+                                     <a href="#"  class="btn btn-info">注册</a>
                                 </div>
                             </div>
 

@@ -67,7 +67,6 @@ class App_Controller_Manage_Sign{
        $ctr->DisplaySmart('/Manage/Sign/register.html');
        return;
     }
-
     public function TestAction(){
       $ctr = new Controller;
       $ctr->DisplaySmart('/Manage/Admin/test.html');
