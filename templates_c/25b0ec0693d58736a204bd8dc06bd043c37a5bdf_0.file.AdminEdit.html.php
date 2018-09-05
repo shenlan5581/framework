@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-01 09:04:01
+/* Smarty version 3.1.32, created on 2018-09-05 15:10:38
   from '/home/k/https/www/framework/mvc/view/Manage/Admin/AdminEdit.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8a5601475aa0_64237941',
+  'unifunc' => 'content_5b8ff1ee938cc5_35586862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '25b0ec0693d58736a204bd8dc06bd043c37a5bdf' => 
     array (
       0 => '/home/k/https/www/framework/mvc/view/Manage/Admin/AdminEdit.html',
-      1 => 1535785905,
+      1 => 1536160225,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8a5601475aa0_64237941 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8ff1ee938cc5_35586862 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
    <?php if (isset($_smarty_tpl->tpl_vars['message']->value)) {?>
    <div class="alert alert-success" role="alert">
@@ -42,7 +42,7 @@ echo $_smarty_tpl->tpl_vars['oper']->value;
                     <hr>
                                 <div class="col-sm-12">
                                     用户名
-                   <input class="form-control"  name ='name' id="inputEmail3" value="<?php if (isset($_smarty_tpl->tpl_vars['admin']->value)) {
+                   <input class="form-control"  name ='name'  value="<?php if (isset($_smarty_tpl->tpl_vars['admin']->value)) {
 echo $_smarty_tpl->tpl_vars['admin']->value;
 } else {
 }?>" type="text" />

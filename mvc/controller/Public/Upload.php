@@ -88,6 +88,15 @@ public function DeleteFileAction(){
 // for kindedit
 public function kindeditUploadAction(){
 
+  function alert($msg) {
+    header('Content-type: text/html; charset=UTF-8');
+    $json = new Services_JSON();
+    echo $json->encode(array('error' => 1, 'message' => $msg));
+    exit;
+  }
+
+
+
   require_once 'JSON.php';
   //文件保存目录路
   $save_path = DIR_ROOT.'/sources/kindedit_upload/';
@@ -102,7 +111,7 @@ public function kindeditUploadAction(){
     'file' => array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'htm', 'html', 'txt', 'zip', 'rar', 'gz', 'bz2'),
   );
   //最大文件大小
-  $max_size = 1000000;
+  $max_size = 200000;
   
   $save_path = realpath($save_path) . '/';
   
@@ -199,7 +208,10 @@ public function kindeditUploadAction(){
     $file_path = $save_path . $new_file_name;
     if (move_uploaded_file($tmp_name, $file_path) === false) {
       alert("上传文件失败。");
+    } else{
+       //上传图片路径
     }
+
     @chmod($file_path, 0644);
     $file_url = $save_url . $new_file_name;
   
@@ -209,12 +221,7 @@ public function kindeditUploadAction(){
     exit;
   }
   
-  function alert($msg) {
-    header('Content-type: text/html; charset=UTF-8');
-    $json = new Services_JSON();
-    echo $json->encode(array('error' => 1, 'message' => $msg));
-    exit;
-  }
+
   }
 
 

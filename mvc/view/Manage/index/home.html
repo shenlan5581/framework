@@ -1,9 +1,17 @@
 <br>
+<script>
+    
+    $(document).ready(function(){
+    $('#home').click(function(){
+        $('#home').toggle('fold',1000);
+    });
+
+    })
+</script>
 
 
 
-
-<div class="jumbotron">
+<div id='home' class="jumbotron">
     <h1 class="display-4">{$info['pro_name']}</h1>
     <p class="lead">{$info['pro_com']} </p>
     <hr class="my-4">

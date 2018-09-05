@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-01 09:07:55
+/* Smarty version 3.1.32, created on 2018-09-05 14:24:29
   from '/home/k/https/www/framework/mvc/view/Manage/Slide/slide.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8a56eb5ca5b2_43352728',
+  'unifunc' => 'content_5b8fe71db58ef3_18229735',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8a56eb5ca5b2_43352728 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8fe71db58ef3_18229735 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <style>
 #slide{

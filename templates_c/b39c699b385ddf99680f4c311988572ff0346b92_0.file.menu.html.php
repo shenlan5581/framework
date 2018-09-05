@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-01 09:03:53
+/* Smarty version 3.1.32, created on 2018-09-05 13:59:04
   from '/home/k/https/www/framework/mvc/view/Manage/layout-home/menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8a55f9a33917_91754029',
+  'unifunc' => 'content_5b8fe12867ba86_71484827',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b39c699b385ddf99680f4c311988572ff0346b92' => 
     array (
       0 => '/home/k/https/www/framework/mvc/view/Manage/layout-home/menu.html',
-      1 => 1535785905,
+      1 => 1536155909,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8a55f9a33917_91754029 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8fe12867ba86_71484827 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .c1{
   color:red;
 
 }
-
 </style>
 <!--主目录 -->
 <div id='k-menu ' >    
-        <nav class="navbar navbar-expand-lg navbar-light border02 " style="font-size:15px; background-color: #247e8c;">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-sm " style="font-size:13px;  background-color: #5d939a;">
                 <a class="navbar-brand" href="/Manage">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>

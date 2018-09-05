@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-01 09:03:59
+/* Smarty version 3.1.32, created on 2018-09-05 14:24:33
   from '/home/k/https/www/framework/mvc/view/Manage/Admin/AdminList.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8a55ff7cd1f1_81267399',
+  'unifunc' => 'content_5b8fe721cdb0e1_45361557',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d6d686e536465bcb8449f250c3338bf3e4410ee' => 
     array (
       0 => '/home/k/https/www/framework/mvc/view/Manage/Admin/AdminList.html',
-      1 => 1535785905,
+      1 => 1536068380,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8a55ff7cd1f1_81267399 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b8fe721cdb0e1_45361557 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  
  <div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
     <span> 管理员列表：</span><br>
