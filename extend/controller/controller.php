@@ -67,7 +67,7 @@ class Controller{
   ";
  echo $html;
  }
- public function MessageLocation($msg,$url,$msg2=''){
+ public function MessageLocation($msg,$url,$msg2='',$time=3000){
   $html="    
   <style> 
   #msg {
@@ -82,7 +82,7 @@ class Controller{
 $(document).ready(function(){
   var html=\"<span id ='msg'> $msg <span style='font-weight:300;font-size:12px;color:rgb(150,150,150)'> $msg2 </span></span>\";
           $('#MSG').append(html);
-     setTimeout(\"window.location.href='$url'\",3000)
+     setTimeout(\"window.location.href='$url'\",$time)
    });
     </script>  
   ";
@@ -91,8 +91,6 @@ $(document).ready(function(){
  public function GetJson(){
     echo "none";
  }
-
-
 
  /************输出**********/
  /*

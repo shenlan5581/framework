@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 21:46:46
+/* Smarty version 3.1.32, created on 2018-09-06 20:38:00
   from '/home/ki/https/www/framework/mvc/view/Manage/Case/CaseEdit.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b904ec634cac6_15843425',
+  'unifunc' => 'content_5b919028865511_57563998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '661df12bee63fba6602e5c946dc09af6b9f03197' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Manage/Case/CaseEdit.html',
-      1 => 1536184003,
+      1 => 1536232117,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b904ec634cac6_15843425 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b919028865511_57563998 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <strong>
     <?php if (isset($_smarty_tpl->tpl_vars['oper']->value)) {?>
@@ -145,7 +145,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
  <div class ="row clearfix">
         <div class ="col-sm-8">
-                <textarea required="required"   name='html' id="editor_id" name="content" >
+                <textarea required="required"   name='html' id="editor_id" name="content" style="width:100%; height:500px;">
                     <?php if (isset($_smarty_tpl->tpl_vars['id']->value)) {
 echo $_smarty_tpl->tpl_vars['row']->value['c_articel'];
 }?>

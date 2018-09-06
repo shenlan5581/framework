@@ -51,15 +51,18 @@ function check_exiset($table,$item,$vel){ //检测是否存在
     return $model->getRow($where);
 }
 //根据本地url资源删除资源
-function delete_src($url){ 
+function DeleteSrc($url){ 
   if($url){
-    echo $url;
-
+    $len = \strlen(LOCALNAME);
+    $path=substr($url,$len); 
+    $file = new \FILE;
+    if(!$file->delete(DIR_SOURCES.$path)){
+      trigger_error("资源删除错误", E_USER_ERROR);
+    }
   }
 }
 
        /*  正则匹配  */
-
      // 获取某一字符串(需要正则）
  function Getstr($str,$regex){
       $name;

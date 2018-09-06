@@ -1,7 +1,7 @@
 <?php 
-use function TOOLS\dele_src;
 
 include_once "Base.php";
+
 class App_Controller_Manage_Case extends Base_Manage{
     public function __construct(){
       parent::__construct();
