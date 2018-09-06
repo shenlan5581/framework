@@ -50,6 +50,30 @@ function check_exiset($table,$item,$vel){ //检测是否存在
     );
     return $model->getRow($where);
 }
+//根据本地url资源删除资源
+function delete_src($url){ 
+  if($url){
+    echo $url;
+
+  }
+}
+
+       /*  正则匹配  */
+
+     // 获取某一字符串(需要正则）
+ function Getstr($str,$regex){
+      $name;
+      $pattern = $regex;
+      preg_match($pattern, $str,$name);
+      return $name[1];
+  }
+  // 某字符串多次匹配 (需要正则）
+ function GetstrList($str,$regex){
+      $list = array();
+      $pattern = $regex;
+      preg_match_all($pattern, $str,$list);
+      return $list[1];
+  }
 
 
 

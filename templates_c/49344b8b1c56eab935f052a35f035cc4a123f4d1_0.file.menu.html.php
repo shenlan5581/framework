@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-31 22:37:59
+/* Smarty version 3.1.32, created on 2018-09-05 21:39:04
   from '/home/ki/https/www/framework/mvc/view/Manage/layout-home/menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b89c347a2cb36_62414926',
+  'unifunc' => 'content_5b904cf825c8b6_05474255',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '49344b8b1c56eab935f052a35f035cc4a123f4d1' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Manage/layout-home/menu.html',
-      1 => 1535751867,
+      1 => 1536183538,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b89c347a2cb36_62414926 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904cf825c8b6_05474255 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .c1{
   color:red;
 
 }
-
 </style>
 <!--主目录 -->
 <div id='k-menu ' >    
-        <nav class="navbar navbar-expand-lg navbar-light border02 " style="font-size:15px; background-color: #247e8c;">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-sm " style="font-size:13px;  background-color: #5d939a;">
                 <a class="navbar-brand" href="/Manage">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -52,7 +51,7 @@ function content_5b89c347a2cb36_62414926 (Smarty_Internal_Template $_smarty_tpl)
                         工程案例
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/Manage/Case/CaseList">家装案例</a>
+                        <a class="dropdown-item" href="/Manage/Case/CaseList">案例</a>
                         <a class="dropdown-item" href="/Manage/Case/EditList">VR</a>
                       </div>
                     <li class="nav-item dropdown">

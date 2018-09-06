@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-01 09:04:14
-  from '/home/k/https/www/framework/mvc/view/Manage/Sign/logout.html' */
+/* Smarty version 3.1.32, created on 2018-09-05 21:32:36
+  from '/home/ki/https/www/framework/mvc/view/Manage/Sign/logout.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8a560e218557_45875791',
+  'unifunc' => 'content_5b904b74e2b5a4_98469977',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '4deda39360df016f9b3277d1ba34ececc63d2608' => 
+    'a24175a5b0e32b4f923ed106da58f0740f660d92' => 
     array (
-      0 => '/home/k/https/www/framework/mvc/view/Manage/Sign/logout.html',
-      1 => 1535785905,
+      0 => '/home/ki/https/www/framework/mvc/view/Manage/Sign/logout.html',
+      1 => 1536171294,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8a560e218557_45875791 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904b74e2b5a4_98469977 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>

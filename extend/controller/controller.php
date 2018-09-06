@@ -127,9 +127,20 @@ $(document).ready(function(){
 
 
 
+
+
+
+
 /* private ***************** 过滤*/
  //输入过滤 
  // 以下调用了不同的过滤（注意）
+
+
+
+
+
+
+
 private function Clean($str){  
     #替换成实体字符
     $str=htmlspecialchars($str);
@@ -157,6 +168,8 @@ private function Clean($str){
      ),
    $str);
  }
+
+
 
 
 

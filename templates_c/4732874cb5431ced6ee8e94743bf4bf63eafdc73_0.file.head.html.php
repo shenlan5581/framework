@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-08-31 22:37:59
+/* Smarty version 3.1.32, created on 2018-09-05 21:29:53
   from '/home/ki/https/www/framework/mvc/view/Manage/layout-home/head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b89c347a16620_25431463',
+  'unifunc' => 'content_5b904ad1dd6ee4_26689170',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4732874cb5431ced6ee8e94743bf4bf63eafdc73' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Manage/layout-home/head.html',
-      1 => 1535745971,
+      1 => 1536171294,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b89c347a16620_25431463 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b904ad1dd6ee4_26689170 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -29,6 +29,9 @@ function content_5b89c347a16620_25431463 (Smarty_Internal_Template $_smarty_tpl)
 <link  href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 <?php echo '<script'; ?>
  src="/public/jquery-2.1.3.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/public/jquery-ui-1.12.1/jquery-ui.js"><?php echo '</script'; ?>
 >
 <!-- bootstrap-->
 <?php echo '<script'; ?>
@@ -43,17 +46,18 @@ function content_5b89c347a16620_25431463 (Smarty_Internal_Template $_smarty_tpl)
 <!-- bootstrap-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Admin</title>
+<title>后台管理</title>
 </head> 
 
 
 <style>
 
 body{
-    width:80%;
+ 
     margin:auto;
-    line-height:16px;
-     font-size: 15px;
+    line-height:14px;
+    font-size: 12px;
+    width:99%;
 }
 
 
@@ -62,7 +66,7 @@ body{
 
 <body>
  <div id ='admin_info'>
-        WelCome: <span style="display:inline-block;margin-left:30px;font-weight:900;color:rgb(18, 116, 220)"><?php echo $_smarty_tpl->tpl_vars['user']->value['a_user'];?>
+         WelCome: <span style="display:inline-block;margin-left:30px;font-weight:900;color:rgb(18, 116, 220)"><?php echo $_smarty_tpl->tpl_vars['user']->value['a_user'];?>
  </span>
        <a  href ="/Manage/Sign/Logout" class="btn a2 "> 退出 </a>
  <!--message-->

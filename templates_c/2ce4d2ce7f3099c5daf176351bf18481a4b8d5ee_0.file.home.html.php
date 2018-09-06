@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-01 09:36:50
+/* Smarty version 3.1.32, created on 2018-09-05 21:53:42
   from '/home/https/www/framework/mvc/view/Manage/index/home.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8a5db22542b9_27934799',
+  'unifunc' => 'content_5b905066d06152_35073932',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2ce4d2ce7f3099c5daf176351bf18481a4b8d5ee' => 
     array (
       0 => '/home/https/www/framework/mvc/view/Manage/index/home.html',
-      1 => 1535794102,
+      1 => 1536184331,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8a5db22542b9_27934799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b905066d06152_35073932 (Smarty_Internal_Template $_smarty_tpl) {
 ?><br>
+<?php echo '<script'; ?>
+>
+    
+    $(document).ready(function(){
+    $('#home').click(function(){
+        $('#home').toggle('fold',1000);
+    });
+
+    })
+<?php echo '</script'; ?>
+>
 
 
 
-
-<div class="jumbotron">
+<div id='home' class="jumbotron">
     <h1 class="display-4"><?php echo $_smarty_tpl->tpl_vars['info']->value['pro_name'];?>
 </h1>
     <p class="lead"><?php echo $_smarty_tpl->tpl_vars['info']->value['pro_com'];?>
