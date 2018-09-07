@@ -36,6 +36,22 @@ class DB_Base {
         }
         return $row;
     }
+    public function getRowUnion($where,$more_table) {
+        if(empty($where && $more_table) && empty($more_table)){
+            trigger_error("Update the mysql  where conditions cannot be empty");
+            return false;
+        }
+        if($this->_delete_field){
+            $where[] = array('name'=>$this->_delete_field,'oper'=>'=','value'=>0);
+        }
+        $sql = $this->formatSelectOneUnionSql($where,$more_table);
+        $row = DB::fetch_first($sql);
+        if ($row === false) {
+            trigger_error("query mysql failed.", E_USER_ERROR);
+            return false;
+        }
+        return $row;
+    }
 
     public function getList($where = array(), $index = 0, $count = 20, $sort = array(), $field = array()) {
         if($this->_delete_field){
@@ -52,6 +68,24 @@ class DB_Base {
         }
         return $ret;
     }
+    // k add 多表查询
+    public function getListUnion($where = array(), $index = 0, $count = 20, $sort = array(), $field = array(),$more_table=array()) {
+        if(empty($where) && empty($more_table)){
+            trigger_error("Update the mysql  where conditions cannot be empty");
+            return false;
+        }
+        if($this->_delete_field){
+            $where[] = array('name'=>$this->_delete_field,'oper'=>'=','value'=>0);
+        }
+        $sql = $this->formatSelectUnionSql($field, $where, $sort, $index, $count,$more_table);
+        $ret =DB::fetch_all($sql);
+        if ($ret === false) {
+            trigger_error("query mysql failed.", E_USER_ERROR);
+            return false;
+        }
+        return $ret;
+    }
+
     public function getCount($where = array()) {
         if($this->_delete_field){
             $where[] = array('name'=>$this->_delete_field,'oper'=>'=','value'=>0);
@@ -90,6 +124,7 @@ class DB_Base {
         }
         return $ret;
     }
+
 
     public function deleteValue($where) {
         if(empty($where)){
@@ -233,10 +268,34 @@ class DB_Base {
      * @param bool $isand
      * @return string
      */
-    public function formatSelectSql($fields = '', $where = array(), $sort = array(), $index = 0, $count = 20, $isand = true) {
+    public function formatSelectSql($fields = '', $where = array(), $sort = array(), $index = 0, $count = 20,$isand = true) {
         $sql = "select ";
         $sql .= $this->getFieldString($fields);
         $sql .= " from `".DB::table($this->_table)."` ";
+        $sql .= $this->formatWhereSql($where, $isand);
+	    $sql .= $this->getSqlSort($sort);
+	    $sql .= $this->formatLimitSql($index,$count);
+        return $sql;
+    }
+    /**a  k
+     * 格式化形成查询SQL语句
+     * @param array $fields e.g. array('id', 'count' => 'total', 'name')
+     * @param array $where
+     * @param array $sort e.g. array('count' => 'DESC', 'id' => 'ASC')
+     * @param int $index
+     * @param int $count
+     * @param bool $isand
+     * @return string
+     */
+    public function formatSelectUnionSql($fields = '', $where = array(), $sort = array(), $index = 0, $count = 20,$more_table, $isand = true) {
+        global $config;
+        $pre = $config['db']['default']['tablepre']; //表前缀
+        $sql = "select ";
+        $sql .= $this->getFieldString($fields);
+        $sql .= " from `".DB::table($this->_table)."` ";
+        foreach ($more_table as $k => $v){
+            $sql.=" left join `".$pre.$v[0]."` on ".$pre.$v[1]." = ".$pre.$v[2]."  ";
+        }
         $sql .= $this->formatWhereSql($where, $isand);
 	    $sql .= $this->getSqlSort($sort);
 	    $sql .= $this->formatLimitSql($index,$count);
@@ -264,6 +323,25 @@ class DB_Base {
         $fields = $this->getFieldString($fields);
         $sql .= $fields;
         $sql .= " from `".DB::table($this->_table)."` ";
+        $sql .= $this->formatWhereSql($where);
+        return $sql;
+    }
+    /** k add
+     * 获取单条数据记录
+     * @param array $where @see $this->formatWhereSql
+     * @param array $fields @see $this->formatSelectSql
+     * @return string
+     */
+    public function formatSelectOneUnionSql($where,$more_table,$fields = '') {
+        global $config;
+        $pre = $config['db']['default']['tablepre']; //表前缀
+        $sql = "select ";
+        $fields = $this->getFieldString($fields);
+        $sql .= $fields;
+        $sql .= " from `".DB::table($this->_table)."` ";
+        foreach ($more_table as $k => $v){
+            $sql.=" left join `".$pre.$v[0]."` on ".$pre.$v[1]." = ".$pre.$v[2]."  ";
+        }
         $sql .= $this->formatWhereSql($where);
         return $sql;
     }

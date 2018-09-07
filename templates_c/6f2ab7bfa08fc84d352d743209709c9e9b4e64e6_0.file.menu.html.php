@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 21:53:42
+/* Smarty version 3.1.32, created on 2018-09-06 22:19:55
   from '/home/https/www/framework/mvc/view/Manage/layout-home/menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b905066d02000_03034227',
+  'unifunc' => 'content_5b91a80b226c02_95744001',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f2ab7bfa08fc84d352d743209709c9e9b4e64e6' => 
     array (
       0 => '/home/https/www/framework/mvc/view/Manage/layout-home/menu.html',
-      1 => 1536184331,
+      1 => 1536266969,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b905066d02000_03034227 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b91a80b226c02_95744001 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .c1{
   color:red;
@@ -43,7 +43,7 @@ function content_5b905066d02000_03034227 (Smarty_Internal_Template $_smarty_tpl)
                         图片管理 
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/Manage/Slide">幻灯片</a>
+                        <a class="dropdown-item" href="/Manage/Slide/Slide">幻灯片</a>
                       </div>
 
                     <li class="nav-item dropdown">

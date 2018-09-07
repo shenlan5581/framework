@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 21:54:29
+/* Smarty version 3.1.32, created on 2018-09-06 22:19:55
   from '/home/https/www/framework/mvc/view/Manage/Case/caselist.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b9050958a1b03_53654356',
+  'unifunc' => 'content_5b91a80b238d67_09925204',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b9050958a1b03_53654356 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b91a80b238d67_09925204 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
     <span> 案例列表：</span><br>
     <span style="font-size: 10px;">管理案例信息相关</span> 
