@@ -3,9 +3,9 @@
 
 class App_Controller_Wxccsj_Home{
   
-    public function wx_infoAction{
+    public function wxinfoAction(){
       
-       echo "KK";
+       echo "KkkkK";
 
 
 
