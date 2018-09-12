@@ -32,7 +32,7 @@ class App_Controller_Manage_Case extends Base_Manage{
       $list = $model->List(($index-1)*$items,$items,$type,$style);
       //信息转换
       foreach($list as $k => &$val){
-         $val['c_articel'] =htmlspecialchars_decode($val['c_articel']); 
+         $val['c_article'] =htmlspecialchars_decode($val['c_article']); 
          $val['c_date'] =date("Y-m-d H:i:s", $val['c_date']); 
          $val['c_type'] =$this->Case_Type($val['c_type']); 
          $val['c_style'] =$this->Case_Style($val['c_style']); 
@@ -73,7 +73,7 @@ public function CaseEditAction(){
                 'c_type'=>$type,
                 'c_style'=>$style,
                 'c_biref'=>$biref,
-                'c_articel'=>$html,
+                'c_article'=>$html,
                 'c_date'=>time(),
               );
               if($editid){
@@ -82,7 +82,7 @@ public function CaseEditAction(){
                   $ret = $model->AddCase($set);
               }
               if($ret){
-                  $this->ctr->MessageLocation('操作成功','/Manage/Case/CaseList','3秒后跳转');
+                  $this->ctr->MessageLocation('操作成功','/Manage/Case/CaseList','3秒后跳转',0);
                   die();
               }else {
                   $this->ctr->Message('操作失败','请检查输入');

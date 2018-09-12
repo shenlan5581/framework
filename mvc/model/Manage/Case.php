@@ -5,7 +5,7 @@ class App_Model_Manage_Case{
         $this->mysql = new Mysql('case');
     }
 
- public function List($index,$count,$type,$style){
+ public function List($index,$count,$type=false,$style=false){
         $where =array(
           array('name'=>'c_del','oper'=>'=','value'=>0)
         );
