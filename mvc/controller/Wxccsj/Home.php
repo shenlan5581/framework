@@ -22,6 +22,10 @@ public function CaseAction(){
     $this->ctr->DisplayJson('success',$ret);  
 }
 
+ 
+
+ 
+
 /* 
 返回整个数组或者 某个值
 */
@@ -57,6 +61,10 @@ public function CaseAction(){
       return $style;
    }
  }
+
+
+
+
 
 
 

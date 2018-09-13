@@ -1,4 +1,27 @@
-<style>
+<?php
+/* Smarty version 3.1.32, created on 2018-09-12 16:44:08
+  from '/home/ki/https/www/framework/mvc/view/Manage/layout-home/menu.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32',
+  'unifunc' => 'content_5b99425860c968_04937080',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '49344b8b1c56eab935f052a35f035cc4a123f4d1' => 
+    array (
+      0 => '/home/ki/https/www/framework/mvc/view/Manage/layout-home/menu.html',
+      1 => 1536764901,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5b99425860c968_04937080 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
 .c1{
   color:red;
 
@@ -72,7 +95,7 @@ button{
                         <a class="dropdown-item" href="/Manage/Admin/AdminEdit">创建管理员</a>
                       </div>
 
-                {if $user['a_level'] > 5}
+                <?php if ($_smarty_tpl->tpl_vars['user']->value['a_level'] > 5) {?>
                     <li class="nav-item dropdown">
                       <a style="color:rgb(43, 43, 43) ; weigth:900;"    class="nav-link dropdown-toggle " style="color:rgb(0, 0, 0)" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           后台接口
@@ -81,7 +104,7 @@ button{
                         <a style="color:rgb(86, 86, 86)" class="dropdown-item" href="/Manage/Transaction/">后台接口</a>
                         <div class="dropdown-divider"></div>
                       </div>
-                {/if}
+                <?php }?>
                       
 
 
@@ -89,3 +112,5 @@ button{
                 </div>
               </nav>
      </div>
+<?php }
+}
