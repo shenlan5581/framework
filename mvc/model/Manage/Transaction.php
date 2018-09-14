@@ -1,4 +1,7 @@
 <?php 
+/* 后台业务管理
+*
+*/
  class App_Model_Manage_Transaction{
     private  $mysql ;
     public function __construct(){

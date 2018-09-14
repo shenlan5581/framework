@@ -1,5 +1,9 @@
 <?php
 include_once "Base.php";
+/*    
+后台业务管理
+创建业务模型文件
+*/
 class App_Controller_Manage_Transaction extends Base_Manage{
       //  幻灯列表
       public function __construct() {
@@ -26,13 +30,15 @@ public function createAction(){
 
 
       $this->ctr->DisplaySmart('/Manage/Transaction/TransactionCreate.html');
-
      }else{
 
 
-     $this->ctr->DisplaySmart('/Manage/Transaction/TransactionTB.html');
+
+
+    // $this->ctr->DisplaySmart('/Manage/Transaction/TransactionTB.html');
      }
 }
+
 
 
 

@@ -32,8 +32,23 @@ DB_Base:
                     );
      getListUnion($where = array(), $index = 0, $count = 20, $sort = array(), $field = array()，$more_table) {
      getCount($where = array()) 
-     insertValue(array $data) 
+
+     insertValue(array $data)
+
+     k add 联合插入  (注意 data 和 table 中的元素对应 都是二位数组 和 LIst不一样）
+     @pararm $more_table (最后一个参数是联合表数据结构）
+           结构说明: $union_table=array(    ps;其中主表key是在实例化mysql时的表
+                       1 表名     主表key       从表 key       插入数据
+                      'admin' => array(
+                               Skey=>admin.a_id',       //外健
+                               data=>array();
+                      );
+     insertValueUnion(array $data,array more_table) 
+
      updateValue($set, $where)
+
+
+
      deleteValue($where) 
      getRowById($id){
      updateById($set,$id)
@@ -42,3 +57,60 @@ DB_Base:
 
 }//class end
 //初始化数据库
+
+
+/*
+场景： 多对1关系
+根据主表返回的ID 在从表中创建记录外健ID 等于主表ID
+Example:
+$mysql = new Mysql('admin');
+$data =array(
+    'admin'=> array(
+           'Skey'=>null,
+           'data'=>array(
+                 'a_user'=>'ss',
+                 'a_email'=>'ss',
+                 'a_create_time'=>555,
+                 'a_pass'=>'ppp',
+                 'a_level'=>4,
+           ),
+     ),
+    'test'=> array(
+           'Skey'=>'t_a_id',
+           'data'=>array(
+                 't_a_id'=>'ss',
+           ),
+     ),
+);
+$ret = $mysql->insertValueUnion($data);
+echo $ret;                            
+
+// 多表更新
+$data =array(
+    'admin'=> array(
+           'where'=>array(
+              array('name'=>'a_id','oper'=>'=','value'=>40),
+           ),
+           'set'=>array(
+                 'a_user'=>'ss',
+                 'a_email'=>'ss',
+                 'a_create_time'=>555,
+                 'a_pass'=>'ppp',
+                 'a_level'=>4,
+           ),
+     ),
+    'test'=> array(
+           'where'=>array(
+              array('name'=>'t_a_id','oper'=>'=','value'=>40),
+           ),
+           'set'=>array(
+            'kk'=>'kkkkkkkkk',
+           ),
+     ),
+);
+
+       $mysql = new Mysql('admin');
+       $ret = $mysql->upDateValueUnion($data);
+       echo $ret;                            
+
+*/

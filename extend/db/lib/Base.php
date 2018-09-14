@@ -108,16 +108,53 @@ class DB_Base {
         }
         return $ret;
     }
+//k add  多表插入
+    public function insertValueUnion(array $data) {
+        $retID= false;
+        foreach($data as $k =>&$v){
+            //插入数据
+            $this->_table =$k;
+            if($v['Skey'] ==null){ //主表标识
+               $retID = $this->insert($v['data'],true);
+            } else {  //从表
+                $v['data'][$v['Skey']] = $retID;
+                $retID = $this->insert($v['data'],true);
+            }
+            if ($retID === false) {
+                trigger_error("query mysql failed.", E_USER_ERROR);
+                return false;
+            }
+        }
+        return $retID;
+    }
 
     public function updateValue($set, $where){
         if(empty($where)){
             trigger_error("Update the mysql  where conditions cannot be empty");
             return false;
         }
-
         $sql = $this->formatUpdateSql($set,$where);
         $ret = DB::query($sql);
 
+        if ($ret === false) {
+            trigger_error("query mysql failed.", E_USER_ERROR);
+            return false;
+        }
+        return $ret;
+    }
+// k add   多表更新
+    public function updateValueUnion($info){
+        foreach($info as $k =>$v){
+            $this->_table =$k;
+            $where =$v['where'];
+            $set =$v['set'];
+            if(empty($where)){
+                trigger_error("Update the mysql  where conditions cannot be empty");
+                return false;
+            }
+            $sql = $this->formatUpdateSql($set,$where);
+            $ret = DB::query($sql);
+        }
         if ($ret === false) {
             trigger_error("query mysql failed.", E_USER_ERROR);
             return false;
@@ -474,6 +511,32 @@ class DB_Base {
 
         return $sql;
     }
+
+  //kkk add 多表更新
+    public function formatUpdateSqlUnion(array $sets, array $where,array $more_table) {
+        if (empty($where)&&emtpy($more_table)) {
+            return false;
+        }
+        global $config;
+        $pre = $config['db']['default']['tablepre']; //表前缀
+        $sql = "update `".DB::table($this->_table);
+        foreach ($more_table as $k => $v){
+            $sql.=" left join `".$pre.$v[0]."` on ".$pre.$v[1]." = ".$pre.$v[2]."  ";
+        }
+        $sql .="` set ";
+        $sql .= $this->formatUpdateField($sets);
+//        plum_msg_dump($sql);
+        $sql .= $this->formatWhereSql($where);
+
+        return $sql;
+    }
+
+
+
+
+
+
+
 
     /**
      * 格式化update字段

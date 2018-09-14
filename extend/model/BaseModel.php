@@ -13,15 +13,77 @@
 数据结构:
       $this->Model = array(
 */
+
  
+/*
+*
+*/
+$info =array(
+    'db'=>'framework',
+    'table'=>array('case','admin'),
+    'field'=>array('',''),
+    'condition'=>array(
+    array(),
+    ),
+);
+
 class Model{
-    protected $Model ;
-    protected $Result;
-    #具体业务
-    protected function Handler($ctr){}
-  
-      
+    protected $Information ;// 需求信息
+    protected function Set($info){
+      $this->Information = $info;
     }
+    protected function List(){
+       
+
+    }
+
+    protected function Edit(){
+
+       
+
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*     ***** version 1.0  （note: 不可控因素太多 pause 2018.8.19:3:26) ****        
    
