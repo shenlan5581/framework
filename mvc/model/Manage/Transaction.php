@@ -4,6 +4,8 @@
     public function __construct(){
     $this->mysql = new Mysql("transaction");
     }
+
+ 
     public function list($index=0,$count=10,$name=false){
         $where=array();
         if($name){
