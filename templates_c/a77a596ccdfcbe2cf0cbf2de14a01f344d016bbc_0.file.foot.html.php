@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-14 12:55:30
+/* Smarty version 3.1.32, created on 2018-09-16 10:26:25
   from '/home/ki/https/www/framework/mvc/view/Index/index/layout/foot.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b9bafc26c7999_41641432',
+  'unifunc' => 'content_5b9e2fd1bcf1f6_15000660',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a77a596ccdfcbe2cf0cbf2de14a01f344d016bbc' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Index/index/layout/foot.html',
-      1 => 1536757496,
+      1 => 1537004813,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b9bafc26c7999_41641432 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b9e2fd1bcf1f6_15000660 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 #foot{
   background-color: rgba(255, 255, 255, 0.749);

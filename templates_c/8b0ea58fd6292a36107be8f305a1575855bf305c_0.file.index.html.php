@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-14 12:55:30
+/* Smarty version 3.1.32, created on 2018-09-16 10:26:25
   from '/home/ki/https/www/framework/mvc/view/Index/index/index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b9bafc26b11c8_39240815',
+  'unifunc' => 'content_5b9e2fd1bcd0c2_78194041',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b0ea58fd6292a36107be8f305a1575855bf305c' => 
     array (
       0 => '/home/ki/https/www/framework/mvc/view/Index/index/index.html',
-      1 => 1536757496,
+      1 => 1537004813,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b9bafc26b11c8_39240815 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b9e2fd1bcd0c2_78194041 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 	#item{
 		font-size:20px;

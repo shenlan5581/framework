@@ -2,6 +2,7 @@
 
 use function TOOLS\Check_len;
 use function TOOLS\GetProjectIndo;
+use function WECHAT\WechatCheck;
 /*
 * admin 管理员 注册登陆相关
 */
@@ -25,6 +26,18 @@ class App_Controller_Manage_Sign{
               $ret = $model->Login($user);
               if($ret){ #查询成功
                 if(TOOLS\Salt_Password($user['pass']) ===$ret['a_pass']){
+                    //设定微信 key
+                  if(WECHATURL != false) {
+                    $url = WECHATURL;
+                    $key=json_decode(CLIENT\Client_Get($url),true);
+                    if(!$key){
+                      trigger_error("errmsg=微信开发后台access_key 获取失败", E_USER_ERROR);
+                      }else{
+                      Session::Destoy('Wechat');
+                      Session::Set('Wechat',$key['access_token']);
+                      }
+                    }
+                    //设置
                     Session::SetAdminID($ret['a_id']);
                     //跳转至首页
                     header('Location:/Manage');

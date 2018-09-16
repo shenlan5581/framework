@@ -34,6 +34,28 @@ class Session{
        }
    }
 
+///// 设置一些数据 
+ static  public function Get($k){
+       if(isset($_SESSION[$k])){
+           return $_SESSION[$k];
+       } else {
+           return false;
+       }
+   }
+ static  public function Set($k,$v){
+       if(isset($_SESSION[$k])){
+          return false;
+       } else {
+         $_SESSION[$k] =$v;
+       }
+   }
+ static  public function Destoy($k){
+           unset($_SESSION[$k]);
+   }
+
+
+
+
 
 /*user*/ 
  static  public function GetUserID(){
