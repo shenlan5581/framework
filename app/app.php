@@ -10,21 +10,9 @@
     *  创建日志对象
     *  分发
     */ 
-    public function Run($config){
+    public function Run(){
         //session
         session_start();
-        // 屏蔽错误
-        if(RUNLEVEL === 'RELEASE'){
-            error_reporting(0);
-        }
-        //组件加载    
-        $this->LoadExtends($config['extends']); 
-        //模型文件加载
-        $this->LoadModel(DIR_ROOT.'/mvc/model'); 
-        //日志
-        $GLOBALS['log'] = new Log($config['log']);
-        //DB
-        DB::init($config['db']['default']);
         //分发
         $this->Distribute(); 
     }
@@ -34,13 +22,10 @@
  1获取uri 2加载指定模块文件 3实例化对象 4调用
 */
     private function Distribute(){
-        global $base_url;
         $query  =$this-> parse_uri();  
         //请求的模块  if module?module:def  
+        $project = isset($project) && $project ? $project : (empty($query) ? DEF_MODULE : trim(array_shift($query)));
         $module = isset($module) && $module ? $module : (empty($query) ? DEF_MODULE : trim(array_shift($query)));
-        //设置基URL
-        $base_url = isset($_SERVER['PHP_SELF']) && trim($_SERVER['PHP_SELF'], '/') != 'index.php' ? '/' : '/' . $module . '/';
-        #echo $base_url;
         $controller = empty($query) ? DEF_CONTROLLER : trim(array_shift($query));
         $action = empty($query) ? DEF_ACTION : trim(array_shift($query));
         while(!empty($query)) {
@@ -50,8 +35,26 @@
             $val = trim($val) ? trim($val) : '';
             $_REQUEST[$key] = $val;
         } 
+#在此加载项目 配置 及相应文件 (注意部分宏是写在项目的define 文件中）
+        //加载项目配置
+        @require_once DIR_ROOT."/project/$project/define.php";
+        $config = include PROJECT_CONFIG;
+        //组件加载    
+        $this->LoadExtends($config['extends']); 
+        //模型文件加载
+        $this->LoadFromDir(PROJECT_MODEL); 
+        //日志
+        $GLOBALS['log'] = new Log(LOG_FILE);
+        //DB 初始化DB
+         DB::init($config['db']['default']);
+        // 屏蔽错误
+        if(RUNLEVEL === 'RELEASE'){
+            error_reporting(0);
+        }
+
+#在此加载 控制器 调用
         //加载控制器文件           ctr/module/file_name
-        @include_once DIR_CTR.$module.'/'.$controller.'.php';    
+        @include_once PROJECT_CTR.$module.'/'.$controller.'.php';    
         //定义 类前缀后缀          (实例化的类名)Ctr_module_class 
         $controller =DEF_CLASS_PREFIX.ucfirst(strtolower($module)).'_'.ucfirst(strtolower($controller));
         $action = strtolower($action).'Action';
@@ -90,15 +93,6 @@
           $file = DIR_EXTENDS.$k.'/'.$v.'.php';
           include_once($file);
        }
-    }
-    /*
-    *    加载扩展组件相应文件
-    */
-    private function loadModel($path){
-        $this->loadfromdir($path);
-    }
-    private function loadController($path){
-        $this->loadfromdir($path);
     }
     /*
     * 加载文件夹下所有文件

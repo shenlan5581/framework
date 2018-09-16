@@ -8,7 +8,7 @@ include_once DIR_ROOT.'/extend/controller/clean.php';
 class Controller{  
  private $smart;
  public function __construct(){
-   include_once DIR_ROOT.'/public/smarty/libs/Smarty.class.php';
+   include_once DIR_ROOT.'/extend/controller/smarty/libs/Smarty.class.php';
    $this->smart = new Smarty();
  }
 
@@ -103,7 +103,7 @@ $(document).ready(function(){
  *   输出 smart 页面
  */
  public function DisplaySmart($file){
-   $file =DIR_VIEW.$file; 
+   $file =PROJECT_VIEW.$file; 
    $this->smart->display($file);
  }
  /*
