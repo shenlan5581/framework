@@ -15,24 +15,36 @@
 */
 
  
-/*
+/*数据结构是否统一 （需求：输入  条件：业务 输出） 是否适应所有业务
+    
 *
 */
-$info =array(
-    'db'=>'framework',
+$info =array(                           //支持的业务
     'table'=>array('case','admin'),
-    'field'=>array('',''),
-    'condition'=>array(
+    'field'=>array('',''),             //需求
+    'condition'=>array(                //条件业务
     array(),
     ),
 );
+//输出
 
 class Model{
+    protected $ctr;
+    protected $LIST;        //业务需求列表
     protected $Information ;// 需求信息
-    protected function Set($info){
-      $this->Information = $info;
+
+    public function __construct(){
+      $this->ctr=new Controller; //控制器
     }
+
+
+    protected function Set(){
+
+    }
+
+    //具体业务
     protected function List(){
+      print_r($this->LIST);
        
 
     }

@@ -10,6 +10,13 @@ class Controller{
  public function __construct(){
    include_once DIR_ROOT.'/extend/controller/smarty/libs/Smarty.class.php';
    $this->smart = new Smarty();
+   $this->smart->setCompileDir(PROJECT_SMARTCACHE);
+
+
+   //在前端文件中设定特定值
+   $this->assign('project_name',PROJECT_NAME);
+
+
  }
 
 //以数组方式获取参数
@@ -45,6 +52,10 @@ class Controller{
 *   参数1 消息    
 *   msg2 为小字体 提示 默认为无
 */
+//跳转
+ public function Location($url){
+   header("Location:/".PROJECT_NAME."/$url");
+ }
  public function Message($msg,$msg2=''){
   $html="     
     <style> 
@@ -103,7 +114,7 @@ $(document).ready(function(){
  *   输出 smart 页面
  */
  public function DisplaySmart($file){
-   $file =PROJECT_VIEW.$file; 
+   $file =VIEW_DIR.$file; 
    $this->smart->display($file);
  }
  /*
@@ -121,8 +132,6 @@ $(document).ready(function(){
  public function CleanCache(){
    $this->smart->clearAllCache();
  }
-
-
 
 
 

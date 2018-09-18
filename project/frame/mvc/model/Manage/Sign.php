@@ -22,7 +22,7 @@ class App_Model_Manage_Sign{
  public function SuperExist(){
         $mysql = new Mysql($this->TableName);
         $condition = array(
-          array('name'=>'a_level','oper'=>'=','value'=>4),
+          array('name'=>'a_level','oper'=>'>','value'=>5),
           array('name'=>'a_del','oper'=>'=','value'=>0),
         );
         return $mysql->getRow($condition); 

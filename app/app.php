@@ -14,6 +14,7 @@
         //session
         session_start();
         //分发
+       
         $this->Distribute(); 
     }
  
@@ -24,7 +25,7 @@
     private function Distribute(){
         $query  =$this-> parse_uri();  
         //请求的模块  if module?module:def  
-        $project = isset($project) && $project ? $project : (empty($query) ? DEF_MODULE : trim(array_shift($query)));
+        $project = isset($project) && $project ? $project : (empty($query) ? DEF_PROJECT: trim(array_shift($query)));
         $module = isset($module) && $module ? $module : (empty($query) ? DEF_MODULE : trim(array_shift($query)));
         $controller = empty($query) ? DEF_CONTROLLER : trim(array_shift($query));
         $action = empty($query) ? DEF_ACTION : trim(array_shift($query));
@@ -37,10 +38,11 @@
         } 
 #在此加载项目 配置 及相应文件 (注意部分宏是写在项目的define 文件中）
         //加载项目配置
+
         @require_once DIR_ROOT."/project/$project/define.php";
         $config = include PROJECT_CONFIG;
         //组件加载    
-        $this->LoadExtends($config['extends']); 
+        $this->LoadExtends($config['extends']);        
         //模型文件加载
         $this->LoadFromDir(PROJECT_MODEL); 
         //日志
@@ -51,7 +53,6 @@
         if(RUNLEVEL === 'RELEASE'){
             error_reporting(0);
         }
-
 #在此加载 控制器 调用
         //加载控制器文件           ctr/module/file_name
         @include_once PROJECT_CTR.$module.'/'.$controller.'.php';    

@@ -7,21 +7,15 @@ class App_Controller_Index_Index{
 
       public function __construct(){
         $this->ctr=new Controller;
-        $this->ctr->DisplaySmart("Index/index/layout/head.html");
+        $this->ctr->DisplaySmart("Index/layout/head.html");
       }
       public function __destruct(){
-        $this->ctr->DisplaySmart("Index/index/layout/foot.html");
+        $this->ctr->DisplaySmart("Index/layout/foot.html");
       }
 
     public function indexAction(){
-        $this->ctr->DisplaySmart("Index/index/index.html");
+        $this->ctr->DisplaySmart("Index/index.html");
     }
-
-
-
-
-
-
     public function formtestAction(){
         $ctr = new Controller();
         $para = array(  //数据接口定义 

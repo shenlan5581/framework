@@ -18,6 +18,25 @@ class Mysql extends DB_Base{
     public function __construct($table){ 
         $this->_table=$table;
     }
+    public function SetFields($field){ 
+         if($field){
+            $this->_fields=$field;
+            return true;
+         } else {
+           return false;
+         }
+    }
+    public function SetDel($del){ 
+         if($field){
+            $this->_delete_field=$del;
+            return true;
+         } else {
+           return false;
+         }
+    }
+
+
+
 //数据库操作层扩展 api
 /*
 DB_Base:

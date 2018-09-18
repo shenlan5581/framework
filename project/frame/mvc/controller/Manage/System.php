@@ -5,7 +5,7 @@ class App_Controller_Manage_System extends Base_Manage{
     public function CleanCacheAction(){
       $file = new FILE;
       $this->ctr->CleanCache();
-      $ret = $file->delete(DIR_SMARTCACHE);
+      $ret = $file->delete(PROJECT_SMARTCACHE);
       if($ret){
       $this->ctr->Message('清除成功','已清除缓存');
       } else {
@@ -15,7 +15,7 @@ class App_Controller_Manage_System extends Base_Manage{
    }
 
     public function LogAction(){
-      $log=file(DIR_LOG.'/log');
+      $log=file(LOG_FILE);
       $log =array_reverse($log);
       if($log){
       $this->ctr->assign('log',$log);
@@ -26,7 +26,7 @@ class App_Controller_Manage_System extends Base_Manage{
 
    }
     public function CleanLogAction(){
-      $log= DIR_LOG.'/log';
+      $log= LOG_FILE;
       if(unlink($log)){
       $this->ctr->Message('日志已清空','请联系管理员');
       } else {

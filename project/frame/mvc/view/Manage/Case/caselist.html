@@ -65,8 +65,8 @@
         <td>{$row['c_biref']}  </td>
         <td>{$row['c_date']}  </td>
         <td>
-                    <a href="/Manage/Case/CaseEdit?id={$row['c_id']}" class="btn btn-sm btn-light"> 编辑 </a>
-                    <a href="/Manage/Case/CaseDelete?id={$row['c_id']}" class="btn  btn-sm btn-secondary"> 删除 </a>
+                    <a href="/{$project_name}/Manage/Case/CaseEdit?id={$row['c_id']}" class="btn btn-sm btn-light"> 编辑 </a>
+                    <a href="/{$project_name}/Manage/Case/CaseDelete?id={$row['c_id']}" class="btn  btn-sm btn-secondary"> 删除 </a>
         </td>
       </tr>
 {/foreach}

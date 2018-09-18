@@ -5,7 +5,7 @@
     {/if}
 </strong>
 
-<form method="Post" action='/Manage/Case/CaseEdit'>
+<form method="Post" action='/{$preject}/Manage/Case/CaseEdit'>
 <div class="container-fluid" >
     <div class ="row clearfix">
                     <div class ="col-sm-3">
@@ -127,7 +127,7 @@
       <script charset="utf-8" src="/public/kindeditor/kindeditor-all.js"></script>
       <script charset="utf-8" src="/public/kindeditor/lang/zh-CN.js"></script>
   
-      <script>
+ <script type="text/javascript">
           KindEditor.ready(function(K) {
           var    options={
               items:[
@@ -140,7 +140,7 @@
                   'table', 'hr', 'pagebreak',
                       'link', 'unlink', '|', 'about'
                       ],
-              uploadJson:'/Public/Upload/kindeditUpload',
+              uploadJson:"/{$project_name}/Public/Upload/kindeditUpload",
               afterBlur:function(){   //关键点  获取不到内容
                           this.sync();
                          }
@@ -221,7 +221,7 @@ doc: 使用Jcrop 作为前端处理
             } else {
                 $.ajax({
                 type: 'Get',
-                url:'/Public/Upload/DeleteFile',
+                url:"/{$project_name}/Public/Upload/DeleteFile",
                 data:data,
                 success: function (result) {
                     var json = JSON.parse(result);
@@ -248,7 +248,7 @@ doc: 使用Jcrop 作为前端处理
             }
             $.ajax({
             type: 'Get',
-            url: '/Public/Upload/CropImg',
+            url: "/{$project_name}/Public/Upload/CropImg",
             data:data,
             success: function (result) {
                 var json = JSON.parse(result);
@@ -272,7 +272,7 @@ doc: 使用Jcrop 作为前端处理
             type: 'Post',
             processData: false,//用于对data参数进行序列化处理 这里必须false
             contentType: false, //必须 
-            url: '/Public/Upload/UploadImg',
+            url: "/{$project_name}/Public/Upload/UploadImg",
             data:formData,
             success: function (result) {
                 $("#target").css('');

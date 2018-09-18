@@ -38,7 +38,7 @@ function Check_name_len($pass) {
 function GetProjectInfo() {
     $model = new \Mysql('project');
     $where =array(
-      array('name'=>'pro_id','oper'=> '=' ,'value'=>1),
+      array('name'=>'pro_date','oper'=> '>' ,'value'=>0),
     );
     return $model->getRow($where);
 }

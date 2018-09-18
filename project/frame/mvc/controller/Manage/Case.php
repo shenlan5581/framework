@@ -45,7 +45,7 @@ class App_Controller_Manage_Case extends Base_Manage{
       $this->ctr->assign('type',$this->Case_Type());
       $this->ctr->assign('style',$this->Case_Style());
       $this->ctr->assign('list',$list);
-      $this->ctr->assign('url','/Manage/Case/CaseList');
+      $this->ctr->assign('url','/'.PROJECT_NAME.'/Manage/Case/CaseList');
       $this->ctr->DisplaySmart('/Manage/Case/caselist.html');
     }
 
@@ -106,7 +106,7 @@ public function CaseEditAction(){
 //删除
 public function CaseDeleteAction(){
   if($this->USER['a_level']<3){
-    $this->ctr->MessageLocation('您的帐号无权操作','/Manage','3秒后跳转');
+    $this->ctr->MessageLocation('您的帐号无权操作','/'.PROJECT_NAME.'Manage','3秒后跳转',200);
     die();
    }
 
@@ -116,7 +116,7 @@ public function CaseDeleteAction(){
         $ret=$model->Del($id); 
       }
       if($ret){
-        $this->ctr->MessageLocation('操作成功','/Manage/Case/CaseList','3秒后跳转');
+        $this->ctr->MessageLocation('操作成功','/'.PROJECT_NAME.'/Manage/Case/CaseList','3秒后跳转',200);
         die();
       }else{
         $this->ctr->Message('操作失败','请联系管理员');

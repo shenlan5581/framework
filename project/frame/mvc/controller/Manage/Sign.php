@@ -7,14 +7,13 @@ use function WECHAT\WechatCheck;
 * admin 管理员 注册登陆相关
 */
 class App_Controller_Manage_Sign{
-    public function __construct(){
-       if(Session::IsloginAdmin()){
-          header('Location:/Manage');
-       }
-    }
+ 
 
     public function LoginAction(){
        $ctr = new Controller;
+      if(Session::IsloginAdmin()){
+        $ctr->location('Manage');
+     }
        $param = array(
            'user'=>'str',
            'pass' =>'str',
@@ -40,7 +39,7 @@ class App_Controller_Manage_Sign{
                     //设置
                     Session::SetAdminID($ret['a_id']);
                     //跳转至首页
-                    header('Location:/Manage');
+                    $ctr->location('Manage');
                 }else{
                   $message = "账户名密码不匹配";
                 }
@@ -58,7 +57,7 @@ class App_Controller_Manage_Sign{
 
     public function LogoutAction(){
        $ctr = new Controller;
-      Session::DestoyAdmin();
+       Session::DestoyAdmin();
        $ctr->DisplaySmart('/Manage/Sign/logout.html');
    }
 
@@ -92,7 +91,7 @@ class App_Controller_Manage_Sign{
        $ctr = new Controller;
        $model = new App_Model_Manage_Sign;
        if($model->SuperExist()){ //超级管理员存在
-          header('Location:/Manage/Sign/Login');
+         $ctr->location('/Manage/Sign/Login');
        } else {
        $user =$ctr->GetParam('user',"POST");
        $pass =$ctr->GetParam('pass',"POST");
@@ -123,8 +122,8 @@ class App_Controller_Manage_Sign{
             'pro_date'=>time(),
           );
           $pro = new Mysql('project');
-          $pro->insertValue($info);
-          header('Location:/Manage/Sign/Login');
+          $pro->insertValue($info);  
+         $ctr->location('/Manage/Sign/Login');
           return;
         } 
       $ctr->DisplaySmart('/Manage/Sign/Super.html');

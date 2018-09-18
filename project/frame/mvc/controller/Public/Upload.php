@@ -7,8 +7,8 @@ class App_Controller_Public_Upload{
     private $local_name;
     public function __construct(){
       global $config; 
-      $this->local_name = $config['local_name']; //主机名
-      $this->path       = $config['sources']['UploadImagePath'];
+      $this->local_name =LOCALNAME;      //名称
+      $this->path       =CROP_UPLOAD ;  //路径
     }
 /*
 * 上传图片 保存在资源文件夹且返回url   for Jcrop
@@ -30,7 +30,7 @@ public function UploadImgAction(){
           $ctr->DisplayJson("文件已存在",null,false);
         } else {
           $data =array();
-          $data['url'] = "$this->local_name/UploadImage/$name";
+          $data['url'] = "$this->local_name/".PROJECT_NAME."/upload/crop/$name";  //配置返回的url
           $data['path'] = $file;
           move_uploaded_file($_FILES['img']['tmp_name'],$file);
           $ctr->DisplayJson("成功",$data,true);
@@ -99,10 +99,9 @@ public function kindeditUploadAction(){
 
   require_once 'JSON.php';
   //文件保存目录路
-  $save_path = DIR_ROOT.'/sources/kindedit_upload/';
-  //文件保存目录URL
-  global $config;
-  $save_url = $config['local_name'].'/kindedit_upload/';
+  $save_path = EDIT_UPLOAD;
+  //文件保存目录URL 
+  $save_url = LOCALNAME.'/upload/kind/';
   //定义允许上传的文件扩展名
   $ext_arr = array(
     'image' => array('gif', 'jpg', 'jpeg', 'png', 'bmp'),

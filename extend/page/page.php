@@ -1,44 +1,23 @@
 <?php
 
 namespace PAGE{
+//页面常见功能生成
+  //
+    class Page{
+      protected $ctr;
+      protected $db;
+      
+      public function __construct(){
+        $this->$ctr = new \Controller;
+      }
 
-//页面基类
-//
-abstract class Page{
-   protected $ctr;
-   protected $db;
-   
-   public function __construct(){
-    $this->$ctr = new \Controller;
-   }
-}
 
-/* 
-  $data 核心数据结构
-  $data =array（
-
-  ）
-*/
-class PAGE_List extends Page{
-
-}
+    public function PAGE_List(){
 
 
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ }
 
 }//namespace end
