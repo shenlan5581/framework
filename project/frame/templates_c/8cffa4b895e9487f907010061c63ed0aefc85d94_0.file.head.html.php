@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 20:16:17
-  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/view-layout/head.html' */
+/* Smarty version 3.1.32, created on 2018-09-18 09:28:59
+  from '/home/https/www/framework/project/frame/mvc/view/Manage/view-layout/head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba15d11cd6765_33405001',
+  'unifunc' => 'content_5ba0c55b9d8c66_46472833',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '83f8135d1c5ffc88ee3ddf50174c3b93b0e72577' => 
+    '8cffa4b895e9487f907010061c63ed0aefc85d94' => 
     array (
-      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/view-layout/head.html',
-      1 => 1537293755,
+      0 => '/home/https/www/framework/project/frame/mvc/view/Manage/view-layout/head.html',
+      1 => 1537261381,
       2 => 'file',
     ),
   ),
@@ -20,27 +20,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba15d11cd6765_33405001 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba0c55b9d8c66_46472833 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<link  href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link  href="/frame/view/bootstrap/css/bootstrap.css" rel="stylesheet">
 <?php echo '<script'; ?>
- src="/public/jquery-2.1.3.min.js"><?php echo '</script'; ?>
+ src="/frame/view/jquery-2.1.3.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="/public/jquery-ui-1.12.1/jquery-ui.min.js"><?php echo '</script'; ?>
 >
 <!-- bootstrap-->
 <?php echo '<script'; ?>
- src="/public/popper.min.js"><?php echo '</script'; ?>
+ src="/frame/view/popper.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="/storage/k.js"><?php echo '</script'; ?>
+ src="/frame/storage/k.js"><?php echo '</script'; ?>
 >
-<link  href="/storage/k.css" rel="stylesheet">
+<link  href="/frame/storage/k.css" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- bootstrap-->

@@ -1,4 +1,27 @@
+<?php
+/* Smarty version 3.1.32, created on 2018-09-18 09:29:06
+  from '/home/https/www/framework/project/frame/mvc/view/Manage/Slide/SlideList.html' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32',
+  'unifunc' => 'content_5ba0c5627740d7_46570284',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '032d8dfddfd25e0335e846f375aac9fc860005fc' => 
+    array (
+      0 => '/home/https/www/framework/project/frame/mvc/view/Manage/Slide/SlideList.html',
+      1 => 1537123409,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5ba0c5627740d7_46570284 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <table class="table">
     <thead>
       <tr>
@@ -8,23 +31,43 @@
       </tr>
     </thead>
     <tbody>
-{foreach $list as $k => $row} 
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'row', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['row']->value) {
+?> 
       <tr>
-        <td><img id ='img{$k}' style="height:50px;width:auto" src="{$row['s_url']}"></td>
-        <td>{$row['s_date']}  </td>
+        <td><img id ='img<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+' style="height:50px;width:auto" src="<?php echo $_smarty_tpl->tpl_vars['row']->value['s_url'];?>
+"></td>
+        <td><?php echo $_smarty_tpl->tpl_vars['row']->value['s_date'];?>
+  </td>
         <td>
-             <a href='#' onclick="k_crop( {$row['s_id']},'{$row['s_url']}','img{$k}' )" class="btn  btn-sm btn-secondary"> 替换 </a>
+             <a href='#' onclick="k_crop( <?php echo $_smarty_tpl->tpl_vars['row']->value['s_id'];?>
+,'<?php echo $_smarty_tpl->tpl_vars['row']->value['s_url'];?>
+','img<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+' )" class="btn  btn-sm btn-secondary"> 替换 </a>
         </td>
       </tr>
-{/foreach}
+<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </tbody>
   </table
 
 <div id ="crop" style="margin:10px;" >
-    <script src="/public/Jcrop/js/jquery.min.js"></script>
-    <script src="/public/Jcrop/js/jquery.Jcrop.js"></script>
-    <script src="/public/Jcrop/js/jquery.color.js"></script>
-    <script type="text/javascript">
+    <?php echo '<script'; ?>
+ src="/public/Jcrop/js/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="/public/Jcrop/js/jquery.Jcrop.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="/public/Jcrop/js/jquery.color.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript">
     // 全局存储变量
        var api =null;
        var img_info=null;  //图片路径信息
@@ -151,7 +194,8 @@
         }
     })// ajax end
     }
-       </script>
+       <?php echo '</script'; ?>
+>
        <link rel="stylesheet" href="/public/Jcrop/css/jquery.Jcrop.css" type="text/css" />
     
           <!-- Modal -->
@@ -192,3 +236,5 @@
             </div>
           </div>
      
+<?php }
+}

@@ -7,15 +7,6 @@ class App_Controller_Wechat_Index{
      $this->ctr=new Controller;
    }
    public function indexAction(){
-
-   print_r($_POST);
-   echo "test";
-
-
-
-
-
-
         
 //     $this->ctr->DisplaySmart('/Wechat/wx.html');
     }
