@@ -43,6 +43,7 @@
     font-size: 1.5em;
     color:rgb(188, 20, 36);
 }
+
 .text3{
     color:rgb(176, 176, 176);
     font-size: 0.8em;
@@ -53,9 +54,15 @@
     font-weight: 900px;;
 }
 .k-btn2{
-    
+    background-color:rgb(14, 149, 206);
     font-size:1em;
-    width: 40%;
+    width: 60%;
+    font-weight: 900px;;
+}
+.k-btn2:hover{
+    background-color:rgb(8, 114, 155);
+    font-size:1em;
+    width: 60%;
     font-weight: 900px;;
 }
 .content1{
