@@ -9,7 +9,7 @@ class App_Controller_Wechat_Sign {
 	 // list
 	 public function RegisterAction(){
     if($this->Islogin()){
-       $this->Loaction('Wechat/Member');
+       $this->ctr->Location('Wechat/Member');
     }    
 
 
@@ -21,6 +21,9 @@ class App_Controller_Wechat_Sign {
 
 
 
+  public function LogOutAction(){
+			Session::Destoy('Wx_id');
+  }
 
  protected  function Islogin(){
 			 return (Session::Get('Wx_id'));

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-19 20:37:29
+/* Smarty version 3.1.32, created on 2018-09-19 21:02:30
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba2b389ba28d3_25496495',
+  'unifunc' => 'content_5ba2b966dc6584_68736119',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5128cfdb3725011095170316f654164de798ebb8' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html',
-      1 => 1537389447,
+      1 => 1537390761,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba2b389ba28d3_25496495 (Smarty_Internal_Template $_smarty_tpl) {
-?><link rel="stylesheet" href="/public/weui/dist/style/weui.min.css"/>
-<link rel="stylesheet" href="/storage/k.css"/>
+function content_5ba2b966dc6584_68736119 (Smarty_Internal_Template $_smarty_tpl) {
+?> 
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
 
+<link rel="stylesheet" href="/public/weui/dist/style/weui.min.css"/>
+<link rel="stylesheet" href="/storage/k.css"/>
+</head>
+<body>
 <style>
     .boss{
         font-size:50px;
@@ -71,5 +77,7 @@ function content_5ba2b389ba28d3_25496495 (Smarty_Internal_Template $_smarty_tpl)
     <a href="javascript:;" class="weui-btn k-btn weui-btn_primary">确定</a>
   </form>
 </div>
- <?php }
+ 
+</body>
+</html><?php }
 }
