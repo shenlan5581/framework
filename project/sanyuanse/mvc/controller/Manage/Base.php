@@ -18,7 +18,7 @@ class Base_Manage{
     $this->ctr =new Controller;
     $ID = Session::GetAdminID();
     if($ID === false){
-         $this->ctr->Location("Manage/Sign/Login");
+         $this->ctr->Location("/Manage/Sign/Login");
     }else{
          $this->ctr =new Controller();
          $model = new App_Model_Manage_Sign;
@@ -51,6 +51,13 @@ class Base_Manage{
         '订单'=>array(
              '订单'=>"/$project/Manage/Order/OrderList",
         ),
+        /*
+        '微信'=>array(
+             '消息'=>"/$project/Manage/Wechat/Message",
+             '菜单'=>"/$project/Manage/Wechat/Menu",
+             '素材'=>"/$project/Manage/Wechat/Material",
+        ),
+        */
     );
   }
 

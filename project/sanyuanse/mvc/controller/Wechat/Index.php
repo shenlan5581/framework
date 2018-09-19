@@ -6,10 +6,8 @@ class App_Controller_Wechat_Index{
    public function __construct(){
      $this->ctr=new Controller;
    }
-   public function indexAction(){
+   public function IndexAction(){
 
-   print_r($_POST);
-   echo "test";
 
 
 

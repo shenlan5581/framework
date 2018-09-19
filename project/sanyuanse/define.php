@@ -7,7 +7,7 @@
 // 主机名
 define('LOCALNAME','http://framework.cn'); //重要返回部分路径
 //项目名(文件名）
-define('PROJECT_NAME','frame');//同文件夹名（重要 涉及页面跳转拼接变量）
+define('PROJECT_NAME','sanyuanse');//同文件夹名（重要 涉及页面跳转拼接变量）
 define('PROJECT_MD','
  项目说明
 ');
@@ -31,6 +31,10 @@ define('PROJECT_CONFIG',PROJECT_ROOT.'/config.php');
 //上传路径  crop 和 kindedit
 define('EDIT_UPLOAD',DIR_ROOT.'/sources/'.PROJECT_NAME.'/upload/kind');
 define('CROP_UPLOAD',DIR_ROOT.'/sources/'.PROJECT_NAME.'/upload/crop');
+
+// 定义的是 微信公众号开发需要获取的access_key 应用在后台登陆时  将返回的key 保存在 session['Wechat'] 中 以便后续微信后台的操作
+define('WECHATURL',false);
+
 
 define('RUNLEVEL','DEBUG');//运行级别 错误是否显示
 #RELEASE

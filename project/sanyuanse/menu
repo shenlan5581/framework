@@ -1,0 +1,20 @@
+
+n": [
+            {
+                "name": "扫码", 
+                "sub_button": [
+                    {
+                        "type": "click", 
+                        "name": "扫码带提示", 
+                        "key": "rselfmenu_0_0", 
+                    }, 
+                    {
+                        "type": "click", 
+                        "name": "扫码推事件", 
+                        "key": "rselfmenu_0_1", 
+                    }
+                ]
+            }
+        ]
+    }
+

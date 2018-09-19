@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 17:44:42
-  from '/home/ki/https/www/framework/project/frame/mvc/view/Index/index.html' */
+/* Smarty version 3.1.32, created on 2018-09-19 10:00:42
+  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Index/index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba1398ac005e7_21092207',
+  'unifunc' => 'content_5ba21e4a44e2b9_22160320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'e687a2124c087ac35728c9be8e7dda49210521b0' => 
+    'fa300901bd70b8d11ff02e89a7ee745aaa3298e1' => 
     array (
-      0 => '/home/ki/https/www/framework/project/frame/mvc/view/Index/index.html',
-      1 => 1537292678,
+      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Index/index.html',
+      1 => 1537262268,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba1398ac005e7_21092207 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba21e4a44e2b9_22160320 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 	#sanyuanse{
 	text-align: center;

@@ -18,7 +18,7 @@ class Base_Manage{
     $this->ctr =new Controller;
     $ID = Session::GetAdminID();
     if($ID === false){
-         $this->ctr->Location("Manage/Sign/Login");
+         $this->ctr->Location("/Manage/Sign/Login");
     }else{
          $this->ctr =new Controller();
          $model = new App_Model_Manage_Sign;

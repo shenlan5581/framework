@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 09:00:16
-  from '/home/ki/https/www/framework/project/frame/mvc/view/Manage/view-layout/menu.html' */
+/* Smarty version 3.1.32, created on 2018-09-18 20:16:17
+  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/view-layout/menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba0bea0ed7a54_88187091',
+  'unifunc' => 'content_5ba15d11d3dfa5_34690203',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '078fe866ede7be637e83d1b5743fd0a145fa531a' => 
+    '8817ea4d874c57e8a7199991ad6c5bec016ce26a' => 
     array (
-      0 => '/home/ki/https/www/framework/project/frame/mvc/view/Manage/view-layout/menu.html',
-      1 => 1537212687,
+      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/view-layout/menu.html',
+      1 => 1537262268,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba0bea0ed7a54_88187091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba15d11d3dfa5_34690203 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .c1{
   color:red;

@@ -27,5 +27,4 @@ define('DEF_CLASS_PREFIX','App_Controller_');
 define('DEF_CLASS_PREFIX','App_Model_');
 
 
-// 定义的是 微信公众号开发需要获取的access_key 应用在后台登陆时  将返回的key 保存在 session['Wechat'] 中 以便后续微信后台的操作
-define('WECHATURL',false);
+

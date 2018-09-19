@@ -3,12 +3,12 @@
 use function TOOLS\Check_len;
 use function TOOLS\GetProjectIndo;
 use function WECHAT\WechatCheck;
+use function WECHAT\WxGetAccessToken;
 /*
 * admin 管理员 注册登陆相关
 */
 class App_Controller_Manage_Sign{
  
-
     public function LoginAction(){
        $ctr = new Controller;
       if(Session::IsloginAdmin()){
@@ -27,13 +27,9 @@ class App_Controller_Manage_Sign{
                 if(TOOLS\Salt_Password($user['pass']) ===$ret['a_pass']){
                     //设定微信 key
                   if(WECHATURL != false) {
-                    $url = WECHATURL;
-                    $key=json_decode(CLIENT\Client_Get($url),true);
-                    if(!$key){
-                      trigger_error("errmsg=微信开发后台access_key 获取失败", E_USER_ERROR);
-                      }else{
-                      Session::Destoy('Wechat');
-                      Session::Set('Wechat',$key['access_token']);
+                      if(!WECHAT\WxGetAccessToken()){
+                         echo "***微信数据接入失败 请联系管理员***";
+                        die();
                       }
                     }
                     //设置
@@ -58,6 +54,7 @@ class App_Controller_Manage_Sign{
     public function LogoutAction(){
        $ctr = new Controller;
        Session::DestoyAdmin();
+       Session::Destoy('Wechat_accesstoken');
        $ctr->DisplaySmart('/Manage/Sign/logout.html');
    }
 

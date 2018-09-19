@@ -10,9 +10,9 @@
             'tools'      => 'tools',         //常见公共函数
             'file'       => 'file',          //文件相关操作
             'page'       => 'page',          //常用功能代码整合
+            'log'        => 'log',           //常用功能代码整合
             'client'     => 'client',        //常用功能代码整合
             'wechat'     => 'wechat',        //常用功能代码整合
-            'log'        => 'log',           //常用功能代码整合
             ), 
     //数据库 
     'db'=>  array(
