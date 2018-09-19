@@ -3,25 +3,26 @@
 
 <style>
     .boss{
-        display: flex;
+        font-size:40px;
+        display:flex;
         flex-direction:column;
         justify-content:conter;
         align-items:center;
         margin:10px;
     }
     .input1 {
-        width: 280px;;
-        height:50px;
+        width: 600px;;
+        height:80px;
         border:1px solid #aaa;
-        border-radius: 3px;
-        margin:10px;
+        border-radius:10px;
+        margin-top:50px;
+        margin-bottom:100px;
     }
     .logo {
-      width:60%;
+      width:100%;
       height:auto;
     }
     .member{
-        height:260px;
         padding:10px;
         color:rgb(160, 8, 8);
     }
@@ -31,25 +32,19 @@
 <div class ="boss">
   <img class = "logo" src = "/sanyuanse/logo.jpg"></img>
  <div class ='member'>
-     <span>会员权益 </span>
-     <div>
-          
-
-
+     <span>会员权益:</span>
+     <div class ='content1'>
+         <ul>
+           <li>查看工程进度 </li>   
+           <li>会员折扣 </li>   
+           <li>优惠大礼包 </li>   
+         </ul>
      </div>
  </div>
  <div class ="text1">输入手机号码即刻成为会员</div>
  <form>
     <input class="input1" class="weui-input" type="tel" placeholder="请输入手机号">
-    <a style ="width:50%" href="javascript:;" class="weui-btn weui-btn_primary">确定</a>
+    <a href="javascript:;" class="weui-btn k-btn weui-btn_primary">确定</a>
   </form>
 </div>
-
-<div class="weui-flex">
-        <div class="weui-flex__item">
-             <div class="placeholder">
-                 <img class = "logo" src = "/sanyuanse/logo.jpg"></img>
-             </div>
-        </div>
-
-    </div>
+ 
