@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-19 22:26:04
+/* Smarty version 3.1.32, created on 2018-09-19 22:35:51
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba2ccfca76282_89449082',
+  'unifunc' => 'content_5ba2cf478e3760_19694297',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537395963,
+      1 => 1537396551,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba2ccfca76282_89449082 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba2cf478e3760_19694297 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -64,7 +64,7 @@ function content_5ba2ccfca76282_89449082 (Smarty_Internal_Template $_smarty_tpl)
         display:flex;
         flex-direction:row;
         margin: 3%;
-        color:rgb(149, 104, 15);
+        color:rgb(195, 120, 0);
     }
     .integral2{
         width:80%;
@@ -103,13 +103,18 @@ function content_5ba2ccfca76282_89449082 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
        <div class = "integral">
-            <div> 当前积分; </div>
-            <div class ="text2"> 999</div>
+            <span> 当前积分: </span>
+            <span class ="text2"> 998</span>
        </div>
             <div> 积分福利 </div>
        <div class = "integral2 border02">
-            <div> 
-             集满1000兑换
+            <div class='text3'> 
+             <span> 满1000分赠送 </span><br>
+             <span> ... ...</span><br>
+             <span> 满800分赠送 </span><br>
+             <span> ... ...</span><br>
+             <span> 满300分赠送 </span><br>
+             <span> ... ...</span><br>
             </div>
        </div>
 

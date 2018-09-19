@@ -32,14 +32,20 @@
     border-style:solid;
     border-width: 1px;
     border-color: rgb(188, 188, 188);
-    border-radius:5px; 
+    border-radius:10px; 
 }
 .text1{
     color:rgb(155, 106, 8);
 }
 
 .text2{
-    color:rgb(125, 14, 99);
+
+    font-size: 1.5em;
+    color:rgb(188, 20, 36);
+}
+.text3{
+    color:rgb(176, 176, 176);
+    font-size: 0.8em;
 }
 .k-btn{
     font-size:1em;
@@ -47,8 +53,9 @@
     font-weight: 900px;;
 }
 .k-btn2{
+    
     font-size:1em;
-    width: 50%;
+    width: 40%;
     font-weight: 900px;;
 }
 .content1{
