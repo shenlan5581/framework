@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-19 22:48:49
+/* Smarty version 3.1.32, created on 2018-09-19 22:54:24
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba2d2515993e7_46546933',
+  'unifunc' => 'content_5ba2d3a06a9187_19699686',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537397328,
+      1 => 1537397663,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba2d2515993e7_46546933 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba2d3a06a9187_19699686 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -119,8 +119,8 @@ function content_5ba2d2515993e7_46546933 (Smarty_Internal_Template $_smarty_tpl)
        </div>
 
  <div class ='nv' >
-      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_primary">会员签到</a>
-      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_primary">查看施工进度</a>
+      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
+      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">查看施工进度</a>
 </div>
 
 </body>
