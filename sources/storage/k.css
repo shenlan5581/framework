@@ -35,13 +35,21 @@
     border-radius:5px; 
 }
 .text1{
-    
     color:rgb(155, 106, 8);
 }
 
+.text2{
+    color:rgb(125, 14, 99);
+}
 .k-btn{
     font-size:1em;
     width: 50%;
+    font-weight: 900px;;
+}
+.k-btn2{
+    font-size:1em;
+    width: 50%;
+    font-weight: 900px;;
 }
 .content1{
     color:rgb(87, 87, 87);
