@@ -2,8 +2,10 @@
 //微信基类 
 class WxBase{
    public $user; //用户数据信息
-   public $cte ;
+   public $ctr ;
    public function __construct(){
+	   $this->ctr = new Controller;
+	         $this->user=false;
 			 $wxid = Session::Get('Wx_id');
 			 if($wxid){ 
 				//  $this->user = GetUserInfo($m_id);
@@ -13,14 +15,14 @@ class WxBase{
 						if($this->user){
 							 $wxid = Session::Set('Wx_id');
 						} else {   //不是会员
-            $this->Loaction('Wechat/Sign/Register');
+            $this->ctr->Location('Wechat/Sign/Register');
 					 }
 			 }
   }
 
         
-  private function Islogin(){
-			 return (Session::Get('Wx_id');
+  protected  function Islogin(){
+			 return (Session::Get('Wx_id'));
   }
 
 

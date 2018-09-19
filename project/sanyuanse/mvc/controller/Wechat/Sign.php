@@ -4,7 +4,7 @@
 class App_Controller_Wechat_Sign {
 	 public $ctr;
 	 public function __construct(){
-		 $this->ctr=new Controller;
+	   $this->ctr = new Controller;
 	 }
 	 // list
 	 public function RegisterAction(){
@@ -17,6 +17,14 @@ class App_Controller_Wechat_Sign {
 
 
     $this->ctr->DisplaySmart('/Wechat/register.html');
- 	}
+	 }
+
+
+
+
+ protected  function Islogin(){
+			 return (Session::Get('Wx_id'));
+  }
+
 }
 
