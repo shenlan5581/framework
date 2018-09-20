@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 14:33:55
+/* Smarty version 3.1.32, created on 2018-09-20 14:35:55
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3afd33ef7f0_83933457',
+  'unifunc' => 'content_5ba3b04b536020_05533245',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537454034,
+      1 => 1537454154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3afd33ef7f0_83933457 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3b04b536020_05533245 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
@@ -61,7 +61,7 @@ function content_5ba3afd33ef7f0_83933457 (Smarty_Internal_Template $_smarty_tpl)
         flex-direction:row;
         margin: 5%;
         color:rgb(13, 136, 150);
-        box-shadow: 10px 10px 3px 3px #0e0e0e22 ;
+        box-shadow: 10px 10px 3px 3px #0e0e0ebd ;
         background-color: rgba(240, 240, 240, 0.496);
         font-size: 0.8em;
     }
@@ -108,7 +108,6 @@ function content_5ba3afd33ef7f0_83933457 (Smarty_Internal_Template $_smarty_tpl)
 
  <div class ='' >
       <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
-      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">查看施工进度</a>
 </div>
 
 <?php }
