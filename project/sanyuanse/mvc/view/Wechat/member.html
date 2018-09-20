@@ -9,8 +9,17 @@
         flex-direction:column;
         justify-content:conter;
         align-items:center;
-        color:rgb(138, 138, 138);
+        color:rgb(18, 18, 18);
         margin-bottom: 10px;
+    }
+    .part>div{
+        display:flex;
+        flex-direction:row;
+        justify-content:conter;
+        align-items:center;
+    }
+    .part>div>img{
+        box-shadow: 15px 15px 15px 8px #17161676;
     }
     .partrait{
       border-radius: 50%;
@@ -27,7 +36,7 @@
         padding:5%;
         display:flex;
         flex-direction:row;
-        margin: 6%;
+        margin: 5%;
         color:rgb(176, 176, 176);
         box-shadow: 10px 10px 3px 3px #0e0e0e79 ;
         background-color: rgba(35, 34, 34, 0.496);
@@ -45,8 +54,11 @@
                 <div class="weui-flex__item">
                     <div class="placeholder">
                           <div class = "part">
-                            <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
-                            <div>BIG FISH</div>
+                            <div>
+                                <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
+                                <span>BIG FISH</span>
+                            </div>
+
                           </div>
                     </div>
                 </div>

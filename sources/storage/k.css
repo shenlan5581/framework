@@ -56,20 +56,21 @@
 .k-btn2{
   color:rgb(210, 210, 210);
     border-style:none;
-    background-color:rgb(24, 24, 24);
+    background-color:rgb(42, 42, 42);
     font-size:1em;
     width: 50%;
+    height:120px;
     font-weight: 900px;
     border-radius: 20px;
 }
 .k-btn2:hover{
-    background-color:rgb(60, 60, 60);
+    background-color:rgb(16, 16, 16);
     font-size:1em;
     width: 50%;
     font-weight: 900px;;
 }
 .content1{
-    color:rgb(87, 87, 87);
+    color:rgb(57, 57, 57);
     font-size: 0.9em;
     height:300px;
     width:70%;
@@ -94,7 +95,7 @@
         justify-content:conter;
         align-items:center;
         background: repeating-linear-gradient(to bottom,rgb(34, 40, 39) ,rgb(31, 34, 35)90%,rgb(16, 16, 16) );
-        height:160px;
+        height:120px;
         color:rgb(200, 194, 194);
         border-radius: 10px;
         width:98%;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 14:04:45
+/* Smarty version 3.1.32, created on 2018-09-20 14:23:23
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3a8fdc54896_52959102',
+  'unifunc' => 'content_5ba3ad5b20f404_94877367',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537452284,
+      1 => 1537453401,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3a8fdc54896_52959102 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3ad5b20f404_94877367 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
@@ -32,8 +32,17 @@ function content_5ba3a8fdc54896_52959102 (Smarty_Internal_Template $_smarty_tpl)
         flex-direction:column;
         justify-content:conter;
         align-items:center;
-        color:rgb(138, 138, 138);
+        color:rgb(18, 18, 18);
         margin-bottom: 10px;
+    }
+    .part>div{
+        display:flex;
+        flex-direction:row;
+        justify-content:conter;
+        align-items:center;
+    }
+    .part>div>img{
+        box-shadow: 15px 15px 15px 8px #17161676;
     }
     .partrait{
       border-radius: 50%;
@@ -50,7 +59,7 @@ function content_5ba3a8fdc54896_52959102 (Smarty_Internal_Template $_smarty_tpl)
         padding:5%;
         display:flex;
         flex-direction:row;
-        margin: 6%;
+        margin: 5%;
         color:rgb(176, 176, 176);
         box-shadow: 10px 10px 3px 3px #0e0e0e79 ;
         background-color: rgba(35, 34, 34, 0.496);
@@ -68,8 +77,11 @@ function content_5ba3a8fdc54896_52959102 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="weui-flex__item">
                     <div class="placeholder">
                           <div class = "part">
-                            <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
-                            <div>BIG FISH</div>
+                            <div>
+                                <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
+                                <span>BIG FISH</span>
+                            </div>
+
                           </div>
                     </div>
                 </div>
