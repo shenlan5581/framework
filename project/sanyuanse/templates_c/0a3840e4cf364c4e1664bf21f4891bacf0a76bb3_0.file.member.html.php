@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 12:05:06
+/* Smarty version 3.1.32, created on 2018-09-20 12:13:21
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba38cf2a75f37_57598588',
+  'unifunc' => 'content_5ba38ee1cbd7d8_87272575',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537445105,
+      1 => 1537445599,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba38cf2a75f37_57598588 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba38ee1cbd7d8_87272575 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <style>
         .logo {
@@ -59,15 +59,21 @@ function content_5ba38cf2a75f37_57598588 (Smarty_Internal_Template $_smarty_tpl)
     }
 
         logo{
-            width:100%;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:conter;
+        align-items:center;
         }
         logo>div{
-            width:95%;
+            width:98%;
             background-color: rgb(47, 55, 57);
             height:200px;
             color:rgb(200, 194, 194);
             border-radius: 10px;
         }
+
+
         </style>
         
 
@@ -77,10 +83,14 @@ function content_5ba38cf2a75f37_57598588 (Smarty_Internal_Template $_smarty_tpl)
             <logo>
                 <div class="weui-flex">
                         <div class="weui-flex__item"><div class="placeholder"></div></div>
-                        <div class="weui-flex__item"><div class="placeholder">会员积分</div></div>
+                        <div class="weui-flex__item"><div class="placeholder">
+                            
+                           <div>会员积分</div>
+                        
+                        </div></div>
                         <div class="weui-flex__item"><div class="placeholder"></div></div>
                     </div>
-                </logo>
+           </logo>
         </div></div>
     </div>
 
