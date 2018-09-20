@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 11:18:20
+/* Smarty version 3.1.32, created on 2018-09-20 12:05:06
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba381fc08c609_79142585',
+  'unifunc' => 'content_5ba38cf2a75f37_57598588',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537442298,
+      1 => 1537445105,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba381fc08c609_79142585 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba38cf2a75f37_57598588 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <style>
-    body{
-        display:flex;
-        font-size:50px;
-        margin:10px;
-        flex-direction:column;
-        justify-content:conter;
-        align-items:center;
-    }
         .logo {
       width:80%;
       height:auto;
@@ -66,7 +58,45 @@ function content_5ba381fc08c609_79142585 (Smarty_Internal_Template $_smarty_tpl)
         width:100%;
     }
 
-</style>
+        logo{
+            width:100%;
+        }
+        logo>div{
+            width:95%;
+            background-color: rgb(47, 55, 57);
+            height:200px;
+            color:rgb(200, 194, 194);
+            border-radius: 10px;
+        }
+        </style>
+        
+
+
+    <div class="weui-flex">
+        <div class="weui-flex__item"><div class="placeholder">
+            <logo>
+                <div class="weui-flex">
+                        <div class="weui-flex__item"><div class="placeholder"></div></div>
+                        <div class="weui-flex__item"><div class="placeholder">会员积分</div></div>
+                        <div class="weui-flex__item"><div class="placeholder"></div></div>
+                    </div>
+                </logo>
+        </div></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="weui-flex">
                 <div class="weui-flex__item">
