@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 12:13:21
+/* Smarty version 3.1.32, created on 2018-09-20 12:37:34
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba38ee1cbd7d8_87272575',
+  'unifunc' => 'content_5ba3948e41f2c6_19986551',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537445599,
+      1 => 1537447053,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba38ee1cbd7d8_87272575 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-<style>
+function content_5ba3948e41f2c6_19986551 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
+   html{
+       font-size: 40px;
+   }
+
         .logo {
       width:80%;
       height:auto;
@@ -58,55 +61,14 @@ function content_5ba38ee1cbd7d8_87272575 (Smarty_Internal_Template $_smarty_tpl)
         width:100%;
     }
 
-        logo{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        justify-content:conter;
-        align-items:center;
-        }
-        logo>div{
-            width:98%;
-            background-color: rgb(47, 55, 57);
-            height:200px;
-            color:rgb(200, 194, 194);
-            border-radius: 10px;
-        }
-
 
         </style>
-        
 
-
-    <div class="weui-flex">
-        <div class="weui-flex__item"><div class="placeholder">
-            <logo>
-                <div class="weui-flex">
-                        <div class="weui-flex__item"><div class="placeholder"></div></div>
-                        <div class="weui-flex__item"><div class="placeholder">
-                            
-                           <div>会员积分</div>
-                        
-                        </div></div>
-                        <div class="weui-flex__item"><div class="placeholder"></div></div>
-                    </div>
-           </logo>
-        </div></div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class='logo-title'>
+            <div>
+                    <div>会员-积分</div>
+            </div>
+</div>
 
         <div class="weui-flex">
                 <div class="weui-flex__item">
@@ -139,12 +101,6 @@ function content_5ba38ee1cbd7d8_87272575 (Smarty_Internal_Template $_smarty_tpl)
       <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
       <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">查看施工进度</a>
 </div>
-
-
-
-
-
-
 
 <?php }
 }
