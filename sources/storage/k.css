@@ -85,18 +85,18 @@
     flex-direction:column;
     justify-content:conter;
     align-items:center;
-    margin-top:10px;
+    margin-top:10px;;
     }
   .logo-title>div{
         display:flex;
         flex-direction:column;
         justify-content:conter;
         align-items:center;
-        background: repeating-linear-gradient(to bottom,rgb(51, 60, 60),rgb(16, 16, 16));
+        background: repeating-linear-gradient(to bottom,rgb(34, 40, 39) ,rgb(31, 34, 35)90%,rgb(16, 16, 16) );
         height:160px;
         color:rgb(200, 194, 194);
         border-radius: 10px;
-        width:97%;
+        width:98%;
         box-shadow: 15px 15px 15px 8px #171616;
     }
    .logo-title>div>div{
