@@ -13,11 +13,11 @@ class App_Controller_Wechat_API {
 
    public function SignAction(){
     $curr = $this->user['m_sign'];
-    if(time()<($curr+86400)){
-      $this->ctr->DisplayJson('操作失败您今天已经签到',array(),false);
+    if(time() < ($curr+86400) && $curr !=0 ){
+      $this->ctr->DisplayJson('您今天已经签到',array(),false);
     } else {
      if($this->model->sign($this->user['m_openid'],$this->user['m_integral'])){
-     $this->ctr->DisplayJson('success');
+     $this->ctr->DisplayJson('签到成功');
     }
    }
  }

@@ -37,6 +37,14 @@ class App_Model_Wechat_wechat{
             return $ret =$mysql->updateValue($set,$where);
 
     }
+    public function Case($openid){
+          $mysql =new Mysql('case');
+            $where = array(
+                array('name'=>'c_del','oper'=>'=','value'=>0),
+                array('name'=>'c_m_openid','oper'=>'=','value'=>$openid),
+            );
+            return $list =$mysql->getList($where);
+    }
 
 
 

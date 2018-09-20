@@ -26,7 +26,7 @@ class App_Controller_Wechat_Sign {
 			'm_nickname'=>$userinfo['nickname'],
 			'm_headimg'=>$userinfo['headimgurl'],
 			'm_date'=>time(),
-			'm_sign'=>time(),
+			'm_sign'=>0,
 			);
 			$ret = $model->Regesiter($data);
 			if($ret){
