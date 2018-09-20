@@ -50,13 +50,23 @@
             </div>
 </div>
 
+</div>
+<div id="MSG"> 
+<div class='MSG k-center'>
+<span class='MSG k-row'>
+   <p id = 'MSG_p'>{if isset($msg)}{$msg}{/if}</p>
+</span>
+</div>
+</div>
+
+
         <div class="weui-flex">
                 <div class="weui-flex__item">
                     <div class="placeholder">
                           <div class = "part">
                             <div>
                                 <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
-                                <span>BIG FISH</span>
+                                <span>{$user['m_nickname']}</span>
                             </div>
 
                           </div>
@@ -79,7 +89,7 @@
 
        <div class = "k-center integral">
             <span> 您的当前积分: </span>
-            <span id = 'igl' class ="text-red"> 998</span>
+            <span id = 'igl' class ="text-red">{$user['m_integral']}</span>
        </div>
 
 
@@ -88,11 +98,36 @@
     </a>
 
 <script>
+    var number;
+    var number=  $('#igl').html();
     function igl(){
-     var number;
-     number=$('#igl').html();
-     number++;
-     $('#igl').html(number);
+                $.ajax({
+                type: 'Get',
+                url:"/{$project_name}/Wechat/API/Sign",
+                data:{
+                },
+                success: function (result) {
+                    var json = JSON.parse(result);
+                     var msg = $('#MSG_p').html(json.msg);
+                    if (json.status == true) { //success 
+                        number++;
+                        $('#igl').html(number);
+                                             
+                    } else {  //failed
+                    }
+                 showmsg();
+                }
+              })// ajax end
 
     }
+function showmsg(){
+         var msg = $('#MSG_p').html();
+        if(msg){
+          $('#MSG').fadeIn();
+          setTimeout("$('#MSG').fadeOut()",2000);
+        }
+   }
+
+
+
 </script>

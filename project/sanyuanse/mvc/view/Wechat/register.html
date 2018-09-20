@@ -3,11 +3,14 @@
 <html lang="en">
 <head>
 
+<script src="/public/jquery-2.1.3.min.js"></script>
 <link rel="stylesheet" href="/public/weui/dist/style/weui.min.css"/>
 <link rel="stylesheet" href="/storage/k.css"/>
-</head>
 <body>
 <style>
+    body{
+    font-size:50px;
+    }
     .boss{
         font-size:50px;
         display:flex;
@@ -34,12 +37,31 @@
         color:rgb(160, 8, 8);
     }
 
+.content1{
+    color:rgb(57, 57, 57);
+    font-size: 0.9em;
+    height:300px;
+    width:70%;
+    border-radius:15px;
+    padding:80px;
+    margin-bottom:20px;
+    margin-top:50px;
+    text-align: left;
+}
 </style>
 <div class='logo-title'>
         <div>
             <div>会员-注册</div>
         </div>
 </div>
+<div id="MSG"> 
+<div class='MSG k-center'>
+<span class='MSG k-row'>
+   <p id = 'MSG_p'>{if isset($msg)}{$msg}{/if}</p>
+</span>
+</div>
+</div>
+
 
 <div class ="boss">
  <div class ='member'>
@@ -53,14 +75,34 @@
      </div>
  </div>
  <div class ="text1">输入手机号码即刻成为会员</div>
- <form>
-    <input class="input1" class="weui-input" type="tel" placeholder="请输入手机号">
-    <a href="javascript:;" class="weui-btn k-btn2 weui-btn_primary">确定</a>
+ <form method="POST" id ='tel' action="/{$p_name}/Wechat/Sign/Register?code={$code}">
+    <input class="input1" required="required" name='tel' class="weui-input" type="tel" placeholder="请输入手机号"></input>
+    <a href="#1" onclick="tel_submit()" class="weui-btn k-btn2 weui-btn_primary">确定</a>
   </form>
 </div>
+
+<div class="weui-toast__content"></div>
+
+
+<script>
+   $(document).ready(function(){
+       var msg = $('#MSG_p').html();
+        if(msg){
+          $('#MSG').fadeIn();
+          setTimeout("$('#MSG').fadeOut()",2000);
+        }
+   });
+
+
+    function tel_submit(){
+        var myform=document.getElementById("tel");
+        myform.submit();
+    }
+</script>
+
+
  
 </body>
-
 <style>
         foot{
             width:100%;
@@ -98,5 +140,6 @@
             </div>
         </foot>
 
+</head>
 
 </html>

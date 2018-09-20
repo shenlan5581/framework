@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 15:09:20
+/* Smarty version 3.1.32, created on 2018-09-20 20:42:46
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3b820d16d17_25612180',
+  'unifunc' => 'content_5ba406469e67e2_11612326',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537456158,
+      1 => 1537476164,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3b820d16d17_25612180 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba406469e67e2_11612326 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
@@ -73,13 +73,26 @@ function content_5ba3b820d16d17_25612180 (Smarty_Internal_Template $_smarty_tpl)
             </div>
 </div>
 
+</div>
+<div id="MSG"> 
+<div class='MSG k-center'>
+<span class='MSG k-row'>
+   <p id = 'MSG_p'><?php if (isset($_smarty_tpl->tpl_vars['msg']->value)) {
+echo $_smarty_tpl->tpl_vars['msg']->value;
+}?></p>
+</span>
+</div>
+</div>
+
+
         <div class="weui-flex">
                 <div class="weui-flex__item">
                     <div class="placeholder">
                           <div class = "part">
                             <div>
                                 <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
-                                <span>BIG FISH</span>
+                                <span><?php echo $_smarty_tpl->tpl_vars['user']->value['m_nickname'];?>
+</span>
                             </div>
 
                           </div>
@@ -102,7 +115,8 @@ function content_5ba3b820d16d17_25612180 (Smarty_Internal_Template $_smarty_tpl)
 
        <div class = "k-center integral">
             <span> 您的当前积分: </span>
-            <span id = 'igl' class ="text-red"> 998</span>
+            <span id = 'igl' class ="text-red"><?php echo $_smarty_tpl->tpl_vars['user']->value['m_integral'];?>
+</span>
        </div>
 
 
@@ -112,13 +126,39 @@ function content_5ba3b820d16d17_25612180 (Smarty_Internal_Template $_smarty_tpl)
 
 <?php echo '<script'; ?>
 >
+    var number;
+    var number=  $('#igl').html();
     function igl(){
-     var number;
-     number=$('#igl').html();
-     number++;
-     $('#igl').html(number);
+                $.ajax({
+                type: 'Get',
+                url:"/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Wechat/API/Sign",
+                data:{
+                },
+                success: function (result) {
+                    var json = JSON.parse(result);
+                     var msg = $('#MSG_p').html(json.msg);
+                    if (json.status == true) { //success 
+                        number++;
+                        $('#igl').html(number);
+                                             
+                    } else {  //failed
+                    }
+                 showmsg();
+                }
+              })// ajax end
 
     }
+function showmsg(){
+         var msg = $('#MSG_p').html();
+        if(msg){
+          $('#MSG').fadeIn();
+          setTimeout("$('#MSG').fadeOut()",2000);
+        }
+   }
+
+
+
 <?php echo '</script'; ?>
 >
 <?php }

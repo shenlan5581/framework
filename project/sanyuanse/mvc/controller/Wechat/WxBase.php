@@ -5,20 +5,29 @@ class WxBase{
    public $ctr ;
    public function __construct(){
 	   $this->ctr = new Controller;
+	   $model = new App_Model_Wechat_wechat;
+	   $code =12345;
+	              //$this->ctr->GetParam('code');
+	   if(!$code){
+		   echo "系统错误";
+		   trigger_error("微信code获取失败");
+		   die();
+	   }
 	   $this->user=false;
 			$wxid = Session::Get('Wx_id');
 			if($wxid){ 
-			//  $this->user = GetUserInfo($m_id);
+			   $this->user =$model->GetUserInfo($wxid); //model
 			} else {
-			//  $wxid = WECHAT\GetUserInfo($code); 
-			//  $this->user = GetUserInfo($m_id);
-					if($this->user){
-							$wxid = Session::Set('Wx_id',1);
+			    $userinfo = WECHAT\WxGetUserInfo($code); //获取用户openid
+			    $this->user =$model->GetUserInfo($userinfo['openid']); //model
+					if($this->user){       //是会员
+							$wxid = Session::Set('Wx_id',$this->user['m_openid']);
 					} else {   //不是会员
-					$this->ctr->Location('/Wechat/Sign/Register');
+					$this->ctr->Location("/Wechat/Sign/Register?code=$code");
 					}
 			}
-			
+    $this->ctr->assign('user',$this->user);
+    $this->ctr->assign('p_name',PROJECT_NAME);
     $this->ctr->DisplaySmart('/Wechat/head.html');
    }
 

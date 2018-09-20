@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 16:10:59
+/* Smarty version 3.1.32, created on 2018-09-20 19:25:40
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3c69344dea8_40602065',
+  'unifunc' => 'content_5ba3f434bcaaa2_57964753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5128cfdb3725011095170316f654164de798ebb8' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html',
-      1 => 1537459858,
+      1 => 1537471538,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3c69344dea8_40602065 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3f434bcaaa2_57964753 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 
+<?php echo '<script'; ?>
+ src="/public/jquery-2.1.3.min.js"><?php echo '</script'; ?>
+>
 <link rel="stylesheet" href="/public/weui/dist/style/weui.min.css"/>
 <link rel="stylesheet" href="/storage/k.css"/>
-</head>
 <body>
 <style>
+    body{
+    font-size:50px;
+    }
     .boss{
         font-size:50px;
         display:flex;
@@ -57,12 +62,33 @@ function content_5ba3c69344dea8_40602065 (Smarty_Internal_Template $_smarty_tpl)
         color:rgb(160, 8, 8);
     }
 
+.content1{
+    color:rgb(57, 57, 57);
+    font-size: 0.9em;
+    height:300px;
+    width:70%;
+    border-radius:15px;
+    padding:80px;
+    margin-bottom:20px;
+    margin-top:50px;
+    text-align: left;
+}
 </style>
 <div class='logo-title'>
         <div>
             <div>会员-注册</div>
         </div>
 </div>
+<div id="MSG"> 
+<div class='MSG k-center'>
+<span class='MSG k-row'>
+   <p id = 'MSG_p'><?php if (isset($_smarty_tpl->tpl_vars['msg']->value)) {
+echo $_smarty_tpl->tpl_vars['msg']->value;
+}?></p>
+</span>
+</div>
+</div>
+
 
 <div class ="boss">
  <div class ='member'>
@@ -76,14 +102,38 @@ function content_5ba3c69344dea8_40602065 (Smarty_Internal_Template $_smarty_tpl)
      </div>
  </div>
  <div class ="text1">输入手机号码即刻成为会员</div>
- <form>
-    <input class="input1" class="weui-input" type="tel" placeholder="请输入手机号">
-    <a href="javascript:;" class="weui-btn k-btn2 weui-btn_primary">确定</a>
+ <form method="POST" id ='tel' action="/<?php echo $_smarty_tpl->tpl_vars['p_name']->value;?>
+/Wechat/Sign/Register?code=<?php echo $_smarty_tpl->tpl_vars['code']->value;?>
+">
+    <input class="input1" required="required" name='tel' class="weui-input" type="tel" placeholder="请输入手机号"></input>
+    <a href="#1" onclick="tel_submit()" class="weui-btn k-btn2 weui-btn_primary">确定</a>
   </form>
 </div>
+
+<div class="weui-toast__content"></div>
+
+
+<?php echo '<script'; ?>
+>
+   $(document).ready(function(){
+       var msg = $('#MSG_p').html();
+        if(msg){
+          $('#MSG').fadeIn();
+          setTimeout("$('#MSG').fadeOut()",2000);
+        }
+   });
+
+
+    function tel_submit(){
+        var myform=document.getElementById("tel");
+        myform.submit();
+    }
+<?php echo '</script'; ?>
+>
+
+
  
 </body>
-
 <style>
         foot{
             width:100%;
@@ -121,6 +171,7 @@ function content_5ba3c69344dea8_40602065 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </foot>
 
+</head>
 
 </html><?php }
 }
