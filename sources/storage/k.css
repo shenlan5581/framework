@@ -56,15 +56,16 @@
 .k-btn2{
   color:rgb(210, 210, 210);
     border-style:none;
-    background-color:rgb(10, 70, 77);
+    background-color:rgb(24, 24, 24);
     font-size:1em;
-    width: 60%;
-    font-weight: 900px;;
+    width: 50%;
+    font-weight: 900px;
+    border-radius: 20px;
 }
 .k-btn2:hover{
-    background-color:rgb(7, 53, 57);
+    background-color:rgb(60, 60, 60);
     font-size:1em;
-    width: 60%;
+    width: 50%;
     font-weight: 900px;;
 }
 .content1{
@@ -100,12 +101,19 @@
         box-shadow: 15px 15px 15px 8px #171616b8;
     }
    .logo-title>div>div{
+          font-size: 1.5em;
           margin:auto;
     }
 /*元素居中*/
 .k-center{
     display:flex;
     flex-direction:column;
+    justify-content:conter;
+    align-items:center;
+}
+.k-row{
+    display:flex;
+    flex-direction:row;
     justify-content:conter;
     align-items:center;
 }
