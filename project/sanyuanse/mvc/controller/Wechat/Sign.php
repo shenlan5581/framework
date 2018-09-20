@@ -12,10 +12,6 @@ class App_Controller_Wechat_Sign {
        $this->ctr->Location('Wechat/Member');
     }    
 
-
-
-
-
     $this->ctr->DisplaySmart('/Wechat/register.html');
 	 }
 

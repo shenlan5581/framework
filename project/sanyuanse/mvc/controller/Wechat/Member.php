@@ -15,12 +15,6 @@ class App_Controller_Wechat_Member extends WxBase{
       $this->ctr->DisplaySmart('/Wechat/test.html');
         
 
-
-
-
-
-
-
         
      
     }
