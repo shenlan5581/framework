@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-19 22:54:24
+/* Smarty version 3.1.32, created on 2018-09-20 09:24:25
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba2d3a06a9187_19699686',
+  'unifunc' => 'content_5ba36749df97f7_80050065',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537397663,
+      1 => 1537435450,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba2d3a06a9187_19699686 (Smarty_Internal_Template $_smarty_tpl) {
-?> 
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-
-        <link rel="stylesheet" href="/public/weui/dist/style/weui.min.css"/>
-        <link rel="stylesheet" href="/storage/k.css"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-
-<title>会员</title>
-</head> 
-<body >
-
+function content_5ba36749df97f7_80050065 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <style>
     body{
         display:flex;
@@ -122,6 +110,7 @@ function content_5ba2d3a06a9187_19699686 (Smarty_Internal_Template $_smarty_tpl)
       <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
       <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">查看施工进度</a>
 </div>
+
 
 </body>
 </html>
