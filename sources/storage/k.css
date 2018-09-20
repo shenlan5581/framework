@@ -95,8 +95,8 @@
         height:200px;
         color:rgb(200, 194, 194);
         border-radius: 10px;
-        width:100%;
-        box-shadow: 10px 10px 5px #bdbcbc;
+        width:99%;
+        box-shadow: 15px 15px 10px #101010;
     }
    .logo-title>div>div{
           margin:auto;
