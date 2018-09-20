@@ -85,6 +85,7 @@
     flex-direction:column;
     justify-content:conter;
     align-items:center;
+    margin-top:10px;
     }
   .logo-title>div{
         display:flex;
@@ -95,8 +96,8 @@
         height:160px;
         color:rgb(200, 194, 194);
         border-radius: 10px;
-        width:99%;
-        box-shadow: 15px 15px 20px 10px #171616;
+        width:97%;
+        box-shadow: 15px 15px 15px 8px #171616;
     }
    .logo-title>div>div{
           margin:auto;
