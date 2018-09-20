@@ -91,12 +91,12 @@
         flex-direction:column;
         justify-content:conter;
         align-items:center;
-        background-color: rgb(54, 63, 65);
+        background: repeating-linear-gradient(to bottom,rgb(51, 60, 60),rgb(16, 16, 16));
         height:160px;
         color:rgb(200, 194, 194);
         border-radius: 10px;
         width:99%;
-        box-shadow: 15px 15px 10px #171616;
+        box-shadow: 15px 15px 20px 10px #171616;
     }
    .logo-title>div>div{
           margin:auto;
