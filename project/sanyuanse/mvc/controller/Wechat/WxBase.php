@@ -5,7 +5,7 @@ class WxBase{
    public $ctr ;
    public function __construct(){
 	   $this->ctr = new Controller;
-	   $this->user=true;
+	   $this->user=false;
 			$wxid = Session::Get('Wx_id');
 			if($wxid){ 
 			//  $this->user = GetUserInfo($m_id);
@@ -15,7 +15,7 @@ class WxBase{
 					if($this->user){
 							$wxid = Session::Set('Wx_id',1);
 					} else {   //不是会员
-					$this->ctr->Location('Wechat/Sign/Register');
+					$this->ctr->Location('/Wechat/Sign/Register');
 					}
 			}
 			

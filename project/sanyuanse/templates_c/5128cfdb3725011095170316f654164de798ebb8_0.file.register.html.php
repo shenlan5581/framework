@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 10:46:48
+/* Smarty version 3.1.32, created on 2018-09-20 16:10:59
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba37a98592b30_89587898',
+  'unifunc' => 'content_5ba3c69344dea8_40602065',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5128cfdb3725011095170316f654164de798ebb8' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html',
-      1 => 1537391313,
+      1 => 1537459858,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba37a98592b30_89587898 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3c69344dea8_40602065 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -37,7 +37,7 @@ function content_5ba37a98592b30_89587898 (Smarty_Internal_Template $_smarty_tpl)
         flex-direction:column;
         justify-content:conter;
         align-items:center;
-        margin:10px;
+        margin:50px;
     }
     .input1 {
         font-size:1.2em;
@@ -58,9 +58,13 @@ function content_5ba37a98592b30_89587898 (Smarty_Internal_Template $_smarty_tpl)
     }
 
 </style>
+<div class='logo-title'>
+        <div>
+            <div>会员-注册</div>
+        </div>
+</div>
 
 <div class ="boss">
-  <img class = "logo" src = "/sanyuanse/logo.jpg"></img>
  <div class ='member'>
      <span>会员权益:</span>
      <div class ='content1'>
@@ -74,10 +78,49 @@ function content_5ba37a98592b30_89587898 (Smarty_Internal_Template $_smarty_tpl)
  <div class ="text1">输入手机号码即刻成为会员</div>
  <form>
     <input class="input1" class="weui-input" type="tel" placeholder="请输入手机号">
-    <a href="javascript:;" class="weui-btn k-btn weui-btn_primary">确定</a>
+    <a href="javascript:;" class="weui-btn k-btn2 weui-btn_primary">确定</a>
   </form>
 </div>
  
 </body>
+
+<style>
+        foot{
+            width:100%;
+            margin-top:80px;
+            font-size:1em;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            color:rgb(19, 19, 19);
+         
+        }
+        foot>div{
+            width:80%;
+            display:flex;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            border-top: 1px solid #aaa;
+            
+        }
+        
+        foot>div>p{
+            display: block;
+            font-size:0.8em;
+            color:rgb(45, 45, 45);
+        }
+            
+        </style> 
+        <foot>
+            <div>
+            <span>郑州三原色</span>
+            <p>郑州市上街区许昌路中段</p>
+            </div>
+        </foot>
+
+
 </html><?php }
 }
