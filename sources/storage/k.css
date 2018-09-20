@@ -34,14 +34,14 @@
     border-color: rgb(21, 21, 21);
     border-radius:10px; 
 }
-.text1{
+.text-yellow{
     color:rgb(155, 106, 8);
 }
 
-.text2{
-
+.text-red{
     font-size: 1.5em;
-    color:rgb(188, 20, 36);
+    color:rgb(227, 18, 39);
+
 }
 
 .text3{
@@ -54,15 +54,15 @@
     font-weight: 900px;;
 }
 .k-btn2{
-  color:rgb(45, 40, 40);
+  color:rgb(210, 210, 210);
     border-style:none;
-    background-color:rgb(18, 143, 193);
+    background-color:rgb(10, 70, 77);
     font-size:1em;
     width: 60%;
     font-weight: 900px;;
 }
 .k-btn2:hover{
-    background-color:rgb(11, 117, 159);
+    background-color:rgb(7, 53, 57);
     font-size:1em;
     width: 60%;
     font-weight: 900px;;
@@ -97,8 +97,15 @@
         color:rgb(200, 194, 194);
         border-radius: 10px;
         width:98%;
-        box-shadow: 15px 15px 15px 8px #171616;
+        box-shadow: 15px 15px 15px 8px #171616b8;
     }
    .logo-title>div>div{
           margin:auto;
     }
+/*元素居中*/
+.k-center{
+    display:flex;
+    flex-direction:column;
+    justify-content:conter;
+    align-items:center;
+}

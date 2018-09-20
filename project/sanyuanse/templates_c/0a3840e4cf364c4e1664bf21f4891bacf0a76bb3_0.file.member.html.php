@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 13:18:42
+/* Smarty version 3.1.32, created on 2018-09-20 13:58:59
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba39e324355e8_62663677',
+  'unifunc' => 'content_5ba3a7a314cf06_06318105',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537449490,
+      1 => 1537451937,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba39e324355e8_62663677 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3a7a314cf06_06318105 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
@@ -40,30 +40,29 @@ function content_5ba39e324355e8_62663677 (Smarty_Internal_Template $_smarty_tpl)
       width:200px;
       margin:50px;
     } 
+
     .integral{
-        display:flex;
-        flex-direction:row;
         margin: 3%;
-        color:rgb(195, 120, 0);
+        font-weight: 900;
+        color:rgb(240, 149, 13);
     }
     .integral2{
-        width:70%;
         padding:5%;
         display:flex;
         flex-direction:row;
-        margin: 3%;
-        color:rgb(130, 129, 126);
+        margin: 6%;
+        color:rgb(176, 176, 176);
+        box-shadow: 10px 10px 3px 3px #0e0e0e79 ;
+        background-color: rgba(35, 34, 34, 0.496);
+        font-size: 0.8em;
     }
-    .nv{
-        width:100%;
-    }
-
+    
 
         </style>
 
 <div class='logo-title'>
             <div>
-                    <div>会员-积分</div>
+                <div>会员-积分</div>
             </div>
 </div>
 
@@ -78,13 +77,17 @@ function content_5ba39e324355e8_62663677 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
         </div>
 
-       <div class = "integral">
-            <span> 当前积分: </span>
-            <span class ="text2"> 998</span>
+
+
+
+
+       <div class = "k-center integral">
+            <span> 您的当前积分: </span>
+            <span class ="text-red"> 998</span>
        </div>
-            <div> 积分福利 </div>
+            <div class="k-center"> 积分福利 </div>
        <div class = "integral2 border02">
-            <div class='text3'> 
+            <div> 
              <span> 满1000分赠送 </span><br>
              <span> ... ...</span><br>
              <span> 满800分赠送 </span><br>
@@ -93,6 +96,8 @@ function content_5ba39e324355e8_62663677 (Smarty_Internal_Template $_smarty_tpl)
              <span> ... ...</span><br>
             </div>
        </div>
+
+
 
  <div class ='nv' >
       <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
