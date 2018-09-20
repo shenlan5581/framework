@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 13:58:59
+/* Smarty version 3.1.32, created on 2018-09-20 14:00:50
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3a7a314cf06_06318105',
+  'unifunc' => 'content_5ba3a8124c0670_72792712',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537451937,
+      1 => 1537452049,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3a7a314cf06_06318105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3a8124c0670_72792712 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
@@ -81,10 +81,7 @@ function content_5ba3a7a314cf06_06318105 (Smarty_Internal_Template $_smarty_tpl)
 
 
 
-       <div class = "k-center integral">
-            <span> 您的当前积分: </span>
-            <span class ="text-red"> 998</span>
-       </div>
+ 
             <div class="k-center"> 积分福利 </div>
        <div class = "integral2 border02">
             <div> 
@@ -97,6 +94,11 @@ function content_5ba3a7a314cf06_06318105 (Smarty_Internal_Template $_smarty_tpl)
             </div>
        </div>
 
+       
+       <div class = "k-center integral">
+            <span> 您的当前积分: </span>
+            <span class ="text-red"> 998</span>
+       </div>
 
 
  <div class ='nv' >
