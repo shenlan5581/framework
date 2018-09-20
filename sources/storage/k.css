@@ -54,9 +54,9 @@
     font-weight: 900px;;
 }
 .k-btn2{
-  color:rgb(0, 0, 0);
+  color:rgb(216, 216, 216);
     border-style:none;
-    background-color:rgb(18, 135, 223);
+    background-color:rgb(21, 153, 210);
     font-size:1em;
     width: 50%;
     height:120px;
@@ -99,7 +99,7 @@
         color:rgb(200, 194, 194);
         border-radius: 10px;
         width:98%;
-        box-shadow: 15px 15px 15px 8px #171616;
+        box-shadow: 15px 15px 15px 8px #322f2f;
     }
    .logo-title>div>div{
           font-size: 1.5em;

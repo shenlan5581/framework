@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 14:35:55
+/* Smarty version 3.1.32, created on 2018-09-20 14:49:21
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3b04b536020_05533245',
+  'unifunc' => 'content_5ba3b37177fd32_81257041',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537454154,
+      1 => 1537454960,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3b04b536020_05533245 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3b37177fd32_81257041 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
@@ -102,13 +102,23 @@ function content_5ba3b04b536020_05533245 (Smarty_Internal_Template $_smarty_tpl)
 
        <div class = "k-center integral">
             <span> 您的当前积分: </span>
-            <span class ="text-red"> 998</span>
+            <span id = 'igl' class ="text-red"> 998</span>
        </div>
 
 
  <div class ='' >
-      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
+    <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
 </div>
+<?php echo '<script'; ?>
+>
+    function igl(){
+     var number;
+     number=$('#igl').html();
+     number++;
+     $('#igl').html(number);
 
+    }
+<?php echo '</script'; ?>
+>
 <?php }
 }

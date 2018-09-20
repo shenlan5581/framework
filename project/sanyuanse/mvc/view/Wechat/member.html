@@ -79,11 +79,19 @@
 
        <div class = "k-center integral">
             <span> 您的当前积分: </span>
-            <span class ="text-red"> 998</span>
+            <span id = 'igl' class ="text-red"> 998</span>
        </div>
 
 
  <div class ='' >
-      <a href="javascript:;" class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
+    <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
 </div>
+<script>
+    function igl(){
+     var number;
+     number=$('#igl').html();
+     number++;
+     $('#igl').html(number);
 
+    }
+</script>
