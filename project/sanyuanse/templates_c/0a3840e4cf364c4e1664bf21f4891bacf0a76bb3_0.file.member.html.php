@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-20 14:49:21
+/* Smarty version 3.1.32, created on 2018-09-20 15:09:20
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba3b37177fd32_81257041',
+  'unifunc' => 'content_5ba3b820d16d17_25612180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537454960,
+      1 => 1537456158,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba3b37177fd32_81257041 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba3b820d16d17_25612180 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
    html{
        font-size: 40px;
-       background: repeating-linear-gradient(to right,rgb(244, 240, 240), rgba(223, 225, 225, 0.619));
+       background:radial-gradient(rgb(255, 255, 255), rgb(255, 255, 255)80%);
    }
 
     .part{
@@ -106,9 +106,10 @@ function content_5ba3b37177fd32_81257041 (Smarty_Internal_Template $_smarty_tpl)
        </div>
 
 
- <div class ='' >
-    <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">会员签到</a>
-</div>
+    <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">
+         <p>会员签到 </p>  
+    </a>
+
 <?php echo '<script'; ?>
 >
     function igl(){

@@ -54,18 +54,16 @@
     font-weight: 900px;;
 }
 .k-btn2{
-  color:rgb(216, 216, 216);
+    color:rgb(216, 216, 216);
     border-style:none;
-    background-color:rgb(21, 153, 210);
-    font-size:1em;
+    background: repeating-linear-gradient(to bottom,rgb(54, 160, 230), rgb(28, 109, 208)80%,rgb(11, 54, 184));
+    font-size:1.3em;
     width: 50%;
-    height:120px;
     font-weight: 900px;
     border-radius: 20px;
 }
 .k-btn2:hover{
     background-color:rgb(11, 109, 179);
-    font-size:1em;
     width: 50%;
     font-weight: 900px;;
 }
