@@ -108,11 +108,11 @@
         justify-content:conter;
         align-items:center;
         background: repeating-linear-gradient(to bottom,rgb(61, 69, 67) ,rgb(51, 56, 57)90%,rgb(45, 44, 44) );
-        height:10vw;
+        height:5vw;
         color:rgb(200, 194, 194);
         border-radius: 10px;
         width:98%;
-        box-shadow: 15px 15px 15px 8px #322f2f;
+        box-shadow: 15p 15px 15px 8px #322f2f;
     }
    .logo-title>div>div{
           font-size: 1.5em;
