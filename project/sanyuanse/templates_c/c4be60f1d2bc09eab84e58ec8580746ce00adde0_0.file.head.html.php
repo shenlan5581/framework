@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 13:03:11
+/* Smarty version 3.1.32, created on 2018-09-21 13:07:54
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba4ec0f4bf999_32550079',
+  'unifunc' => 'content_5ba4ed2a23e073_77642811',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4be60f1d2bc09eab84e58ec8580746ce00adde0' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/head.html',
-      1 => 1537534968,
+      1 => 1537535268,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba4ec0f4bf999_32550079 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba4ed2a23e073_77642811 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -31,8 +31,6 @@ function content_5ba4ec0f4bf999_32550079 (Smarty_Internal_Template $_smarty_tpl)
  src="/public/jquery-2.1.3.min.js"><?php echo '</script'; ?>
 >
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<meta name= "viewport" content="width=device-width height=device-height ,initial-scale=2, maximum-scale=1,user-scalable=no">
-
  
 <title>三原色</title>
 </head> 
