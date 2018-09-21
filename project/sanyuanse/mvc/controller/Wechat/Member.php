@@ -13,6 +13,13 @@ class App_Controller_Wechat_Member extends WxBase{
     }
 
 
-     
-
+    //查看会员装修记录
+   public function OrderAction(){
+      $model = new App_Model_Wechat_wechat;
+      $order= $model->Order($this->user['m_id']);
+      if($order){
+      $this->ctr->assign('order',$order);
+      }
+      $this->ctr->DisplaySmart('/Wechat/order.html');
+    }
 }

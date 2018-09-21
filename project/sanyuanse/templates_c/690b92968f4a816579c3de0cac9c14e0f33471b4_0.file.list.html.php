@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 20:55:09
-  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/member/list.html' */
+/* Smarty version 3.1.32, created on 2018-09-21 20:42:45
+  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/order/list.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba55aad350ee8_10425629',
+  'unifunc' => 'content_5ba557c5e50113_98252704',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '77023bebc30d7af1e97650554b71eb898351f883' => 
+    '690b92968f4a816579c3de0cac9c14e0f33471b4' => 
     array (
-      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/member/list.html',
-      1 => 1537563306,
+      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/order/list.html',
+      1 => 1537556682,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,42 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba55aad350ee8_10425629 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
-        <span> 用户-会员 列表：</span><br>
-        <span style="font-size: 10px;">用户信息相关</span> 
+function content_5ba557c5e50113_98252704 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
+        <span>项目 列表：</span><br>
+        <span style="font-size: 10px;">项目信息相关</span> 
      </div>
      
+
      <div class="container-fluid ">
-        <div class="row ">
-            <div class="col-sm-3 column">
-            <!-- 类型 -->
-                    <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend ">
-                              <label class="input-group-text">按名称查找</label>
-                             <form atcion ="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
-/Manage/Member/MemberList">
-                                <input type='text'name='nk_name' ></input>
-                            </div>
-                        <button type ="submit" class="btn  btn-sm btn-success">查找</button>
-                      </div>
-                            </form>
-                    
-            </div>
-      
-   
+            <div class="row ">
+                <div class="col-sm-3 column">
+                <!-- 类型 -->
+                        <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend ">
+                                  <label class="input-group-text">按名称查找</label>
+                                 <form atcion ="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Manage/Order/OrderList">
+                                    <input type='text'name='otitle' ></input>
+                                </div>
+                            <button type ="submit" class="btn  btn-sm btn-success">查找</button>
+                          </div>
+                                </form>
+                        
+                </div>
+          
+
+
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">头像</th>
-            <th scope="col">昵称</th>
-            <th scope="col">电话</th>
-            <th scope="col">积分</th>
+            <th scope="col">项目标题</th>
+            <th scope="col">地址</th>
+            <th scope="col">负责人</th>
+            <th scope="col">造价</th>
+            <th scope="col">已支付</th>
+            <th scope="col">进度描述</th>
             <th scope="col">日期</th>
             <th scope="col">操作</th>
           </tr>
@@ -62,25 +67,29 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
 ?> 
           <tr>
-            <td><img  style="height:50px;width:auto" src="<?php echo $_smarty_tpl->tpl_vars['row']->value['m_headimg'];?>
-"></td>
-            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['m_nickname'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_title'];?>
  </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['m_tel'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_addr'];?>
  </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['m_integral'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_admin'];?>
  </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['m_date'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_price'];?>
+ </td>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_pay'];?>
+ </td>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_biref'];?>
+ </td>
+            <td><?php echo $_smarty_tpl->tpl_vars['row']->value['o_date'];?>
   </td>
             <td>
-                        <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
-/Manage/Order/OrderEdit?user_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['m_id'];?>
-" class="btn  btn-sm btn-primary"> 创建项目 </a>
-                        <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
-/Manage/Order/Orderlist?user_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['m_id'];?>
-" class="btn  btn-sm btn-success"> 查看用户项目 </a>
-                        <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
-/Manage/Member/MemberDelete?id=<?php echo $_smarty_tpl->tpl_vars['row']->value['m_id'];?>
+                <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Manage/Order/OrderEdit?edit_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['o_id'];?>
+" class="btn  btn-sm btn-primary"> 编辑 </a>
+                <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Manage/Member/MemberList?id=<?php echo $_smarty_tpl->tpl_vars['row']->value['o_m_id'];?>
+" class="btn  btn-sm btn-success"> 查看用户信息 </a>
+                <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Manage/Order/OrderDelete?id=<?php echo $_smarty_tpl->tpl_vars['row']->value['o_id'];?>
 " class="btn  btn-sm btn-secondary"> 删除 </a>
             </td>
           </tr>
@@ -126,6 +135,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 
           window.location.href='<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
 ?&index='+index; 
         }
+
           <?php echo '</script'; ?>
 >
     <?php }

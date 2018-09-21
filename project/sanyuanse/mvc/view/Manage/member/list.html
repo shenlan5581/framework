@@ -40,6 +40,8 @@
             <td>{$row['m_integral']} </td>
             <td>{$row['m_date']}  </td>
             <td>
+                        <a href="/{$project_name}/Manage/Order/OrderEdit?user_id={$row['m_id']}" class="btn  btn-sm btn-primary"> 创建项目 </a>
+                        <a href="/{$project_name}/Manage/Order/Orderlist?user_id={$row['m_id']}" class="btn  btn-sm btn-success"> 查看用户项目 </a>
                         <a href="/{$project_name}/Manage/Member/MemberDelete?id={$row['m_id']}" class="btn  btn-sm btn-secondary"> 删除 </a>
             </td>
           </tr>

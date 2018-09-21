@@ -8,9 +8,11 @@ class App_Model_Manage_Reserve{
     
     public function List($index,$count){
         $ctr = new Controller;
+
         $where =array(
             array('name'=>'re_del','oper'=>'=','value'=>0)
           );
+
           $sort = array('re_date'=>'desc');
           return $this->mysql->getList($where,$index,$count,$sort);
     }

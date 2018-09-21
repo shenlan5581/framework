@@ -48,10 +48,13 @@ class Base_Manage{
         ),
         */
         '用户'=>array(
-             '会员'=>"/$project/Manage/Member/MemberList",
+             '会员列表'=>"/$project/Manage/Member/MemberList",
         ),
         '预约'=>array(
              '预约'=>"/$project/Manage/Reserve/ReserveList",
+        ),
+        '项目'=>array(
+             '项目列表'=>"/$project/Manage/Order/OrderList",
         ),
         /*
         '微信'=>array(

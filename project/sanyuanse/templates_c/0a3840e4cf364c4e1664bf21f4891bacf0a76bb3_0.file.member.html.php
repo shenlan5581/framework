@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 13:03:11
+/* Smarty version 3.1.32, created on 2018-09-21 21:13:42
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba4ec0f4d7a51_29338959',
+  'unifunc' => 'content_5ba55f06b17e69_74476161',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537534961,
+      1 => 1537564420,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba4ec0f4d7a51_29338959 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba55f06b17e69_74476161 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 
@@ -119,6 +119,10 @@ echo $_smarty_tpl->tpl_vars['msg']->value;
 
     <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">
          <p>会员签到 </p>  
+    </a>
+    <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Wechat/Member/Order"  class="weui-btn k-btn2  weui-btn_plain-default">
+         <p>我的装修</p>  
     </a>
 
     <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>

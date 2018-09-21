@@ -37,11 +37,11 @@ class App_Model_Wechat_wechat{
             return $ret =$mysql->updateValue($set,$where);
 
     }
-    public function Case($openid){
-          $mysql =new Mysql('case');
+    public function Order($mid){
+          $mysql =new Mysql('order');
             $where = array(
-                array('name'=>'c_del','oper'=>'=','value'=>0),
-                array('name'=>'c_m_openid','oper'=>'=','value'=>$openid),
+                array('name'=>'o_del','oper'=>'=','value'=>0),
+                array('name'=>'o_m_id','oper'=>'=','value'=>$mid),
             );
             return $list =$mysql->getList($where);
     }

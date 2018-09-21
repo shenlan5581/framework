@@ -1,0 +1,142 @@
+
+<strong>
+        {if isset($oper)}
+        {$oper} 
+        {/if}
+    </strong>
+    
+    <form method="Post" action='/{$project_name}/Manage/Order/OrderEdit{if isset($user_id)}?user_id={$user_id}{/if}{if isset($edit_id)}?edit_id={$edit_id}{/if}'>
+    <div class="container-fluid" >
+        <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                <div class ="col-sm-3">
+                    <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span style = 'width:80px'class="input-group-text">标题</span>
+                    </div>
+                       <input required="required"  name='title' type="text" value="{if isset($row['o_title'])} {$row['o_title']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>  
+    
+    
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span style = 'width:80px'class="input-group-text">地址</span>
+                            </div>
+                               <input required="required"  name='addr' type="text" value="{if isset($row['o_addr'])} {$row['o_addr']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                                
+                               </input>
+                            </div>
+                        </div>
+                    </div>  
+
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span style = 'width:80px'class="input-group-text">推荐人</span>
+                            </div>
+                               <input name='recommend' type="text" value="{if isset($row['o_recommend'])} {$row['o_recommend']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                                
+                                 </input>
+                            </div>
+                        </div>
+                    </div>  
+
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span style = 'width:80px'class="input-group-text">负责人</span>
+                            </div> 
+                               <input required="required"  name='admin' type="text" value="{if isset($row['o_admin'])} {$row['o_admin']} {/if} "  class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                               
+                        </input>
+                            </div>
+                        </div>
+                    </div>  
+
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span style = 'width:80px'class="input-group-text">总造价</span>
+                            </div>
+                               <input required="required"  name='price' type="text" value="{if isset($row['o_price'])} {$row['o_price']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                               
+                        </input>
+                            </div>
+                        </div>
+                    </div>  
+
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span style = 'width:80px'class="input-group-text">已支付</span>
+                            </div>
+                               <input required="required"  name='pay' type="text" value="{if isset($row['o_pay'])} {$row['o_pay']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                               
+                        </input>
+                            </div>
+                        </div>
+                    </div>  
+
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span style = 'width:80px'class="input-group-text">进度描述</span>
+                            </div>
+                               <input required="required"  name='biref' type="text" value="  {if isset($row['o_biref'])} {$row['o_biref']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>  
+
+
+            <div class ="row clearfix">
+                        <div class ="col-sm-4">
+                            <!--占位-->
+                        </div> 
+                        <div class ="col-sm-3">
+
+                    <input type ="hidden" name='oper' value="commit"></input>
+                    <button   type="submit" class= 'btn btn-dark'>save</button>      
+
+                            </div>
+                        </div>
+                    </div>  
+
+
+
+
+            </div> 
+    </div>  
+    
+    </form>
+    
+
+    

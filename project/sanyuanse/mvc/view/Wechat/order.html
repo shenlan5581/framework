@@ -1,0 +1,125 @@
+<style>
+.order{
+ margin-top:120px;
+
+    }
+.order>st{
+    display:flex;
+    flex-direction:column;
+    justify-content:conter;
+    align-items:center;
+    font-size: 1.3em;
+    margin: 80px;
+    color:rgb(11, 155, 244);
+    font-weight: 900;
+    text-shadow: 10px 10px 5px rgb(125, 125, 125);
+}
+.red{
+    color:rgb(218, 110, 43);
+}
+.blue{
+    color:rgb(13, 133, 239);
+    font-size: 1.2em;
+}
+
+.gray{
+    color:rgb(106, 106, 106);
+}
+
+
+</style>
+
+{if isset($order)}
+<div class='logo-title'>
+        <div>
+            <div>会员-我的装修</div>
+        </div>
+</div>
+{foreach $order as $v}
+<div class ="order">
+
+<st class ='status'>
+    {$v['o_biref']}
+</st>
+
+
+<div class="weui-cell">
+        <div class="weui-cell__bd">
+            <p>项目</p>
+        </div>
+        <div class="weui-cell__ft">{$v['o_title']}</div>
+</div>
+
+<div class="weui-cell">
+        <div class="weui-cell__bd">
+            <p>项目地址</p>
+        </div>
+        <div class="weui-cell__ft ">
+{$v['o_addr']}
+        </div>
+</div>
+
+<div class="weui-cell">
+        <div class="weui-cell__bd">
+            <p>项目负责人</p>
+        </div>
+        <div class="weui-cell__ft">
+{$v['o_admin']}
+        </div>
+</div>
+
+<div class="weui-cell">
+        <div class="weui-cell__bd">
+            <p>项目总价</p>
+        </div>
+        <div class="weui-cell__ft red">
+￥{$v['o_price']}.00
+        </div>
+</div>
+
+<div class="weui-cell">
+        <div class="weui-cell__bd ">
+            <p>已付款</p>
+        </div>
+        <div class="weui-cell__ft red">
+￥{$v['o_pay']}.00
+        </div>
+</div>
+<a class="weui-cell weui-cell_access" href="https://mp.weixin.qq.com/mp/homepage?__biz=MzU1NzcxMzcxNg%3D%3D&hid=3&sn=b6cf388e8c61b6c2e516c9e155aed586">
+        <div class="weui-cell__bd">
+            <p>装修日记</p>
+        <p class ='gry'></p>
+        </div>
+        <div class="weui-cell__ft blue">
+        点击查看
+        </div>
+    </a>
+
+
+
+
+<div>
+{/foreach}
+{else}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/if}

@@ -9,12 +9,16 @@ class App_Model_Manage_Member{
 
     public function List($index,$count){
         $ctr = new Controller;
-        $nk_name = $ctr->GetParam('nk_name',"POST");    
+        $nk_name = $ctr->GetParam('nk_name',"GET");    
+        $id = $ctr->GetParam('id',"GET");    
         $where =array(
             array('name'=>'m_del','oper'=>'=','value'=>0)
           );
         if($nk_name){
-          $where [] = array('name'=>'m_nick_name','oper'=>'like','value'=>$nk_name);
+          $where [] = array('name'=>'m_nickname','oper'=>'like','value'=>'%'.$nk_name.'%');
+        }
+        if($id){
+          $where [] = array('name'=>'m_id','oper'=>'=','value'=>$id);
         }
           $sort = array('m_date'=>'desc');
           return $this->mysql->getList($where,$index,$count,$sort);

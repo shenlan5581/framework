@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 20:16:17
+/* Smarty version 3.1.32, created on 2018-09-21 20:42:45
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/view-layout/menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba15d11d3dfa5_34690203',
+  'unifunc' => 'content_5ba557c5e418c5_01110484',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba15d11d3dfa5_34690203 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba557c5e418c5_01110484 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .c1{
   color:red;

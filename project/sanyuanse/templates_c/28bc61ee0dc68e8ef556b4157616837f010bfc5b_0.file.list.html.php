@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 15:32:48
+/* Smarty version 3.1.32, created on 2018-09-21 20:43:56
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/Reserve/list.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba50f207707a0_85662504',
+  'unifunc' => 'content_5ba5580c283fc4_88044183',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba50f207707a0_85662504 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba5580c283fc4_88044183 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
         <span>预约 列表：</span><br>
         <span style="font-size: 10px;">预约信息相关</span> 

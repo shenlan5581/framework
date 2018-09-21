@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 12:52:26
+/* Smarty version 3.1.32, created on 2018-09-21 21:12:58
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/foot.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba4e98ae09c46_12330926',
+  'unifunc' => 'content_5ba55eda2d79b9_50057040',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba4e98ae09c46_12330926 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba55eda2d79b9_50057040 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 

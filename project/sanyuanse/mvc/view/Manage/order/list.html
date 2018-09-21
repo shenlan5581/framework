@@ -1,0 +1,82 @@
+
+<div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
+        <span>项目 列表：</span><br>
+        <span style="font-size: 10px;">项目信息相关</span> 
+     </div>
+     
+
+     <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-sm-3 column">
+                <!-- 类型 -->
+                        <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend ">
+                                  <label class="input-group-text">按名称查找</label>
+                                 <form atcion ="/{$project_name}/Manage/Order/OrderList">
+                                    <input type='text'name='otitle' ></input>
+                                </div>
+                            <button type ="submit" class="btn  btn-sm btn-success">查找</button>
+                          </div>
+                                </form>
+                        
+                </div>
+          
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">项目标题</th>
+            <th scope="col">地址</th>
+            <th scope="col">负责人</th>
+            <th scope="col">造价</th>
+            <th scope="col">已支付</th>
+            <th scope="col">进度描述</th>
+            <th scope="col">日期</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+    {foreach $list as $row} 
+          <tr>
+            <td>{$row['o_title']} </td>
+            <td>{$row['o_addr']} </td>
+            <td>{$row['o_admin']} </td>
+            <td>{$row['o_price']} </td>
+            <td>{$row['o_pay']} </td>
+            <td>{$row['o_biref']} </td>
+            <td>{$row['o_date']}  </td>
+            <td>
+                <a href="/{$project_name}/Manage/Order/OrderEdit?edit_id={$row['o_id']}" class="btn  btn-sm btn-primary"> 编辑 </a>
+                <a href="/{$project_name}/Manage/Member/MemberList?id={$row['o_m_id']}" class="btn  btn-sm btn-success"> 查看用户信息 </a>
+                <a href="/{$project_name}/Manage/Order/OrderDelete?id={$row['o_id']}" class="btn  btn-sm btn-secondary"> 删除 </a>
+            </td>
+          </tr>
+    {/foreach}
+        </tbody>
+      </table>
+    
+      <nav aria-label="Page navigation example" >
+            <ul class="pagination">
+              <li class="page-item"><a  style="color:rgb(31, 31, 31)"  class="page-link" onclick=page({$curr_count-1}) href="#">上一个</a></li>
+              {for $i=1 to $count}
+                 {if $i == $curr_count}
+                <li class="page-item"><a style="color:rgb(22, 170, 180)" class="page-link" >{$i}</a></li>
+                 {else}
+                <li class="page-item"><a style="color:rgb(167, 167, 167)"  class="page-link" onclick=page({$i}) href="#">{$i}</a></li>
+                {/if}
+              {/for}
+              <li class="page-item"><a style="color:rgb(33, 33, 33)" class="page-link" onclick=page({$curr_count+1}) href="#">下一个</a></li>
+            </ul>
+          </nav>
+        
+          <script>
+        function page(index){
+          if(index>{$count} || index < 0){
+              return;
+          }
+          window.location.href='{$url}?&index='+index; 
+        }
+
+          </script>
+    
