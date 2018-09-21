@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 13:01:22
+/* Smarty version 3.1.32, created on 2018-09-21 13:03:11
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba4eba255fff9_39439801',
+  'unifunc' => 'content_5ba4ec0f4d7a51_29338959',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537534881,
+      1 => 1537534961,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba4eba255fff9_39439801 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba4ec0f4d7a51_29338959 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
-   html{
-       font-size: 50px;
-       background:radial-gradient(rgb(255, 255, 255), rgb(255, 255, 255)80%);
-   }
+
 
     .part{
         display:flex;
