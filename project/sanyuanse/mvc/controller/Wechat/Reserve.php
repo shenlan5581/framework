@@ -8,10 +8,17 @@ class App_Controller_Wechat_Reserve extends WxBase{
 
    //会员
    public function IndexAction(){
+
+
+
+
+    
+    
      $this->ctr->DisplaySmart('/Wechat/Reserve.html');
     }
 
 
+    
     public function testAction(){
 
         

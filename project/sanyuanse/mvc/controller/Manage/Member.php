@@ -13,7 +13,7 @@ class App_Controller_Manage_Member extends Base_Manage{
 
     //会员列表
    public function MemberListAction(){ 
-     $model = new App_Model_Manage_WxMember;
+     $model = new App_Model_Manage_Member;
      $List=$model->List();
      $this->ctr->DisplaySmart('/Manage/member/list.html');
    }
