@@ -1,0 +1,72 @@
+<div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
+        <span> 用户-会员 列表：</span><br>
+        <span style="font-size: 10px;">用户信息相关</span> 
+     </div>
+     
+     <div class="container-fluid ">
+        <div class="row ">
+            <div class="col-sm-3 column">
+            <!-- 类型 -->
+                    <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend ">
+                              <label class="input-group-text">按名称查找</label>
+                             <form atcion ="/{$project_name}/Manage/Member/MemberList">
+                                <input type='text'name='nk_name' ></input>
+                            </div>
+                        <button type ="submit" class="btn  btn-sm btn-success">查找</button>
+                      </div>
+                            </form>
+                    
+            </div>
+      
+   
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">头像</th>
+            <th scope="col">昵称</th>
+            <th scope="col">电话</th>
+            <th scope="col">积分</th>
+            <th scope="col">日期</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+    {foreach $list as $row} 
+          <tr>
+            <td><img  style="height:50px;width:auto" src="{$row['m_headimg']}"></td>
+            <td>{$row['m_nickname']} </td>
+            <td>{$row['m_tel']} </td>
+            <td>{$row['m_integral']} </td>
+            <td>{$row['m_date']}  </td>
+            <td>
+                        <a href="/{$project_name}/Manage/Member/MemberDelete?id={$row['m_id']}" class="btn  btn-sm btn-secondary"> 删除 </a>
+            </td>
+          </tr>
+    {/foreach}
+        </tbody>
+      </table>
+    
+      <nav aria-label="Page navigation example" >
+            <ul class="pagination">
+              <li class="page-item"><a  style="color:rgb(31, 31, 31)"  class="page-link" onclick=page({$curr_count-1}) href="#">上一个</a></li>
+              {for $i=1 to $count}
+                 {if $i == $curr_count}
+                <li class="page-item"><a style="color:rgb(22, 170, 180)" class="page-link" >{$i}</a></li>
+                 {else}
+                <li class="page-item"><a style="color:rgb(167, 167, 167)"  class="page-link" onclick=page({$i}) href="#">{$i}</a></li>
+                {/if}
+              {/for}
+              <li class="page-item"><a style="color:rgb(33, 33, 33)" class="page-link" onclick=page({$curr_count+1}) href="#">下一个</a></li>
+            </ul>
+          </nav>
+        
+          <script>
+        function page(index){
+          if(index>{$count} || index < 0){
+              return;
+          }
+          window.location.href='{$url}?&index='+index; 
+        }
+          </script>
+    

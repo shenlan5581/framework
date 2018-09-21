@@ -30,7 +30,7 @@ img{
 .input1 {
     font-size:1.2em;
     width: 800px;;
-    height:140px;
+    height:100px;
     border:1px solid #aaa;
     border-radius:10px;
     }
@@ -41,24 +41,61 @@ img{
     </div>
 </div>
 
+<div id="MSG"> 
+    <div class='MSG k-center'>
+    <span class='MSG k-row'>
+       <p id = 'MSG_p'>{if isset($msg)}{$msg}{/if}</p>
+    </span>
+    </div>
+    </div>
+
+
 <img  src="/sanyuanse/logo.jpg">
     
 </img>
 
 <div class ='content k-center'> 
-<form method="POST" id ='tel' action="/{$p_name}/Wechat/Sign/Register?code={$code}">
+<form method="POST" id ='tel' action="/{$p_name}/Wechat/Reserve">
    
   <div class ='item'> 
    <span>您的姓名</span>
-   <input class="input1" required="required" name='text' class="weui-input" type="name" placeholder="请输入姓名"></input>
+   <input class="input1" required="required" name='name' class="weui-input" type="text" placeholder="请输入姓名"></input>
   </div>   
 
   <div class ='item'> 
    <span>您的电话</span>
     <input class="input1" required="required" name='tel' class="weui-input" type="tel" placeholder="请输入手机号"></input>
    </div>  
- 
+
+  <div class ='item'> 
+   <span>装修地址</span>
+    <input class="input1" required="required" name='addr' class="weui-input" type="text" placeholder="你要装修的地址"></input>
+   </div>  
+
+  <div class ='item'> 
+   <span>您的留言</span>
+    <input class="input1" required="required" name='note' class="weui-input" type="text" placeholder="留言"></input>
+   </div>  
+
+
     <a href="#1" onclick="form_submit()" class="weui-btn ts-btn weui-btn_primary">确定</a>
  </form>
 </div>
   
+<script>
+
+    $(document).ready(function(){
+        var msg = $('#MSG_p').html();
+         if(msg){
+           $('#MSG').fadeIn();
+           setTimeout("$('#MSG').fadeOut()",2000);
+         }
+    });
+ 
+ 
+     function form_submit(){
+         var myform=document.getElementById("tel");
+         myform.submit();
+     }
+ </script>
+ 

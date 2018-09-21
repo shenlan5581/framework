@@ -39,17 +39,19 @@ class Base_Manage{
   public function BASE_MENU(){
     $project = PROJECT_NAME;
     return array(
+        /*
         '图片管理'=>array(
              '幻灯片'=>"/$project/Manage/Slide/Slide",
         ),
         '工程案例'=>array(
              '案例'=>"/$project/Manage/Case/CaseList",
         ),
+        */
         '用户'=>array(
              '会员'=>"/$project/Manage/Member/MemberList",
         ),
-        '订单'=>array(
-             '订单'=>"/$project/Manage/Order/OrderList",
+        '预约'=>array(
+             '预约'=>"/$project/Manage/Reserve/ReserveList",
         ),
         /*
         '微信'=>array(

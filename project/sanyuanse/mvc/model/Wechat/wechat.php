@@ -46,6 +46,10 @@ class App_Model_Wechat_wechat{
             return $list =$mysql->getList($where);
     }
 
+    public function Reserve($data){
+          $mysql =new Mysql('reserve');
+            return $list =$mysql->insertValue($data);
+    }
 
 
 
