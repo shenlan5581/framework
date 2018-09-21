@@ -21,26 +21,26 @@ class App_Controller_Wechat_Reserve {
        $tel  = $this->ctr->GetParam('tel',"POST");
        $addr = $this->ctr->GetParam('addr',"POST");
        $note = $this->ctr->GetParam('note',"POST");
-       echo $name;
-       echo $tel;
        $tellen=strlen($tel);
        $namelen=strlen($name);
-       if($tellen == 11 && $namelen >3 && $namelen < 20 && $addr){
-          $data=array(
-            're_name'=>$name,
-            're_tel'=>intval($tel),
-            're_addr'=>intval($addr),
-            're_note'=>intval($addr),
-            're_date'=>time(),
-          );
-          if($this->model->Reserve($data)){
-    				$this->ctr->assign('msg','预约已提交，客服经理会尽快与您联系');
-          }  else {
-    				$this->ctr->assign('msg','提交失败');
+       if($tel && $tel && $addr && $note ) {
+          if($tellen == 11 && $namelen >3 && $namelen < 20 && $addr){
+              $data=array(
+                're_name'=>$name,
+                're_tel'=>intval($tel),
+                're_addr'=>intval($addr),
+                're_note'=>intval($addr),
+                're_date'=>time(),
+              );
+              if($this->model->Reserve($data)){
+                $this->ctr->assign('msg','预约已提交，客服经理会尽快与您联系');
+              }  else {
+                $this->ctr->assign('msg','提交失败');
+              }
+          }else{
+              $this->ctr->assign('msg','输入错误，请检查');
           }
-       }else{
-           $this->ctr->assign('msg','输入错误，请检查');
-       }
+        }
      $this->ctr->DisplaySmart('/Wechat/Reserve.html');
     }
 
