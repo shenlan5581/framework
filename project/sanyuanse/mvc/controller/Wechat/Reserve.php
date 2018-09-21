@@ -27,9 +27,9 @@ class App_Controller_Wechat_Reserve {
           if($tellen == 11 && $namelen >3 && $namelen < 20 && $addr){
               $data=array(
                 're_name'=>$name,
-                're_tel'=>intval($tel),
-                're_addr'=>intval($addr),
-                're_note'=>intval($addr),
+                're_tel'=>$tel,
+                're_addr'=>$addr,
+                're_note'=>$addr,
                 're_date'=>time(),
               );
               if($this->model->Reserve($data)){
