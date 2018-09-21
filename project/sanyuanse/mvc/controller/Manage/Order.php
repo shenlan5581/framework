@@ -31,7 +31,7 @@ class App_Controller_Manage_Order extends Base_Manage{
     }
 
     public function OrderEditAction(){
-        if($this->USER['a_level']<2){
+        if($this->USER['a_level']<3){
          $this->ctr->MessageLocation('您的帐号无权操作','/Manage','3秒后跳转');
          die();
         }
@@ -83,14 +83,31 @@ class App_Controller_Manage_Order extends Base_Manage{
             }
         }
 
-
             $this->ctr->assign('edit_id',$edit_id?$edit_id:null); 
             $this->ctr->assign('user_id',$user_id?$user_id:null); 
             $this->ctr->DisplaySmart('/Manage/order/edit.html');
   }
   
 
-
+//删除
+public function OrderDeleteAction(){
+    if($this->USER['a_level']<3){
+      $this->ctr->MessageLocation('您的帐号无权操作','/'.PROJECT_NAME.'Manage','3秒后跳转',200);
+      die();
+     }
+        $model = new App_Model_Manage_Order;
+        $id = $this->ctr->GetParam('id');
+        if($id){
+          $ret=$model->Del($id); 
+        }
+        if($ret){
+          $this->ctr->MessageLocation('操作成功','/'.PROJECT_NAME.'/Manage/Order/OrderList','3秒后跳转',200);
+          die();
+        }else{
+          $this->ctr->Message('操作失败','请联系管理员');
+        }
+  }
+  
 
 
 

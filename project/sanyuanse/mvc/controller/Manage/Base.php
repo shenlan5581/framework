@@ -16,7 +16,7 @@ class Base_Manage{
     public $data;
     public function __construct(){
     $this->ctr =new Controller;
-    $ID = Session::GetAdminID();
+    $ID = Session::Get(PROJECT_NAME);
     if($ID === false){
          $this->ctr->Location("/Manage/Sign/Login");
     }else{

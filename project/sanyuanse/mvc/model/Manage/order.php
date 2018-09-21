@@ -32,10 +32,10 @@ class App_Model_Manage_Order{
 
 public function Del($id){
     $set =array(
-      're_del'=>1,
+      'o_del'=>1,
     );
     $where =array(
-      array('name'=>'re_id','oper'=>'=','value'=>$id)
+      array('name'=>'o_id','oper'=>'=','value'=>$id)
     );
        return $this->mysql->updateValue($set,$where);
     }

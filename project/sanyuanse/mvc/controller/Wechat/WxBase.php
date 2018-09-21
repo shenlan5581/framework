@@ -14,14 +14,14 @@ class WxBase{
 		   die();
 	   }
 	   $this->user=false;
-			$wxid = Session::Get('Wx_id');
+			$wxid = Session::Get(PROJECT_NAME.'Wx_id');
 			if($wxid){ 
 			   $this->user =$model->GetUserInfo($wxid); //model
 			} else {
 			    $userinfo = WECHAT\WxGetUserInfo($code); //获取用户openid
 			    $this->user =$model->GetUserInfo($userinfo['openid']); //model
 					if($this->user){       //是会员
-							$wxid = Session::Set('Wx_id',$this->user['m_openid']);
+							$wxid = Session::Set(PROJECT_NAME.'Wx_id',$this->user['m_openid']);
 					} else {   //不是会员
 					$this->ctr->Location("/Wechat/Sign/Register?code=$code");
 					}

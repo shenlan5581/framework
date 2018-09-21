@@ -11,7 +11,7 @@ class App_Controller_Manage_Sign{
  
     public function LoginAction(){
        $ctr = new Controller;
-      if(Session::IsloginAdmin()){
+      if(Session::Get(PROJECT_NAME)){
         $ctr->location('Manage');
      }
        $param = array(
@@ -33,9 +33,9 @@ class App_Controller_Manage_Sign{
                       }
                     }
                     //设置
-                    Session::SetAdminID($ret['a_id']);
-                    //跳转至首页
-                    $ctr->location('Manage');
+                     $set= Session::Set(PROJECT_NAME,$ret['a_id']);
+                        //跳转至首页
+                        $ctr->location('Manage');
                 }else{
                   $message = "账户名密码不匹配";
                 }
