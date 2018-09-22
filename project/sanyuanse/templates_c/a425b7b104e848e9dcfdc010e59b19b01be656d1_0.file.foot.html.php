@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 20:42:44
+/* Smarty version 3.1.32, created on 2018-09-22 11:21:38
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/view-layout/foot.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba557c44a7e94_22716742',
+  'unifunc' => 'content_5ba625c228bc77_98294861',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba557c44a7e94_22716742 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba625c228bc77_98294861 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <style>
 foot{

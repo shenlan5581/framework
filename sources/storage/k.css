@@ -1,11 +1,18 @@
 /*
 *  自由样式表存储库
 */
-/* 页面消息*/
+
+/* 注意这个Msg 是后台页面消息使用的 */
 #MSG{
-    display: none;
 }
-.MSG{
+
+
+
+/* 注意这个Msg 微信界面的 */
+#WxMSG{
+display:block;
+}
+.WxMSG{
     position: fixed;
     top:500px;
     margin:20px;
@@ -15,15 +22,20 @@
     width:100%;
     height:300px;
  }   
- .MSG>span{
+ .WxMSG>span{
     width:50%;
     background-color:rgba(0, 0, 0, 0.708); 
     font-size:1.0em;
     border-radius:30px; 
  }
- .MSG>span>p{
+ .WxMSG>span>p{
     margin: auto;
  }
+
+
+
+
+
 
 
 .a1{

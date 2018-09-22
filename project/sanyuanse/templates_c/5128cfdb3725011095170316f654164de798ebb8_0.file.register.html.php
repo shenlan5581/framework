@@ -1,9 +1,34 @@
- 
+<?php
+/* Smarty version 3.1.32, created on 2018-09-22 11:28:04
+  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32',
+  'unifunc' => 'content_5ba627440189a6_62441247',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '5128cfdb3725011095170316f654164de798ebb8' => 
+    array (
+      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/register.html',
+      1 => 1537615681,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5ba627440189a6_62441247 (Smarty_Internal_Template $_smarty_tpl) {
+?> 
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 
-<script src="/public/jquery-2.1.3.min.js"></script>
+<?php echo '<script'; ?>
+ src="/public/jquery-2.1.3.min.js"><?php echo '</script'; ?>
+>
 <link rel="stylesheet" href="/public/weui/dist/style/weui.min.css"/>
 <link rel="stylesheet" href="/storage/k.css"/>
 <body>
@@ -57,7 +82,9 @@
 <div id="WxMSG"> 
 <div class='WxMSG k-center'>
 <span class='WxMSG k-row'>
-   <p id = 'WxMSG_p'>{if isset($msg)}{$msg}{/if}</p>
+   <p id = 'WxMSG_p'><?php if (isset($_smarty_tpl->tpl_vars['msg']->value)) {
+echo $_smarty_tpl->tpl_vars['msg']->value;
+}?></p>
 </span>
 </div>
 </div>
@@ -75,7 +102,9 @@
      </div>
  </div>
  <div class ="text1">输入手机号码即刻成为会员</div>
- <form method="POST" id ='tel' action="/{$p_name}/Wechat/Sign/Register?code={$code}">
+ <form method="POST" id ='tel' action="/<?php echo $_smarty_tpl->tpl_vars['p_name']->value;?>
+/Wechat/Sign/Register?code=<?php echo $_smarty_tpl->tpl_vars['code']->value;?>
+">
     <input class="input1" required="required" name='tel' class="weui-input" type="tel" placeholder="请输入手机号"></input>
     <a href="#1" onclick="tel_submit()" class="weui-btn k-btn2 weui-btn_primary">确定</a>
   </form>
@@ -84,7 +113,8 @@
 <div class="weui-toast__content"></div>
 
 
-<script>
+<?php echo '<script'; ?>
+>
    $(document).ready(function(){
        var msg = $('#MSG_p').html();
         if(msg){
@@ -98,7 +128,8 @@
         var myform=document.getElementById("tel");
         myform.submit();
     }
-</script>
+<?php echo '</script'; ?>
+>
 
 
  
@@ -142,4 +173,5 @@
 
 </head>
 
-</html>
+</html><?php }
+}
