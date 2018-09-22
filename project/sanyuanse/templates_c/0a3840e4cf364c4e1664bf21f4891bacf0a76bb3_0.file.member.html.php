@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 21:10:38
+/* Smarty version 3.1.32, created on 2018-09-22 21:16:19
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6afce0b4711_21046392',
+  'unifunc' => 'content_5ba6b123c21422_99633981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537650636,
+      1 => 1537650976,
       2 => 'file',
     ),
   ),
@@ -20,53 +20,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6afce0b4711_21046392 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6b123c21422_99633981 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
-
-
-    .part{
-        display:flex;
-        flex-direction:column;
-        justify-content:conter;
-        align-items:center;
-        color:rgb(18, 18, 18);
-        margin-bottom: 10px;
-    }
-    .part>div{
-        display:flex;
-        flex-direction:row;
-        justify-content:conter;
-        align-items:center;
-    }
-    .part>div>img{
-        box-shadow: 15px 15px 10px 3px #17161676;
-    }
-
-    .integral{
-        margin: 3%;
-        font-weight: 900;
-        color:rgb(240, 149, 13);
-    }
-    .integral2{
-        padding:5%;
-        display:flex;
-        flex-direction:row;
-        margin: 5%;
-        color:rgb(13, 136, 150);
-        box-shadow: 10px 10px 3px 3px #0e0e0ebd ;
-        background-color: rgba(240, 240, 240, 0.496);
-        font-size: 0.8em;
-    }
 
 #cade{
     width:100%;
     height:38%;
 }
 #cade-back{
-    top:32%;
+    top:28%;
     position: relative;
     width:90%;
-    height:60%;
+    height:70%;
     background-image:url("/sanyuanse/Wx-member/bk2.png");
     background-size:105% 105%;-moz-background-size:100% 100%;
     border-radius:0.3em;
@@ -115,7 +80,7 @@ function content_5ba6afce0b4711_21046392 (Smarty_Internal_Template $_smarty_tpl)
      </div>
      <div class = "integral k-row">
            您的当前积分:
-          <span id ='integral'><?php echo $_smarty_tpl->tpl_vars['user']->value['m_integral'];?>
+          <span  class ='text-red' id ='integral'><?php echo $_smarty_tpl->tpl_vars['user']->value['m_integral'];?>
 </span> 
        </div>
 </div>
@@ -190,7 +155,7 @@ function ShowMsg(msg){
                         flex-direction:row;\
                         justify-content:center;\
                         align-items:center;\
-                        border-radius:2vw;\
+                        border-radius:4vw;\
                         height:100%;\
                         width:70%;'>\
                <span style='display:flex,\

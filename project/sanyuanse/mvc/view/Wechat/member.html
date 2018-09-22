@@ -1,49 +1,14 @@
 <style>
 
-
-    .part{
-        display:flex;
-        flex-direction:column;
-        justify-content:conter;
-        align-items:center;
-        color:rgb(18, 18, 18);
-        margin-bottom: 10px;
-    }
-    .part>div{
-        display:flex;
-        flex-direction:row;
-        justify-content:conter;
-        align-items:center;
-    }
-    .part>div>img{
-        box-shadow: 15px 15px 10px 3px #17161676;
-    }
-
-    .integral{
-        margin: 3%;
-        font-weight: 900;
-        color:rgb(240, 149, 13);
-    }
-    .integral2{
-        padding:5%;
-        display:flex;
-        flex-direction:row;
-        margin: 5%;
-        color:rgb(13, 136, 150);
-        box-shadow: 10px 10px 3px 3px #0e0e0ebd ;
-        background-color: rgba(240, 240, 240, 0.496);
-        font-size: 0.8em;
-    }
-
 #cade{
     width:100%;
     height:38%;
 }
 #cade-back{
-    top:32%;
+    top:28%;
     position: relative;
     width:90%;
-    height:60%;
+    height:70%;
     background-image:url("/sanyuanse/Wx-member/bk2.png");
     background-size:105% 105%;-moz-background-size:100% 100%;
     border-radius:0.3em;
@@ -90,7 +55,7 @@
      </div>
      <div class = "integral k-row">
            您的当前积分:
-          <span id ='integral'>{$user['m_integral']}</span> 
+          <span  class ='text-red' id ='integral'>{$user['m_integral']}</span> 
        </div>
 </div>
 
@@ -160,7 +125,7 @@ function ShowMsg(msg){
                         flex-direction:row;\
                         justify-content:center;\
                         align-items:center;\
-                        border-radius:2vw;\
+                        border-radius:4vw;\
                         height:100%;\
                         width:70%;'>\
                <span style='display:flex,\
