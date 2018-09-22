@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 16:38:34
+/* Smarty version 3.1.32, created on 2018-09-22 19:56:12
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6700ab08116_25552078',
+  'unifunc' => 'content_5ba69e5c3b9397_19412174',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537634313,
+      1 => 1537646170,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6700ab08116_25552078 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba69e5c3b9397_19412174 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 
@@ -66,7 +66,7 @@ function content_5ba6700ab08116_25552078 (Smarty_Internal_Template $_smarty_tpl)
     top:32%;
     position: relative;
     width:90%;
-    height:58%;
+    height:60%;
     background-image:url("/sanyuanse/Wx-member/bk2.png");
     background-size:105% 105%;-moz-background-size:100% 100%;
     border-radius:0.3em;
@@ -74,28 +74,35 @@ function content_5ba6700ab08116_25552078 (Smarty_Internal_Template $_smarty_tpl)
 #cade>img{
     left:18%;
     top:8%;
-    position:fixed;
+    position: absolute;
     border-radius: 50%;
     width:8em;
     z-index:1;
-    box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(94, 92, 92, 0.777);
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(94, 92, 92, 0.777);
+}
+#cade>.integral{
+    left:18%;
+    top:29%;
+    position: absolute;
+    width:8em;
+    z-index:1;
 }
 #cade-back>span{
-    left:25%;
-    top:26%;
-    position:fixed;
+    left:22%;
+    top:55%;
+    position:relative;
     border-radius: 50%;
     width:8em;
 }
 
 
 
-
+.bt{
+    height:10vh;
+    width:20%;
+}
  </style>
 
-
-
-</div>
 <div id="MSG"> 
 <div class='MSG k-center'>
 <span class='MSG k-row'>
@@ -107,28 +114,46 @@ echo $_smarty_tpl->tpl_vars['msg']->value;
 </div>
 
 <div id ='cade' class='k-center'>
-        <img src = "/sanyuanse/2.jpeg"></img>
+        <img src ="<?php echo $_smarty_tpl->tpl_vars['user']->value['m_headimg'];?>
+"></img>
      <div id = "cade-back">
                  <span><?php echo $_smarty_tpl->tpl_vars['user']->value['m_nickname'];?>
 </span>
-            </div>
      </div>
+
+     <div class = "integral k-row">
+           您的当前积分:
+            <?php echo $_smarty_tpl->tpl_vars['user']->value['m_integral'];?>
+
+       </div>
 </div>
 
 
 
 
+<div class="k-row">
+    <div class="k-center ">
+         <a href="#1" >
+            <img src=/sanyuanse/Wx-member/bt1.png></img>
+         </a>
+    </div>
+
+    <div class="k-center ">
+         <a href="#1"href="#1"onclick ="igl()" >
+            <img src=/sanyuanse/Wx-member/bt2.png></img>
+         </a>
+    </div>
+
+    <div class="k-center ">
+         <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Wechat/Member/Order"  >
+            <img src=/sanyuanse/Wx-member/bt3.png></img>
+         </a>
+    </div>
+</div>
 
 
 
-
-
-
-
-
-
-
- 
 
             <div class="k-center"> 积分福利 </div>
        <div class = "integral2 border02">
@@ -143,22 +168,10 @@ echo $_smarty_tpl->tpl_vars['msg']->value;
        </div>
 
 
-       <div class = "k-center integral">
-            <span> 您的当前积分: </span>
-            <span id = 'igl' class ="text-red"><?php echo $_smarty_tpl->tpl_vars['user']->value['m_integral'];?>
-</span>
-       </div>
+     
 
 
-    <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">
-         <p>会员签到 </p>  
-    </a>
-    <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
-/Wechat/Member/Order"  class="weui-btn k-btn2  weui-btn_plain-default">
-         <p>我的装修</p>  
-    </a>
-
-    <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+      <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
 /Wechat/Sign/Logout">exit test</a>
 <?php echo '<script'; ?>
 >

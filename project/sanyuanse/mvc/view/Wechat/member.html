@@ -43,7 +43,7 @@
     top:32%;
     position: relative;
     width:90%;
-    height:58%;
+    height:60%;
     background-image:url("/sanyuanse/Wx-member/bk2.png");
     background-size:105% 105%;-moz-background-size:100% 100%;
     border-radius:0.3em;
@@ -51,28 +51,35 @@
 #cade>img{
     left:18%;
     top:8%;
-    position:fixed;
+    position: absolute;
     border-radius: 50%;
     width:8em;
     z-index:1;
-    box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(94, 92, 92, 0.777);
+    box-shadow: 0.2em 0.2em 0.2em 0.2em rgba(94, 92, 92, 0.777);
+}
+#cade>.integral{
+    left:18%;
+    top:29%;
+    position: absolute;
+    width:8em;
+    z-index:1;
 }
 #cade-back>span{
-    left:25%;
-    top:26%;
-    position:fixed;
+    left:22%;
+    top:55%;
+    position:relative;
     border-radius: 50%;
     width:8em;
 }
 
 
 
-
+.bt{
+    height:10vh;
+    width:20%;
+}
  </style>
 
-
-
-</div>
 <div id="MSG"> 
 <div class='MSG k-center'>
 <span class='MSG k-row'>
@@ -82,27 +89,42 @@
 </div>
 
 <div id ='cade' class='k-center'>
-        <img src = "/sanyuanse/2.jpeg"></img>
+        <img src ="{$user['m_headimg']}"></img>
      <div id = "cade-back">
                  <span>{$user['m_nickname']}</span>
-            </div>
      </div>
+
+     <div class = "integral k-row">
+           您的当前积分:
+            {$user['m_integral']}
+       </div>
 </div>
 
 
 
 
+<div class="k-row">
+    <div class="k-center ">
+         <a href="#1" >
+            <img src=/sanyuanse/Wx-member/bt1.png></img>
+         </a>
+    </div>
+
+    <div class="k-center ">
+         <a href="#1"href="#1"onclick ="igl()" >
+            <img src=/sanyuanse/Wx-member/bt2.png></img>
+         </a>
+    </div>
+
+    <div class="k-center ">
+         <a href="/{$project_name}/Wechat/Member/Order"  >
+            <img src=/sanyuanse/Wx-member/bt3.png></img>
+         </a>
+    </div>
+</div>
 
 
 
-
-
-
-
-
-
-
- 
 
             <div class="k-center"> 积分福利 </div>
        <div class = "integral2 border02">
@@ -117,20 +139,10 @@
        </div>
 
 
-       <div class = "k-center integral">
-            <span> 您的当前积分: </span>
-            <span id = 'igl' class ="text-red">{$user['m_integral']}</span>
-       </div>
+     
 
 
-    <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">
-         <p>会员签到 </p>  
-    </a>
-    <a href="/{$project_name}/Wechat/Member/Order"  class="weui-btn k-btn2  weui-btn_plain-default">
-         <p>我的装修</p>  
-    </a>
-
-    <a href="/{$project_name}/Wechat/Sign/Logout">exit test</a>
+      <a href="/{$project_name}/Wechat/Sign/Logout">exit test</a>
 <script>
     var number;
     var number=  $('#igl').html();
