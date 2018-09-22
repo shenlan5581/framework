@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 13:14:42
+/* Smarty version 3.1.32, created on 2018-09-22 16:38:34
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba64042cbc889_64551269',
+  'unifunc' => 'content_5ba6700ab08116_25552078',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537564420,
+      1 => 1537634313,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba64042cbc889_64551269 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6700ab08116_25552078 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 
@@ -41,11 +41,6 @@ function content_5ba64042cbc889_64551269 (Smarty_Internal_Template $_smarty_tpl)
     .part>div>img{
         box-shadow: 15px 15px 10px 3px #17161676;
     }
-    .partrait{
-      border-radius: 50%;
-      width:200px;
-      margin:50px;
-    } 
 
     .integral{
         margin: 3%;
@@ -62,13 +57,43 @@ function content_5ba64042cbc889_64551269 (Smarty_Internal_Template $_smarty_tpl)
         background-color: rgba(240, 240, 240, 0.496);
         font-size: 0.8em;
     }
+
+#cade{
+    width:100%;
+    height:40%;
+}
+#cade-back{
+    top:32%;
+    position: relative;
+    width:90%;
+    height:58%;
+    background-image:url("/sanyuanse/Wx-member/bk2.png");
+    background-size:105% 105%;-moz-background-size:100% 100%;
+    border-radius:0.3em;
+}
+#cade>img{
+    left:18%;
+    top:8%;
+    position:fixed;
+    border-radius: 50%;
+    width:8em;
+    z-index:1;
+    box-shadow: 0.3em 0.3em 0.3em 0.3em rgba(94, 92, 92, 0.777);
+}
+#cade-back>span{
+    left:25%;
+    top:26%;
+    position:fixed;
+    border-radius: 50%;
+    width:8em;
+}
+
+
+
+
  </style>
 
-<div class='logo-title'>
-            <div>
-                <div>会员-积分</div>
-            </div>
-</div>
+
 
 </div>
 <div id="MSG"> 
@@ -81,21 +106,29 @@ echo $_smarty_tpl->tpl_vars['msg']->value;
 </div>
 </div>
 
-
-        <div class="weui-flex">
-                <div class="weui-flex__item">
-                    <div class="placeholder">
-                          <div class = "part">
-                            <div>
-                                <img class = "partrait" src = "/sanyuanse/2.jpeg"></img>
-                                <span><?php echo $_smarty_tpl->tpl_vars['user']->value['m_nickname'];?>
+<div id ='cade' class='k-center'>
+        <img src = "/sanyuanse/2.jpeg"></img>
+     <div id = "cade-back">
+                 <span><?php echo $_smarty_tpl->tpl_vars['user']->value['m_nickname'];?>
 </span>
-                            </div>
+            </div>
+     </div>
+</div>
 
-                          </div>
-                    </div>
-                </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
             <div class="k-center"> 积分福利 </div>
        <div class = "integral2 border02">
