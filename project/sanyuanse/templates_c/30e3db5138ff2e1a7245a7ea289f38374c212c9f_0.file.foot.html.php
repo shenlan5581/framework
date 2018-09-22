@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 21:04:15
+/* Smarty version 3.1.32, created on 2018-09-22 21:07:20
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/foot.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6ae4f5cc6b8_85729863',
+  'unifunc' => 'content_5ba6af082270e8_82697671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30e3db5138ff2e1a7245a7ea289f38374c212c9f' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/foot.html',
-      1 => 1537650251,
+      1 => 1537650438,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6ae4f5cc6b8_85729863 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6af082270e8_82697671 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -35,7 +35,7 @@ function content_5ba6ae4f5cc6b8_85729863 (Smarty_Internal_Template $_smarty_tpl)
 foot{
    
     width:100%;
-    margin-top:10vw;
+    margin-top:5vw;
     font-size:1em;
     display:flex;
     flex-direction:column;

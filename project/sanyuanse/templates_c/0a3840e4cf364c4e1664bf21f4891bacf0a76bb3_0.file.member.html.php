@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 20:56:07
+/* Smarty version 3.1.32, created on 2018-09-22 21:08:06
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6ac67713fd2_74802190',
+  'unifunc' => 'content_5ba6af36caa373_05310294',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537649766,
+      1 => 1537650484,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6ac67713fd2_74802190 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6af36caa373_05310294 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 
@@ -126,26 +126,26 @@ function content_5ba6ac67713fd2_74802190 (Smarty_Internal_Template $_smarty_tpl)
 <div class="k-row">
     <div class="k-center bt ">
          <a href="#1" >
-            <img width="100%"src=/sanyuanse/Wx-member/bt1.png></img>
+            <img width="95%"src=/sanyuanse/Wx-member/bt1.png></img>
          </a>
     </div>
 
     <div class="k-center bt ">
          <a href="#1"href="#1"onclick ="igl()" >
-            <img width="100%" src=/sanyuanse/Wx-member/bt2.png></img>
+            <img width="95%" src=/sanyuanse/Wx-member/bt2.png></img>
          </a>
     </div>
 
     <div class="k-center bt">
          <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
 /Wechat/Member/Order"  >
-            <img  width="100%" src=/sanyuanse/Wx-member/bt3.png></img>
+            <img  width="95%" src=/sanyuanse/Wx-member/bt3.png></img>
          </a>
     </div>
 </div>
 
 <div id='p5'class='k-center'>
-<img  width="80%" src=/sanyuanse/Wx-member/p5.png></img>
+<img  width="100%" src=/sanyuanse/Wx-member/p5.png></img>
 </div>
 
 
@@ -197,6 +197,7 @@ function ShowMsg(msg){
                             flex-direction:row;\
                             justify-content:center;\
                             align-items:center;\
+                            font-size:1em;\
                                '>\
                    <p id='MSG_content'\
                      >"+msg+"</p>\
