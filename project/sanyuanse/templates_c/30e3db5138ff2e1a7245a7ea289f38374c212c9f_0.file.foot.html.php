@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 21:07:20
+/* Smarty version 3.1.32, created on 2018-09-22 21:49:09
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/foot.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6af082270e8_82697671',
+  'unifunc' => 'content_5ba6b8d5e67b91_22883823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30e3db5138ff2e1a7245a7ea289f38374c212c9f' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/foot.html',
-      1 => 1537650438,
+      1 => 1537652949,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6af082270e8_82697671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6b8d5e67b91_22883823 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
@@ -41,7 +41,7 @@ foot{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    color:rgb(19, 19, 19);
+    color:rgb(58, 58, 58);
 }
 foot>div{
     width:80%;
@@ -57,7 +57,7 @@ foot>div{
 foot>div>p{
     display: block;
     font-size:0.8em;
-    color:rgb(45, 45, 45);
+    color:rgb(98, 98, 98);
 }
     
 </style> 

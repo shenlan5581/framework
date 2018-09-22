@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 21:16:19
+/* Smarty version 3.1.32, created on 2018-09-22 21:20:12
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6b123c21422_99633981',
+  'unifunc' => 'content_5ba6b20c04c112_04083770',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537650976,
+      1 => 1537651205,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6b123c21422_99633981 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6b20c04c112_04083770 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 #cade{
@@ -60,6 +60,7 @@ function content_5ba6b123c21422_99633981 (Smarty_Internal_Template $_smarty_tpl)
     width:8em;
 }
 .bt{
+    margin-top:2vh; 
     height:10vh;
     width:20%;
 }
@@ -91,20 +92,20 @@ function content_5ba6b123c21422_99633981 (Smarty_Internal_Template $_smarty_tpl)
 <div class="k-row">
     <div class="k-center bt ">
          <a href="#1" >
-            <img width="95%"src=/sanyuanse/Wx-member/bt1.png></img>
+            <img width="90%"src=/sanyuanse/Wx-member/bt1.png></img>
          </a>
     </div>
 
     <div class="k-center bt ">
          <a href="#1"href="#1"onclick ="igl()" >
-            <img width="95%" src=/sanyuanse/Wx-member/bt2.png></img>
+            <img width="90%" src=/sanyuanse/Wx-member/bt2.png></img>
          </a>
     </div>
 
     <div class="k-center bt">
          <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
 /Wechat/Member/Order"  >
-            <img  width="95%" src=/sanyuanse/Wx-member/bt3.png></img>
+            <img  width="90%" src=/sanyuanse/Wx-member/bt3.png></img>
          </a>
     </div>
 </div>
