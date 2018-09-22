@@ -1,4 +1,27 @@
-<style>
+<?php
+/* Smarty version 3.1.32, created on 2018-09-22 17:51:54
+  from '/home/k/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32',
+  'unifunc' => 'content_5ba6813a5f1994_47535292',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '1c101f27467f3c1cedcfa667c5bfa956a4dc51d0' => 
+    array (
+      0 => '/home/k/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
+      1 => 1537638712,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5ba6813a5f1994_47535292 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
 
 
     .part{
@@ -76,7 +99,9 @@
 <div id="MSG"> 
 <div class='MSG k-center'>
 <span class='MSG k-row'>
-   <p id = 'MSG_p'>{if isset($msg)}{$msg}{/if}</p>
+   <p id = 'MSG_p'><?php if (isset($_smarty_tpl->tpl_vars['msg']->value)) {
+echo $_smarty_tpl->tpl_vars['msg']->value;
+}?></p>
 </span>
 </div>
 </div>
@@ -84,7 +109,8 @@
 <div id ='cade' class='k-center'>
         <img src = "/sanyuanse/2.jpeg"></img>
      <div id = "cade-back">
-                 <span>{$user['m_nickname']}</span>
+                 <span><?php echo $_smarty_tpl->tpl_vars['user']->value['m_nickname'];?>
+</span>
             </div>
      </div>
 </div>
@@ -94,25 +120,30 @@
 
 
        <div class = "k-center integral">
-            <span id = 'igl' class ="text-red">{$user['m_integral']}</span>
+            <span id = 'igl' class ="text-red"><?php echo $_smarty_tpl->tpl_vars['user']->value['m_integral'];?>
+</span>
        </div>
 
 
     <a href="#1"onclick ="igl()"class="weui-btn k-btn2  weui-btn_plain-default">
          <p>会员签到 </p>  
     </a>
-    <a href="/{$project_name}/Wechat/Member/Order"  class="weui-btn k-btn2  weui-btn_plain-default">
+    <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Wechat/Member/Order"  class="weui-btn k-btn2  weui-btn_plain-default">
          <p>我的装修</p>  
     </a>
 
-    <a href="/{$project_name}/Wechat/Sign/Logout">exit test</a>
-<script>
+    <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Wechat/Sign/Logout">exit test</a>
+<?php echo '<script'; ?>
+>
     var number;
     var number=  $('#igl').html();
     function igl(){
                 $.ajax({
                 type: 'Get',
-                url:"/{$project_name}/Wechat/API/Sign",
+                url:"/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Wechat/API/Sign",
                 data:{
                 },
                 success: function (result) {
@@ -139,4 +170,7 @@ function showmsg(){
 
 
 
-</script>
+<?php echo '</script'; ?>
+>
+<?php }
+}
