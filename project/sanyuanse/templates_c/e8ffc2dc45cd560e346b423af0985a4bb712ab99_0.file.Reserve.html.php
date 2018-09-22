@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 22:34:33
+/* Smarty version 3.1.32, created on 2018-09-22 22:38:47
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/Reserve.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6c3797d6373_56616630',
+  'unifunc' => 'content_5ba6c477420ab8_74209654',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e8ffc2dc45cd560e346b423af0985a4bb712ab99' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/Reserve.html',
-      1 => 1537655667,
+      1 => 1537655925,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6c3797d6373_56616630 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6c477420ab8_74209654 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .ts-btn{
     color:rgb(216, 216, 216);
     border-style:none;
     background: repeating-linear-gradient(to bottom,rgb(54, 160, 230), rgb(28, 109, 208)80%,rgb(11, 54, 184));
-    font-size:1.3em;
+    font-size:1.4em;
     width: 50vw;
     font-weight: 900;
     border-radius:1vw;
@@ -38,6 +38,7 @@ function content_5ba6c3797d6373_56616630 (Smarty_Internal_Template $_smarty_tpl)
     font-weight: 900px;;
 }
 .content{
+    font-size:1.2em;
     position:relative;
     top:30vw;
     margin-bottom:40vw;
@@ -55,7 +56,7 @@ function content_5ba6c3797d6373_56616630 (Smarty_Internal_Template $_smarty_tpl)
 
 .input1 {
     color:rgb(23, 61, 91);
-    font-size:1em;
+    font-size:1.2em;
     width: 70%;;
     height:10vw;
     border:1px solid rgb(203, 203, 203);
