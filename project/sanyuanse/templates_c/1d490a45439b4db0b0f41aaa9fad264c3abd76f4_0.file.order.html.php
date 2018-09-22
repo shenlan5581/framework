@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 22:59:11
+/* Smarty version 3.1.32, created on 2018-09-22 23:11:54
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/order.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6c93f5f6080_02734663',
+  'unifunc' => 'content_5ba6cc3a90eee9_02271981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d490a45439b4db0b0f41aaa9fad264c3abd76f4' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/order.html',
-      1 => 1537657149,
+      1 => 1537657910,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6c93f5f6080_02734663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6cc3a90eee9_02271981 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .order{
  margin-top:20vw;
-    font-size: 1.2em;
+    font-size: 16px;
 
     }
 .order>st{
@@ -32,7 +32,7 @@ function content_5ba6c93f5f6080_02734663 (Smarty_Internal_Template $_smarty_tpl)
     flex-direction:column;
     justify-content:conter;
     align-items:center;
-    font-size: 2em;
+    font-size: 22px;
     margin:8vw;
     color:rgb(23, 21, 21);
     font-weight: 900;
@@ -40,16 +40,16 @@ function content_5ba6c93f5f6080_02734663 (Smarty_Internal_Template $_smarty_tpl)
 }
 .red{
     color:rgb(218, 110, 43);
-    font-size: 1.4em;
+    font-size: 16px;
 }
 .blue{
     color:rgb(13, 133, 239);
-    font-size: 1.6em;
+    font-size: 16px;
 }
 
 .gray{
     color:rgb(48, 48, 48);
-    font-size: 1.2em;
+    font-size: 16px;
 }
 
 
@@ -137,7 +137,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 } else { ?>
 
-
+<div class ='status'>
+    未能查询到您的相关信息
+</div>
 
 
 
