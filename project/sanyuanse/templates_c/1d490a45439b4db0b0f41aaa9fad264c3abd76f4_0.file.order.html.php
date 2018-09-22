@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 13:16:41
+/* Smarty version 3.1.32, created on 2018-09-22 22:53:55
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/order.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba640b96091a7_85456458',
+  'unifunc' => 'content_5ba6c803490246_48592476',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d490a45439b4db0b0f41aaa9fad264c3abd76f4' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/order.html',
-      1 => 1537567084,
+      1 => 1537656834,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba640b96091a7_85456458 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6c803490246_48592476 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .order{
  margin-top:120px;
@@ -31,11 +31,11 @@ function content_5ba640b96091a7_85456458 (Smarty_Internal_Template $_smarty_tpl)
     flex-direction:column;
     justify-content:conter;
     align-items:center;
-    font-size: 1.3em;
-    margin: 80px;
-    color:rgb(11, 155, 244);
+    font-size: 2em;
+    margin:8vw;
+    color:rgb(23, 21, 21);
     font-weight: 900;
-    text-shadow: 10px 10px 5px rgb(125, 125, 125);
+  
 }
 .red{
     color:rgb(218, 110, 43);
@@ -46,18 +46,14 @@ function content_5ba640b96091a7_85456458 (Smarty_Internal_Template $_smarty_tpl)
 }
 
 .gray{
-    color:rgb(106, 106, 106);
+    color:rgb(48, 48, 48);
 }
 
 
 </style>
 
 <?php if (isset($_smarty_tpl->tpl_vars['order']->value)) {?>
-<div class='logo-title'>
-        <div>
-            <div>会员-我的装修</div>
-        </div>
-</div>
+
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['order']->value, 'v');
 if ($_from !== null) {
