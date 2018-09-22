@@ -8,7 +8,7 @@ class App_Controller_Wechat_API {
     public function __construct(){
       $this->ctr=new Controller;
       $this->model=new App_Model_Wechat_wechat;
-      $this->user = $this->model->GetUserInfo(Session::Get('Wx_id'));
+      $this->user = $this->model->GetUserInfo(Session::Get(PROJECT_NAME.'Wx_id'));
     }
 
    public function SignAction(){
@@ -18,6 +18,8 @@ class App_Controller_Wechat_API {
     } else {
      if($this->model->sign($this->user['m_openid'],$this->user['m_integral'])){
      $this->ctr->DisplayJson('签到成功');
+    } else{
+     $this->ctr->DisplayJson('错误');
     }
    }
  }
