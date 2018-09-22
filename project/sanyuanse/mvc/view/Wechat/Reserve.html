@@ -16,23 +16,20 @@
 }
 .content{
     position:relative;
-    top:40vw;
+    top:45vw;
     margin-bottom:60vw;
 }
 .item{
-    margin-top:3vw;
     display:flex;
     flex-direction:row;
     justify-content:space-around;
     align-items:center;
+    margin-top:20px;
 }
 .item>span{
    color:rgb(36, 36, 36); 
 }
-img{
-    width:100vw;
-    height:auto;
-}
+
 .input1 {
     color:rgb(23, 61, 91);
     font-size:1em;
@@ -48,7 +45,7 @@ img{
 <div id="wxmsg">{if isset($msg)}{$msg}{/if}</div>
 
 <div class ='content'> 
-<form method="POST" id ='tel' action="/{$p_name}/Wechat/Reserve">
+<form method="POST" id ='fm' action="/{$p_name}/Wechat/Reserve">
   <div class ='item'> 
    <span>您的姓名</span>
    <input class="input1" required="required" name='name' class="weui-input" type="text" placeholder="请输入姓名"></input>
@@ -126,7 +123,7 @@ img{
 
 
      function form_submit(){
-         var myform=document.getElementById("tel");
+         var myform=document.getElementById("fm");
          myform.submit();
      }
  </script>
