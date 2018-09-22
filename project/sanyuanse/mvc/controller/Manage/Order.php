@@ -56,8 +56,8 @@ class App_Controller_Manage_Order extends Base_Manage{
                   'o_addr'=>$addr,
                   'o_recommend'=>$recommend?$recommend:'',
                   'o_admin'=>$admin,
-                  'o_price'=>$price,
-                  'o_pay'=>$pay,
+                  'o_price'=>intval($price),
+                  'o_pay'=>intval($pay),
                   'o_biref'=>$biref,
                 );
                 if($edit_id){ //编辑提交
@@ -67,18 +67,15 @@ class App_Controller_Manage_Order extends Base_Manage{
                     $set['o_m_id'] = $user_id;
                     $ret = $model->AddOrder($set);
                 }
-                if($ret){
                     $this->ctr->MessageLocation('操作成功','/'.PROJECT_NAME.'/Manage/Order/OrderList','3秒后跳转',0);
-                    die();
-                }else {
-                    $this->ctr->Message('操作失败','请检查输入');
-                }
             } else {
                     $this->ctr->Message('请检查输入');
             }
         }else{ //no commit
             if($edit_id){
                 $row = $model->GetRow($edit_id);
+                    $row['o_price']=intval($row['o_price']);
+                    $row['o_pay']=intval($row['o_pay']);
                 $this->ctr->assign('row',$row);
             }
         }

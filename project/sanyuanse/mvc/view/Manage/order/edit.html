@@ -79,8 +79,7 @@
                             <div class="input-group-prepend">
                                 <span style = 'width:80px'class="input-group-text">总造价</span>
                             </div>
-                               <input required="required"  name='price' type="text" value="{if isset($row['o_price'])} {$row['o_price']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
-                               
+                               <input id='price' required="required"  name='price' type="number"  value="{if isset($row['o_price'])}{$row['o_price']}{/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                         </input>
                             </div>
                         </div>
@@ -95,7 +94,7 @@
                             <div class="input-group-prepend">
                                 <span style = 'width:80px'class="input-group-text">已支付</span>
                             </div>
-                               <input required="required"  name='pay' type="text" value="{if isset($row['o_pay'])} {$row['o_pay']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                               <input id = 'pay'required="required"  name='pay' type="number" value="{if isset($row['o_pay'])}{$row['o_pay']}{/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                                
                         </input>
                             </div>
@@ -111,7 +110,7 @@
                             <div class="input-group-prepend">
                                 <span style = 'width:80px'class="input-group-text">进度描述</span>
                             </div>
-                               <input required="required"  name='biref' type="text" value="  {if isset($row['o_biref'])} {$row['o_biref']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                               <input required="required"  name='biref'  value="  {if isset($row['o_biref'])} {$row['o_biref']} {/if}" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>  
@@ -139,4 +138,9 @@
     </form>
     
 
-    
+   <script>
+       $(document).ready(function (){
+       $('pay').val("{if isset($row['o_biref'])} {$row['o_pay']} {/if}");
+       $('price').val("{if isset($row['o_biref'])} {$row['o_price']} {/if}");
+       });
+   </script> 

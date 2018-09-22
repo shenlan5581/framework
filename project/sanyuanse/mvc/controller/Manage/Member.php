@@ -40,7 +40,7 @@ class App_Controller_Manage_Member extends Base_Manage{
 
    public function MemberDeleteAction(){
     if($this->USER['a_level']<3){
-      $this->ctr->MessageLocation('您的帐号无权操作','/'.PROJECT_NAME.'Manage','3秒后跳转',200);
+      $this->ctr->MessageLocation('您的帐号无权操作','/'.PROJECT_NAME.'/Manage','3秒后跳转',200);
       die();
      }
         $model = new App_Model_Manage_Member;
@@ -57,6 +57,15 @@ class App_Controller_Manage_Member extends Base_Manage{
   }
   
 
+  public function RestIntegralAction(){
+     $id =$this->ctr->GetParam('user_id');
+     $model = new App_Model_Manage_Member;
+   if( $id && $model->RestIntegral($id)){
+   $this->ctr->MessageLocation('成功','/'.PROJECT_NAME.'/Manage/Member/MemberList',null,0);
+   } else {
+   $this->ctr->MessageLocation('操作失败','/'.PROJECT_NAME.'/Manage/Member/MemberList',null,0);
+   }
+}
 
 
   

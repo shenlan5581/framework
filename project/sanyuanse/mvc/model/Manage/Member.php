@@ -40,5 +40,14 @@ public function Del($id){
     );
        return $this->mysql->updateValue($set,$where);
     }
+public function RestIntegral($id){
+    $set =array(
+      'm_Integral'=>0,
+    );
+    $where =array(
+      array('name'=>'m_id','oper'=>'=','value'=>$id)
+    );
+       return $this->mysql->updateValue($set,$where);
+    }
 
 }

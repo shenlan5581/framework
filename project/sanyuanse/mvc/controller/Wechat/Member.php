@@ -22,4 +22,8 @@ class App_Controller_Wechat_Member extends WxBase{
       }
       $this->ctr->DisplaySmart('/Wechat/order.html');
     }
+
+ 
+
+
 }

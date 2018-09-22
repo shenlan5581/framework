@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 20:58:33
+/* Smarty version 3.1.32, created on 2018-09-22 09:03:26
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/order/edit.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba55b79c6dc83_86662266',
+  'unifunc' => 'content_5ba6055e4ebec0_90054934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '90e37feb7d679b8b32888671b1731cac8565ce21' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/order/edit.html',
-      1 => 1537563510,
+      1 => 1537607003,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba55b79c6dc83_86662266 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba6055e4ebec0_90054934 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <strong>
         <?php if (isset($_smarty_tpl->tpl_vars['oper']->value)) {?>
@@ -111,9 +111,9 @@ if (isset($_smarty_tpl->tpl_vars['edit_id']->value)) {?>?edit_id=<?php echo $_sm
                             <div class="input-group-prepend">
                                 <span style = 'width:80px'class="input-group-text">总造价</span>
                             </div>
-                               <input required="required"  name='price' type="text" value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_price'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['o_price'];?>
- <?php }?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
-                               
+                               <input id='price' required="required"  name='price' type="number"  value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_price'])) {
+echo $_smarty_tpl->tpl_vars['row']->value['o_price'];
+}?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                         </input>
                             </div>
                         </div>
@@ -128,8 +128,9 @@ if (isset($_smarty_tpl->tpl_vars['edit_id']->value)) {?>?edit_id=<?php echo $_sm
                             <div class="input-group-prepend">
                                 <span style = 'width:80px'class="input-group-text">已支付</span>
                             </div>
-                               <input required="required"  name='pay' type="text" value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_pay'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['o_pay'];?>
- <?php }?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
+                               <input id = 'pay'required="required"  name='pay' type="number" value="<?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_pay'])) {
+echo $_smarty_tpl->tpl_vars['row']->value['o_pay'];
+}?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                                
                         </input>
                             </div>
@@ -145,7 +146,7 @@ if (isset($_smarty_tpl->tpl_vars['edit_id']->value)) {?>?edit_id=<?php echo $_sm
                             <div class="input-group-prepend">
                                 <span style = 'width:80px'class="input-group-text">进度描述</span>
                             </div>
-                               <input required="required"  name='biref' type="text" value="  <?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_biref'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['o_biref'];?>
+                               <input required="required"  name='biref'  value="  <?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_biref'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['o_biref'];?>
  <?php }?>" class="form-control " aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
@@ -174,5 +175,14 @@ if (isset($_smarty_tpl->tpl_vars['edit_id']->value)) {?>?edit_id=<?php echo $_sm
     </form>
     
 
-    <?php }
+   <?php echo '<script'; ?>
+>
+       $(document).ready(function (){
+       $('pay').val("<?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_biref'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['o_pay'];?>
+ <?php }?>");
+       $('price').val("<?php if (isset($_smarty_tpl->tpl_vars['row']->value['o_biref'])) {?> <?php echo $_smarty_tpl->tpl_vars['row']->value['o_price'];?>
+ <?php }?>");
+       });
+   <?php echo '</script'; ?>
+> <?php }
 }

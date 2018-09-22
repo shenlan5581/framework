@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-21 20:55:09
+/* Smarty version 3.1.32, created on 2018-09-22 11:03:04
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/member/list.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba55aad350ee8_10425629',
+  'unifunc' => 'content_5ba621682c3a75_28209646',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77023bebc30d7af1e97650554b71eb898351f883' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/member/list.html',
-      1 => 1537563306,
+      1 => 1537614180,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba55aad350ee8_10425629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba621682c3a75_28209646 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="alert alert-secondary"  style="background-color: rgb(255, 255, 255)"="alert"> 
         <span> 用户-会员 列表：</span><br>
         <span style="font-size: 10px;">用户信息相关</span> 
@@ -79,6 +79,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
                         <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
 /Manage/Order/Orderlist?user_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['m_id'];?>
 " class="btn  btn-sm btn-success"> 查看用户项目 </a>
+                        <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Manage/Member/RestIntegral?user_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['m_id'];?>
+" class="btn  btn-sm btn-success"> 积分重置</a>
                         <a href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
 /Manage/Member/MemberDelete?id=<?php echo $_smarty_tpl->tpl_vars['row']->value['m_id'];?>
 " class="btn  btn-sm btn-secondary"> 删除 </a>

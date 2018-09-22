@@ -22,5 +22,4 @@ class App_Controller_Wechat_API {
    }
  }
 
-
 }
