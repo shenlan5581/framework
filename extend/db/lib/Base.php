@@ -53,6 +53,9 @@ class DB_Base {
         return $row;
     }
 
+
+
+
     public function getList($where = array(), $index = 0, $count = 20, $sort = array(), $field = array()) {
         if($this->_delete_field){
             $where[] = array('name'=>$this->_delete_field,'oper'=>'=','value'=>0);
@@ -99,6 +102,22 @@ class DB_Base {
         }
         return $ret;
     }
+
+    // k add
+    public function getCountUnion($where = array(),$more_table){
+        if($this->_delete_field){
+            $where[] = array('name'=>$this->_delete_field,'oper'=>'=','value'=>0);
+        }
+        $sql = $this->formatCountSqlUnion($where,$more_table);
+        $ret = DB::result_first($sql);
+
+        if ($ret === false) {
+            trigger_error("query mysql failed.", E_USER_ERROR);
+            return false;
+        }
+        return $ret;
+    }
+
 
     public function insertValue(array $data) {
         $ret = $this->insert($data, true);
@@ -325,13 +344,12 @@ class DB_Base {
      * @return string
      */
     public function formatSelectUnionSql($fields = '', $where = array(), $sort = array(), $index = 0, $count = 20,$more_table, $isand = true) {
-        global $config;
-        $pre = $config['db']['default']['tablepre']; //表前缀
+        $pre = TABLE_PRE; //表前缀
         $sql = "select ";
         $sql .= $this->getFieldString($fields);
         $sql .= " from `".DB::table($this->_table)."` ";
         foreach ($more_table as $k => $v){
-            $sql.=" left join `".$pre.$v[0]."` on ".$pre.$v[1]." = ".$pre.$v[2]."  ";
+            $sql.=" left join `".$pre.$v[0]."` on ".$v[1]." = ".$v[2]."  ";
         }
         $sql .= $this->formatWhereSql($where, $isand);
 	    $sql .= $this->getSqlSort($sort);
@@ -346,6 +364,15 @@ class DB_Base {
      */
     public function formatCountSql($where) {
         $sql = "select count(*) as total from `".DB::table($this->_table)."` ";
+        $sql .= $this->formatWhereSql($where);
+        return $sql;
+    }
+    public function formatCountSqlUnion($where,$more_table) {
+        $pre = TABLE_PRE; //表前缀
+        $sql = "select count(*) as total from `".DB::table($this->_table)."` ";
+        foreach ($more_table as $k => $v){
+            $sql.=" left join `".$pre.$v[0]."` on ".$v[1]." = ".$v[2]."  ";
+        }
         $sql .= $this->formatWhereSql($where);
         return $sql;
     }

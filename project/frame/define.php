@@ -34,3 +34,8 @@ define('CROP_UPLOAD',DIR_ROOT.'/sources/'.PROJECT_NAME.'/upload/crop');
 
 define('RUNLEVEL','DEBUG');//运行级别 错误是否显示
 #RELEASE
+
+// 定义的是 微信公众号开发需要获取的access_key 应用在后台登陆时  将返回的key 保存在 session['Wechat'] 中 以便后续微信后台的操作
+define('WECHATURL',false);
+
+define('TABLE_PRE','fw_');

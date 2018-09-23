@@ -37,7 +37,7 @@ class App_Controller_Manage_Sign{
                       }
                     }
                     //设置
-                    Session::SetAdminID($ret['a_id']);
+                    Session::Set(PROJECT_NAME,$ret['a_id']);
                     //跳转至首页
                     $ctr->location('Manage');
                 }else{

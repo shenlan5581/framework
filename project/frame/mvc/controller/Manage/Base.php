@@ -16,7 +16,7 @@ class Base_Manage{
     public $data;
     public function __construct(){
     $this->ctr =new Controller;
-    $ID = Session::GetAdminID();
+    $ID = Session::Get(PROJECT_NAME);
     if($ID === false){
          $this->ctr->Location("/Manage/Sign/Login");
     }else{
@@ -39,6 +39,7 @@ class Base_Manage{
   public function BASE_MENU(){
     $project = PROJECT_NAME;
     return array(
+        /*
         '图片管理'=>array(
              '幻灯片'=>"/$project/Manage/Slide/Slide",
         ),
@@ -50,7 +51,7 @@ class Base_Manage{
         ),
         '订单'=>array(
              '订单'=>"/$project/Manage/Order/OrderList",
-        ),
+        ),*/
     );
   }
 

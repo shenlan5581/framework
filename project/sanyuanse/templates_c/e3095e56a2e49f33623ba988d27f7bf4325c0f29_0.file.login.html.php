@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 09:24:32
-  from '/home/k/https/www/framework/project/frame/mvc/view/Manage/Sign/login.html' */
+/* Smarty version 3.1.32, created on 2018-09-23 10:57:42
+  from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/Sign/login.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba0c450249416_87336368',
+  'unifunc' => 'content_5ba771a6903ea6_36121570',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c73f6942960492dcacaab1e6184c3699151266d9' => 
+    'e3095e56a2e49f33623ba988d27f7bf4325c0f29' => 
     array (
-      0 => '/home/k/https/www/framework/project/frame/mvc/view/Manage/Sign/login.html',
-      1 => 1537261797,
+      0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Manage/Sign/login.html',
+      1 => 1537262268,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba0c450249416_87336368 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba771a6903ea6_36121570 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>

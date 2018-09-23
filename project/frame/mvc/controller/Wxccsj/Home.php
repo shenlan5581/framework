@@ -1,4 +1,9 @@
 <?php
+/*
+  微信小程序璀璨设计
+*/
+
+
 class App_Controller_Wxccsj_Home{
    public $ctr;
 public function __construct(){
@@ -21,11 +26,6 @@ public function CaseAction(){
     $ret= array('style'=>$style,'data'=>$data);
     $this->ctr->DisplayJson('success',$ret);  
 }
-
- 
-
- 
-
 /* 
 返回整个数组或者 某个值
 */

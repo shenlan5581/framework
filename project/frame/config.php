@@ -20,7 +20,7 @@
                 'host'=>'127.0.0.1',
                 'user'=>'root',
                 'pass'=>'xingke',
-                'dbname'=>'sanyuanse',
+                'dbname'=>'framework',
                 'port'=>'3306',
                 'tablepre'=>'fw_', //表前缀
             )

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 17:44:42
+/* Smarty version 3.1.32, created on 2018-09-23 14:13:04
   from '/home/ki/https/www/framework/project/frame/mvc/view/Index/index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba1398ac005e7_21092207',
+  'unifunc' => 'content_5ba79f70ed0b38_99641350',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e687a2124c087ac35728c9be8e7dda49210521b0' => 
     array (
       0 => '/home/ki/https/www/framework/project/frame/mvc/view/Index/index.html',
-      1 => 1537292678,
+      1 => 1537711982,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba1398ac005e7_21092207 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba79f70ed0b38_99641350 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 	#sanyuanse{
 	text-align: center;
@@ -32,7 +32,7 @@ function content_5ba1398ac005e7_21092207 (Smarty_Internal_Template $_smarty_tpl)
 	color:rgb(149, 149, 149);
 	}
 	.logo{
-  width:150px;
+  width:250px;
   height:auto;
 	}
 
@@ -43,5 +43,23 @@ function content_5ba1398ac005e7_21092207 (Smarty_Internal_Template $_smarty_tpl)
 	<img class="logo" src="/sanyuanse/logo.jpg"><img>
 	郑州三原色 
 </a>
-<?php }
+
+
+<?php echo '<script'; ?>
+>
+var a= {
+	 name:{
+      sex:'man',
+   	 },
+}
+//alert(a.name.sex);
+
+
+
+
+
+
+
+<?php echo '</script'; ?>
+><?php }
 }

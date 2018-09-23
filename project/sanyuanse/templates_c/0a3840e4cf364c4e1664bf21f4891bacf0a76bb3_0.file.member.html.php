@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-22 21:20:12
+/* Smarty version 3.1.32, created on 2018-09-23 17:47:19
   from '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba6b20c04c112_04083770',
+  'unifunc' => 'content_5ba7d1a7dd9195_46358657',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a3840e4cf364c4e1664bf21f4891bacf0a76bb3' => 
     array (
       0 => '/home/ki/https/www/framework/project/sanyuanse/mvc/view/Wechat/member.html',
-      1 => 1537651205,
+      1 => 1537724837,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba6b20c04c112_04083770 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba7d1a7dd9195_46358657 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 #cade{
@@ -62,7 +62,7 @@ function content_5ba6b20c04c112_04083770 (Smarty_Internal_Template $_smarty_tpl)
 .bt{
     margin-top:2vh; 
     height:10vh;
-    width:20%;
+    width:20vw;
 }
 
 #p5{
@@ -124,7 +124,7 @@ function content_5ba6b20c04c112_04083770 (Smarty_Internal_Template $_smarty_tpl)
 <?php echo '<script'; ?>
 >
     var number;
-    var number=  $('#igl').html();
+    var number=  $('#integral').html();
     function igl(){
                 $.ajax({
                 type: 'Get',

@@ -35,9 +35,6 @@
             }
     }
     function WxGetUserInfo($code){
-        if($code){
-       // 使用code 换取
-
      return array(
             "openid"=>"999",  //每个用户对一个公众号唯一
             "nickname"=>'BIG_FISH',
@@ -47,7 +44,6 @@
             "country"=>"中国",
             "headimgurl"=>"http://thirdwx.qlogo.cn/mmopen/g3MonUZtNHkdmzicIlibx6iaFqAc56vxLSUfpb6n5WKSYVY0ChQKkiaJSgQ1dZuTOgvLLrhJbERQQ4eMsv84eavHiaiceqxibJxCfHe/46",
      );
-    }
     }
 
 
@@ -148,7 +144,6 @@
         }
        return($ret);
     }
-
 
 
 } //namespace

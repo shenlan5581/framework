@@ -11,16 +11,6 @@ class App_Controller_Wechat_Index{
 //     $this->ctr->DisplaySmart('/Wechat/wx.html');
     }
     public function testAction(){
-
-        
-
-
-
-
-
-
-
-        
      
     }
 

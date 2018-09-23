@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-18 09:00:16
+/* Smarty version 3.1.32, created on 2018-09-23 13:19:56
   from '/home/ki/https/www/framework/project/frame/mvc/view/Manage/view-layout/menu.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5ba0bea0ed7a54_88187091',
+  'unifunc' => 'content_5ba792fc2a22f3_73037028',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '078fe866ede7be637e83d1b5743fd0a145fa531a' => 
     array (
       0 => '/home/ki/https/www/framework/project/frame/mvc/view/Manage/view-layout/menu.html',
-      1 => 1537212687,
+      1 => 1537700680,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ba0bea0ed7a54_88187091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba792fc2a22f3_73037028 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .c1{
   color:red;
@@ -92,6 +92,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
 /Manage/System/CleanCache">缓存清理</a>
+                        <a class="dropdown-item" href="/<?php echo $_smarty_tpl->tpl_vars['project_name']->value;?>
+/Manage/System/DBsave">备份数据库</a>
                       </div>
 
                     <li class="nav-item dropdown">

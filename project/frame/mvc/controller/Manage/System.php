@@ -2,7 +2,7 @@
 include_once "Base.php";
 class App_Controller_Manage_System extends Base_Manage{
       // 清除缓存 
-    public function CleanCacheAction(){
+  public function CleanCacheAction(){
       $file = new FILE;
       $this->ctr->CleanCache();
       $ret = $file->delete(PROJECT_SMARTCACHE);
@@ -11,10 +11,9 @@ class App_Controller_Manage_System extends Base_Manage{
       } else {
       $this->ctr->Message('清除失败','请联系管理员');
       }
+  }
 
-   }
-
-    public function LogAction(){
+  public function LogAction(){
       $log=file(LOG_FILE);
       $log =array_reverse($log);
       if($log){
@@ -23,21 +22,22 @@ class App_Controller_Manage_System extends Base_Manage{
       } else {
       $this->ctr->Message('日志读取失败','请联系管理员');
       }
-
    }
-    public function CleanLogAction(){
+  public function CleanLogAction(){
       $log= LOG_FILE;
       if(unlink($log)){
       $this->ctr->Message('日志已清空','请联系管理员');
       } else {
       $this->ctr->Message('失败','请联系管理员');
       }
-
    }
+   //数据库备份 ? 查询项目文件夹 ?数据库记录？
+  public function DBsaveAction(){
 
 
 
 
 
-
+      $this->ctr->Message('数据库已备份');
+  }
 }

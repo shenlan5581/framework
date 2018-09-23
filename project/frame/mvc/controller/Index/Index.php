@@ -13,17 +13,10 @@ class App_Controller_Index_Index{
         $this->ctr->DisplaySmart("Index/layout/foot.html");
       }
 
-    public function indexAction(){
+   //总后台管理首页
+    public function IndexAction(){
+        $model = new App_Model_Index_Index; //使用模型
+        $list =  $model->List(array('name'=>'xingke'));
         $this->ctr->DisplaySmart("Index/index.html");
-    }
-    public function formtestAction(){
-        $ctr = new Controller();
-        $para = array(  //数据接口定义 
-            'text'=>''
-        ); 
-        $ctr->GetParam($para);//填充
-        print_r($para);
-        echo "Input test ok";
-        
     }
 }

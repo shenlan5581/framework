@@ -23,38 +23,98 @@ $info =array(                           //支持的业务
     'table'=>array('case','admin'),
     'field'=>array('',''),             //需求
     'condition'=>array(                //条件业务
-    array(),
+     array(),
     ),
 );
 //输出
 
 class Model{
-    protected $ctr;
-    protected $LIST;        //业务需求列表
-    protected $Information ;// 需求信息
+    protected $ctr;         //前端控制器
+    protected $mysql;
+    protected $info;        //
 
-    public function __construct(){
+    protected $Error;    //错误信息
+
+    public function __construct($Operate){
       $this->ctr=new Controller; //控制器
+      $this->mysql=new Mysql($Operate['table']); //控制器
+      $this->info=$Operate; //保存子类数据
+      $this->Error = false;    //错误信息
+    }
+    public function __destruct(){
+       if($this->Error){
+         // 写入错误到日志
+         trigger_error("MODEL-errmsg=$this->Error", E_USER_ERROR);
+       }
     }
 
-
-    protected function Set(){
-
+    // 输出列表   参数为数组其他可能的参数
+    public function List($Param=array()){
+      //获取信息
+      $info =$this->info['List'];
+      if(!$info){
+        return false;
+      }
+      //参数收集 
+      $req =$this->ctr->GetParam($info['request']['param'],$info['request']['method']);
+      //参数检测
+      if(!$this->checkParam($req)){
+        return false;
+      }
+      $params = $req;
+      if($Param){
+       $params =  array_merge($req,$Param);
+      }
+      //条件
+      $where = $info['where'];
+      if(!$this->makeWhere($params,$where)){
+        return false;
+      }
+      //默认
+      $index=(isset($params['index']))?$params['index']:1;
+      $count=(isset($params['count']))?$params['count']:10;
+      $curr_index=$index;
+      $index=($index-1)*$count;
+      $sort =$info['sort'] ?$info['sort']:null;
+      $field=$info['field']?$info['field']:null;
+      $count=$info['count']?$info['count']:10;
+      if(is_array($info['Uniontable'])){  //联表
+         $ret['curr_index'] =$curr_index;
+         $ret['conuts']=$this->mysql->getCountUnion($where,$info['Uniontable']);
+         $ret['list'] = $this->mysql->getListUnion($where,$index,$count,$sort,$field,$info['Uniontable']);
+         return $ret;
+      } else {
+         $ret['curr_index'] =$curr_index;
+         $ret['conuts']=$this->mysql->getCount($where);
+         $ret['list'] = $this->mysql->getList($where,$index,$count,$sort,$field);
+         return $ret;
+      }
     }
 
-    //具体业务
-    protected function List(){
-      print_r($this->LIST);
-       
+ 
 
+    // 
+    private function makeWhere($params,&$where){
+        foreach($where as $k => &$v){
+            if(isset($params[$v['value']])){
+               $v['value'] = $params[$v['value']];
+            } else {
+               $this->Error="参数  ".$v['value']." 未正常找到(make Where)::";
+               return false;
+            }
+        }
+        return true;
     }
-
-    protected function Edit(){
-
-       
-
+    //检查参数 
+    private function checkParam($Param){
+          foreach($Param as $k=>$v){
+             if(!$v){
+               $this->Error="参数".$k."未正常获取::";
+               return false;
+             }
+          }
+      return true;
     }
-
  }
 
 

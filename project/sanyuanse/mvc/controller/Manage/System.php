@@ -34,10 +34,4 @@ class App_Controller_Manage_System extends Base_Manage{
       }
 
    }
-
-
-
-
-
-
 }
