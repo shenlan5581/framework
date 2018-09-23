@@ -8,12 +8,9 @@ class App_Controller_Wechat_Index{
    }
    public function indexAction(){
         
-//     $this->ctr->DisplaySmart('/Wechat/wx.html');
-    }
-    public function testAction(){
-     
-    }
+    WECHAT\WechatCheck('xingke');      
 
+    }
 
 
 

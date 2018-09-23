@@ -14,6 +14,7 @@
             echo $_GET['echostr'];
         return true;
         }else{
+            echo "wechat check";
         return false;
         }
     }
